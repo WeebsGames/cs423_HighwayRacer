@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
@@ -23,8 +22,20 @@ public class CarControl : MonoBehaviour
     private bool handbraking = false;
     private float prevSpeed;
     
-    [Header("Input Actions")]
-    public InputActionReference moveAction;
+    [Header("Gyro Controls")]
+    [Min(1f)] public float fullSteeringTilt = 45f;
+    [Min(1f)] public float fullAccelerationTilt = 30f;
+    [Min(0f)] public float steeringDeadZone = 2f;
+    [Min(0f)] public float accelerationDeadZone = 2f;
+    [Min(0f)] public float inputSmoothing = 10f;
+    public bool invertSteering = false;
+    public bool invertAcceleration = false;
+
+    private Gyroscope gyro;
+    private Quaternion neutralAttitude;
+    private ScreenOrientation calibratedOrientation;
+    private bool gyroCalibrated;
+    private Vector2 gyroInput;
 
     [Header("OtherObjects")]
     // public TMP_Text speedText;
@@ -33,12 +44,108 @@ public class CarControl : MonoBehaviour
 
     private void OnEnable()
     {
-        moveAction.action.Enable();
+        gyroInput = Vector2.zero;
+        gyroCalibrated = false;
+        if (SystemInfo.supportsGyroscope)
+        {
+            gyro = Input.gyro;
+            gyro.enabled = true;
+            gyro.updateInterval = 1f / 60f;
+        }
+        else
+        {
+            Debug.LogWarning("Gyroscope unavailable. Car movement input will remain neutral.", this);
+        }
     }
 
     private void OnDisable()
     {
-        moveAction.action.Disable();
+        gyroCalibrated = false;
+        gyroInput = Vector2.zero;
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            gyroCalibrated = false;
+            gyroInput = Vector2.zero;
+        }
+    }
+
+    public void CalibrateGyro()
+    {
+        if (gyro == null || !gyro.enabled || gyro.gravity.sqrMagnitude < 0.25f)
+        {
+            return;
+        }
+
+        neutralAttitude = GetScreenAttitude();
+        calibratedOrientation = Screen.orientation;
+        gyroCalibrated = true;
+        gyroInput = Vector2.zero;
+    }
+
+    private Quaternion GetScreenAttitude()
+    {
+        Quaternion attitude = gyro.attitude;
+        Quaternion unityAttitude = new Quaternion(attitude.x, attitude.y, -attitude.z, -attitude.w);
+        if (Input.compensateSensors)
+        {
+            return unityAttitude;
+        }
+
+        float screenRotation = 0f;
+        switch (Screen.orientation)
+        {
+            case ScreenOrientation.LandscapeLeft:
+                screenRotation = -90f;
+                break;
+            case ScreenOrientation.LandscapeRight:
+                screenRotation = 90f;
+                break;
+            case ScreenOrientation.PortraitUpsideDown:
+                screenRotation = 180f;
+                break;
+        }
+
+        return unityAttitude * Quaternion.AngleAxis(screenRotation, Vector3.forward);
+    }
+
+    private static float NormalizeTilt(float angle, float deadZone, float fullTilt)
+    {
+        float effectiveDeadZone = Mathf.Clamp(deadZone, 0f, Mathf.Max(1f, fullTilt) - 0.01f);
+        return Mathf.Sign(angle) * Mathf.InverseLerp(effectiveDeadZone, Mathf.Max(1f, fullTilt), Mathf.Abs(angle));
+    }
+
+    private void UpdateGyroInput()
+    {
+        if (gyro == null || !gyro.enabled)
+        {
+            gyroInput = Vector2.zero;
+            return;
+        }
+
+        if (!gyroCalibrated || calibratedOrientation != Screen.orientation)
+        {
+            CalibrateGyro();
+            return;
+        }
+
+        Quaternion relativeAttitude = Quaternion.Inverse(neutralAttitude) * GetScreenAttitude();
+        Vector3 deviceUp = relativeAttitude * Vector3.up;
+        Vector3 deviceForward = relativeAttitude * Vector3.forward;
+        float steeringAngle = Mathf.Atan2(deviceUp.x, deviceUp.y) * Mathf.Rad2Deg;
+        float accelerationAngle = Mathf.Atan2(-deviceForward.y,
+            Mathf.Sqrt(deviceForward.x * deviceForward.x + deviceForward.z * deviceForward.z)) * Mathf.Rad2Deg;
+        if (invertSteering) steeringAngle = -steeringAngle;
+        if (invertAcceleration) accelerationAngle = -accelerationAngle;
+
+        Vector2 targetInput = new Vector2(
+            NormalizeTilt(steeringAngle, steeringDeadZone, fullSteeringTilt),
+            Mathf.Max(0f, NormalizeTilt(accelerationAngle, accelerationDeadZone, fullAccelerationTilt)));
+        float smoothing = inputSmoothing > 0f ? 1f - Mathf.Exp(-inputSmoothing * Time.deltaTime) : 1f;
+        gyroInput = Vector2.Lerp(gyroInput, targetInput, smoothing);
     }
 
     // Start is called before the first frame update
@@ -62,6 +169,8 @@ public class CarControl : MonoBehaviour
 
     void Update()
     {
+        UpdateGyroInput();
+
         if (Input.GetKeyUp(KeyCode.R))
         {
             rigidBody.transform.position = startPos.transform.position;
@@ -124,8 +233,8 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {
         // Get player input for acceleration and steering
-        float vInput = moveAction.action.ReadValue<Vector2>().y; // Forward/backward input
-        float hInput = moveAction.action.ReadValue<Vector2>().x; // Steering input
+        float vInput = gyroInput.y; // Forward throttle input
+        float hInput = gyroInput.x; // Steering input
 
         // Calculate current speed along the car's forward axis
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.linearVelocity);
