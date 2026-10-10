@@ -66,6 +66,11 @@ extern void AE86Engine_Update_m0572F05D527551933709D3D98FB396E936A9CCC8 (void);
 extern void AE86Engine__ctor_m9C6E2F672D529FDAD2F4220C73B1BD543F3647FD (void);
 extern void CarControl_OnEnable_mDC986F31C0D7779885A30DFA18DB195AA3A3BD19 (void);
 extern void CarControl_OnDisable_m1162EA7EE2F642800E61E69685D6114E543C19BE (void);
+extern void CarControl_OnApplicationFocus_m4619C62EFBA4C2A979CEA4B6A99906BF3E3A0C7D (void);
+extern void CarControl_CalibrateGyro_m6730B83D7616549BCA71726EEC8D1D94E08067D2 (void);
+extern void CarControl_GetScreenAttitude_m497170781873F18F0031412DC8790C519E4F224F (void);
+extern void CarControl_NormalizeTilt_mD75178B3DD87368542209B1BA33B613DAEBDA8AA (void);
+extern void CarControl_UpdateGyroInput_mD1829A100D787B6BA21F375F3854C601CBCB1CCD (void);
 extern void CarControl_Start_m9945202B68E5626B4888936803480A03B938C07C (void);
 extern void CarControl_Update_m6E7794AAB8C2EE88D25EFCE770FDDD4347F74A3A (void);
 extern void CarControl_FixedUpdate_mE0AB2F117310C07A980BB2AE54BC6953E29D6A0B (void);
@@ -538,7 +543,7 @@ extern void ThirdPersonCamera_Move_m15EB46669D76829468B4E4AE7EC1C3801F54701F (vo
 extern void ThirdPersonCamera__ctor_mCB0B298CC2FB54E41B384CD575515605ED223D3D (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__cameraU7C6_0_m50675C74BEFA9F8E49B463DCE30F0DAF561808FB (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__targetU7C6_1_m685EAC5C4BF2F78AD94F72563EA8A5E2CA58EC70 (void);
-static Il2CppMethodPointer s_methodPointers[531] = 
+static Il2CppMethodPointer s_methodPointers[536] = 
 {
 	WaterReflection_Awake_m86F43948E686275B6F0C6D761C619EDAB40B1678,
 	WaterReflection_Update_mEAF4BCA28F1154AF68D716AC6E3A954482DED822,
@@ -599,6 +604,11 @@ static Il2CppMethodPointer s_methodPointers[531] =
 	AE86Engine__ctor_m9C6E2F672D529FDAD2F4220C73B1BD543F3647FD,
 	CarControl_OnEnable_mDC986F31C0D7779885A30DFA18DB195AA3A3BD19,
 	CarControl_OnDisable_m1162EA7EE2F642800E61E69685D6114E543C19BE,
+	CarControl_OnApplicationFocus_m4619C62EFBA4C2A979CEA4B6A99906BF3E3A0C7D,
+	CarControl_CalibrateGyro_m6730B83D7616549BCA71726EEC8D1D94E08067D2,
+	CarControl_GetScreenAttitude_m497170781873F18F0031412DC8790C519E4F224F,
+	CarControl_NormalizeTilt_mD75178B3DD87368542209B1BA33B613DAEBDA8AA,
+	CarControl_UpdateGyroInput_mD1829A100D787B6BA21F375F3854C601CBCB1CCD,
 	CarControl_Start_m9945202B68E5626B4888936803480A03B938C07C,
 	CarControl_Update_m6E7794AAB8C2EE88D25EFCE770FDDD4347F74A3A,
 	CarControl_FixedUpdate_mE0AB2F117310C07A980BB2AE54BC6953E29D6A0B,
@@ -1075,9 +1085,9 @@ static Il2CppMethodPointer s_methodPointers[531] =
 extern void LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x060001F5, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
+	{ 0x060001FA, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[531] = 
+static const int32_t s_InvokerIndices[536] = 
 {
 	16110,
 	16110,
@@ -1138,6 +1148,11 @@ static const int32_t s_InvokerIndices[531] =
 	16110,
 	16110,
 	16110,
+	12082,
+	16110,
+	15941,
+	20218,
+	16110,
 	16110,
 	16110,
 	16110,
@@ -1185,7 +1200,7 @@ static const int32_t s_InvokerIndices[531] =
 	16003,
 	15677,
 	16110,
-	27374,
+	27375,
 	16110,
 	4332,
 	16110,
@@ -1308,7 +1323,7 @@ static const int32_t s_InvokerIndices[531] =
 	15893,
 	16110,
 	16110,
-	27401,
+	27402,
 	16110,
 	2488,
 	16110,
@@ -1428,7 +1443,7 @@ static const int32_t s_InvokerIndices[531] =
 	15893,
 	15893,
 	16110,
-	27374,
+	27375,
 	12227,
 	16110,
 	15677,
@@ -1615,7 +1630,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	531,
+	536,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

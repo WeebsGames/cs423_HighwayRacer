@@ -24,6 +24,19 @@ extern void Touch_get_altitudeAngle_m26DEF010E2CDC23F4FADE8E49A986D557C07D391 (v
 extern void Touch_get_azimuthAngle_m2F11532183492E608922A2F9D9EC9AC31D34F490 (void);
 extern void Touch_get_radius_m5BC9C50DABBB17B07742BAFC6CC36A6736AE7960 (void);
 extern void Touch_get_radiusVariance_m6F54BE964B91C3B2F8FA2A483E1FDB644B282B21 (void);
+extern void Gyroscope__ctor_mC476EA849DBF7705A36094F4A2609B5F6286408F (void);
+extern void Gyroscope_gravity_Internal_m4FE5E5B9F0F9906129BEC2489FF7A8DB137BB303 (void);
+extern void Gyroscope_attitude_Internal_mE673BB2C9BDCD791AD249FF307C10F83DCC5F3D2 (void);
+extern void Gyroscope_getEnabled_Internal_m69827470009782D6CC88AA7F9EEAC66A3E5C3BCE (void);
+extern void Gyroscope_setEnabled_Internal_mBA928BFDE5565840E372846AF9E0D0E45AD7D115 (void);
+extern void Gyroscope_setUpdateInterval_Internal_m9E08181F8BF28707553BFB77A2B7697C7E33DB6D (void);
+extern void Gyroscope_get_gravity_m33AEF129216C2ECF5289C06B795FCA0EECEBE1BA (void);
+extern void Gyroscope_get_attitude_mF6D8131ED2D0E5BF979C7FC4AAC99E87A01CBE85 (void);
+extern void Gyroscope_get_enabled_m10F5B3F646AB1A6EEE2831010642E9E1E0BCBDB9 (void);
+extern void Gyroscope_set_enabled_m2B22BC93369BA61034A80350405FE1B493822DAB (void);
+extern void Gyroscope_set_updateInterval_m477CB8AF6D656813C14467CCB62EDC3BF1383925 (void);
+extern void Gyroscope_gravity_Internal_Injected_m71D25DBC8914B61C552F2AFA5329C097F768576A (void);
+extern void Gyroscope_attitude_Internal_Injected_m550F81250B94FE9B11049C8F49DE2F8B9061A2AC (void);
 extern void CameraRaycastHelper_RaycastTry_m79A654495BD2C09623E9067BCC70D23A0DA3BF58 (void);
 extern void CameraRaycastHelper_RaycastTry2D_m132832B9171CD030AD231A63BF70D1226ED1F373 (void);
 extern void CameraRaycastHelper_RaycastTry_Injected_m4CD2A2E8F1B7E117BC341C8FF747C9B1225AC18E (void);
@@ -59,6 +72,9 @@ extern void Input_GetTouchSupportedInternal_mDCA680EA815E39D9B50A029CC707A7A4EEF
 extern void Input_get_mousePresent_mAD77FFD987CD5B998AFAD4DAECADBC76034026BF (void);
 extern void Input_get_touchSupported_m2A4FA398A793861AE1BC5971A1363552AB33BEEF (void);
 extern void Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39 (void);
+extern void Input_get_compensateSensors_mE9736D598882AF6DCD6AA0CADDD299EE5871A281 (void);
+extern void Input_GetGyroInternal_mE769DAF56501C53B38B2714742CC75E99EC696C4 (void);
+extern void Input_get_gyro_m895498B803FE9A3124FBFE3C05966431F8840548 (void);
 extern void Input_CheckDisabled_m359B281F7F5DDAB74780E1898311AECD9B0ECCE1 (void);
 extern void Input_GetTouch_Injected_m04E25DD035583531339AB310FBDD4F5A30817F87 (void);
 extern void Input_GetLastPenContactEvent_Injected_mA7F2DE408F86C38FC15357E468645CD82D38A84A (void);
@@ -91,7 +107,7 @@ extern void InputUnsafeUtility_GetAxis_Injected_m7617B11C7695077D77C9C2F3F068734
 extern void InputUnsafeUtility_GetAxisRaw_Injected_mB5CF61FFB2DE889CB33B56AB77AE94BB8F16D31D (void);
 extern void InputUnsafeUtility_GetButton_Injected_m4387AAB2A1C2934460CBDF10B2907706357D6AD4 (void);
 extern void InputUnsafeUtility_GetButtonDown_Injected_m14E4D5FEFEE423F495E54FE1CACC08567ABDAA29 (void);
-static Il2CppMethodPointer s_methodPointers[84] = 
+static Il2CppMethodPointer s_methodPointers[100] = 
 {
 	Touch_get_fingerId_mC1DCE93BFA0574960A3AE5329AE6C5F7E06962BD,
 	Touch_get_position_m41B9EB0F3F3E1BE98CEB388253A9E31979CB964A,
@@ -110,6 +126,19 @@ static Il2CppMethodPointer s_methodPointers[84] =
 	Touch_get_azimuthAngle_m2F11532183492E608922A2F9D9EC9AC31D34F490,
 	Touch_get_radius_m5BC9C50DABBB17B07742BAFC6CC36A6736AE7960,
 	Touch_get_radiusVariance_m6F54BE964B91C3B2F8FA2A483E1FDB644B282B21,
+	Gyroscope__ctor_mC476EA849DBF7705A36094F4A2609B5F6286408F,
+	Gyroscope_gravity_Internal_m4FE5E5B9F0F9906129BEC2489FF7A8DB137BB303,
+	Gyroscope_attitude_Internal_mE673BB2C9BDCD791AD249FF307C10F83DCC5F3D2,
+	Gyroscope_getEnabled_Internal_m69827470009782D6CC88AA7F9EEAC66A3E5C3BCE,
+	Gyroscope_setEnabled_Internal_mBA928BFDE5565840E372846AF9E0D0E45AD7D115,
+	Gyroscope_setUpdateInterval_Internal_m9E08181F8BF28707553BFB77A2B7697C7E33DB6D,
+	Gyroscope_get_gravity_m33AEF129216C2ECF5289C06B795FCA0EECEBE1BA,
+	Gyroscope_get_attitude_mF6D8131ED2D0E5BF979C7FC4AAC99E87A01CBE85,
+	Gyroscope_get_enabled_m10F5B3F646AB1A6EEE2831010642E9E1E0BCBDB9,
+	Gyroscope_set_enabled_m2B22BC93369BA61034A80350405FE1B493822DAB,
+	Gyroscope_set_updateInterval_m477CB8AF6D656813C14467CCB62EDC3BF1383925,
+	Gyroscope_gravity_Internal_Injected_m71D25DBC8914B61C552F2AFA5329C097F768576A,
+	Gyroscope_attitude_Internal_Injected_m550F81250B94FE9B11049C8F49DE2F8B9061A2AC,
 	CameraRaycastHelper_RaycastTry_m79A654495BD2C09623E9067BCC70D23A0DA3BF58,
 	CameraRaycastHelper_RaycastTry2D_m132832B9171CD030AD231A63BF70D1226ED1F373,
 	CameraRaycastHelper_RaycastTry_Injected_m4CD2A2E8F1B7E117BC341C8FF747C9B1225AC18E,
@@ -145,6 +174,9 @@ static Il2CppMethodPointer s_methodPointers[84] =
 	Input_get_mousePresent_mAD77FFD987CD5B998AFAD4DAECADBC76034026BF,
 	Input_get_touchSupported_m2A4FA398A793861AE1BC5971A1363552AB33BEEF,
 	Input_get_touchCount_m057388BFC67A0F4CA53764B1022867ED81D01E39,
+	Input_get_compensateSensors_mE9736D598882AF6DCD6AA0CADDD299EE5871A281,
+	Input_GetGyroInternal_mE769DAF56501C53B38B2714742CC75E99EC696C4,
+	Input_get_gyro_m895498B803FE9A3124FBFE3C05966431F8840548,
 	Input_CheckDisabled_m359B281F7F5DDAB74780E1898311AECD9B0ECCE1,
 	Input_GetTouch_Injected_m04E25DD035583531339AB310FBDD4F5A30817F87,
 	Input_GetLastPenContactEvent_Injected_mA7F2DE408F86C38FC15357E468645CD82D38A84A,
@@ -215,9 +247,9 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[18] =
 	{ 0x0600000F, Touch_get_azimuthAngle_m2F11532183492E608922A2F9D9EC9AC31D34F490_AdjustorThunk },
 	{ 0x06000010, Touch_get_radius_m5BC9C50DABBB17B07742BAFC6CC36A6736AE7960_AdjustorThunk },
 	{ 0x06000011, Touch_get_radiusVariance_m6F54BE964B91C3B2F8FA2A483E1FDB644B282B21_AdjustorThunk },
-	{ 0x06000042, HitInfo_SendMessage_m7834418ACE250BBCBA38ADCF0892E475BD1AD541_AdjustorThunk },
+	{ 0x06000052, HitInfo_SendMessage_m7834418ACE250BBCBA38ADCF0892E475BD1AD541_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[84] = 
+static const int32_t s_InvokerIndices[100] = 
 {
 	15820,
 	16097,
@@ -236,71 +268,87 @@ static const int32_t s_InvokerIndices[84] =
 	16003,
 	16003,
 	16003,
-	18923,
-	18923,
-	18804,
-	18804,
-	25834,
-	25834,
-	25275,
-	25275,
+	12227,
+	26046,
+	25764,
 	25271,
-	25271,
-	25271,
-	25271,
-	25271,
-	25271,
-	25897,
-	27275,
-	27374,
-	25271,
-	25271,
-	25271,
-	26076,
-	27217,
-	27371,
-	27369,
-	27253,
-	26085,
-	27272,
-	27369,
-	26106,
-	27217,
-	27217,
-	27217,
-	27217,
-	27217,
-	27253,
-	27217,
+	23084,
+	23091,
+	16099,
+	15941,
+	15677,
+	12082,
+	12393,
 	23083,
-	26075,
-	26075,
-	26075,
-	26075,
-	26075,
-	26075,
-	27374,
-	27374,
-	26085,
+	23083,
+	18923,
+	18923,
+	18804,
+	18804,
+	25835,
+	25835,
+	25275,
+	25275,
+	25271,
+	25271,
+	25271,
+	25271,
+	25271,
+	25271,
+	25898,
+	27276,
+	27375,
+	25271,
+	25271,
+	25271,
+	26077,
+	27218,
+	27372,
+	27370,
+	27254,
+	26086,
+	27273,
+	27370,
+	26107,
+	27218,
+	27218,
+	27218,
+	27218,
+	27218,
+	27254,
+	27218,
+	27254,
+	27273,
+	27218,
+	23083,
+	26076,
+	26076,
+	26076,
+	26076,
+	26076,
+	26076,
+	27375,
+	27375,
+	26086,
 	23093,
-	27374,
+	27375,
 	12296,
 	25322,
 	22014,
 	21782,
 	21782,
 	21782,
-	25834,
+	25835,
 	22515,
-	25834,
+	25835,
 	22515,
 	25275,
 	21782,
 	25275,
 	21782,
 	21782,
-	25822,
-	25822,
+	25823,
+	25823,
 	25262,
 	25262,
 };
@@ -308,7 +356,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGe
 const Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule = 
 {
 	"UnityEngine.InputLegacyModule.dll",
-	84,
+	100,
 	s_methodPointers,
 	18,
 	s_adjustorThunks,
