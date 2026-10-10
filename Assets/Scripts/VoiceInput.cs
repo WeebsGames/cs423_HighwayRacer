@@ -1,14 +1,17 @@
 using TMPro;
 using TMPro.EditorUtilities;
 using UnityEngine;
+using System.Text.RegularExpressions;
+using UnityEngine.AdaptivePerformance;
 
-public class VoiceInput : MonoBehaviour
+public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
     
     public TMP_Text text;
     public string keyword = "boost";
 
     private SpeechRecognizerPlugin plugin;
+    private bool active = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -42,6 +45,14 @@ public class VoiceInput : MonoBehaviour
         {
             Debug.Log("Keyword detected: " + keyword);
             // Trigger your gameplay action here.
+            active = !active;
+            if (active)
+            {
+                text.text = "Boost: Active";
+            } else
+            {
+                text.text = "Boost: Inactive";
+            }
         }
     }
 
