@@ -1,5 +1,4 @@
 using TMPro;
-using TMPro.EditorUtilities;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using UnityEngine.AdaptivePerformance;
@@ -8,6 +7,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 {
     
     public TMP_Text text;
+    public TMP_Text debugText;
     public string keyword = "boost";
 
     private SpeechRecognizerPlugin plugin;
@@ -18,6 +18,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     {
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(
             gameObject.name);
+        BeginListening();
     }
 
     public void BeginListening()
@@ -29,6 +30,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     {
         if (string.IsNullOrWhiteSpace(recognizedResult))
             return;
+
+        debugText.text = "Recognizer returned: " + recognizedResult;
 
         // The plugin separates alternative transcripts with "~".
         string transcript = recognizedResult.Split('~')[0];
