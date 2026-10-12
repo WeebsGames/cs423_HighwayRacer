@@ -8,7 +8,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     
     public TMP_Text text;
     public TMP_Text debugText;
-    public string keyword = "boost";
+    public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed"};
+    public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect"};
+    public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
 
     private SpeechRecognizerPlugin plugin;
     private bool active = false;
@@ -39,24 +41,29 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         if (text != null)
             text.text = transcript;
 
-        if (string.IsNullOrWhiteSpace(keyword))
-            return;
-
-        string pattern = @"\b" + Regex.Escape(keyword.Trim()) + @"\b";
-
-        if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+        for (int i = 0; i < boostKeyword.Length; i++)
         {
-            Debug.Log("Keyword detected: " + keyword);
-            // Trigger your gameplay action here.
-            active = !active;
-            if (active)
+            if (string.IsNullOrWhiteSpace(boostKeyword[i]))
+                return;
+
+            string pattern = @"\b" + Regex.Escape(boostKeyword[i].Trim()) + @"\b";
+
+            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
             {
-                text.text = "Boost: Active";
-            } else
-            {
-                text.text = "Boost: Inactive";
+                Debug.Log("Keyword detected: " + boostKeyword[i]);
+                // Trigger your gameplay action here.
+                active = !active;
+                if (active)
+                {
+                    text.text = "Boost: Active";
+                } else
+                {
+                    text.text = "Boost: Inactive";
+                }
+                break;
             }
         }
+        
     }
 
     public void OnError(string recognizedError)

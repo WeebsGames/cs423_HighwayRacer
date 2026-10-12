@@ -22738,6 +22738,7 @@ struct VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4  : public Mono
 struct VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___text;
+	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___debugText;
 	String_t* ___keyword;
 	SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* ___plugin;
 	bool ___active;
@@ -28801,9 +28802,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10423[7] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10424[11] = 
 {
 	static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___wheelFL)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___wheelFR)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___wheelRL)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___wheelRR)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___suspensionTravel)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___suspensionStiffness)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___suspensionDamping)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___raycastOffset)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___raycastDistance)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___groundLayer)),static_cast<int32_t>(offsetof(VisualSuspension_t0DB5F8EF47FE0CE519D221C9793F793DC2043BC4, ___wheelVelocities)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10425[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10425[5] = 
 {
-	static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___text)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___keyword)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___plugin)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___active)),};
+	static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___text)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___debugText)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___keyword)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___plugin)),static_cast<int32_t>(offsetof(VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9, ___active)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10426[3] = 
 {
 	static_cast<int32_t>(offsetof(ChatController_t21BE953E1D5ADF0BA9F3B03C205203CADDC64C15, ___ChatInputField)),static_cast<int32_t>(offsetof(ChatController_t21BE953E1D5ADF0BA9F3B03C205203CADDC64C15, ___ChatDisplayOutput)),static_cast<int32_t>(offsetof(ChatController_t21BE953E1D5ADF0BA9F3B03C205203CADDC64C15, ___ChatScrollbar)),};
