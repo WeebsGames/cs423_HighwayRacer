@@ -98,7 +98,13 @@ MonoBehaviour:
   centreOfGravityOffset: -1
   crashThreshold: 10
   crashSource: {fileID: 9028971401821022053}
-  moveAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fullSteeringTilt: 45
+  fullAccelerationTilt: 30
+  steeringDeadZone: 2
+  accelerationDeadZone: 2
+  inputSmoothing: 10
+  invertSteering: 0
+  invertAcceleration: 0
   brakeText: {fileID: 0}
   startPos: {fileID: 0}
 --- !u!114 &9177137988658768003
@@ -108,7 +114,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74184229363486579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1595bab9dd5f6ee41a109d21d24ebddd, type: 3}
   m_Name: 
@@ -1496,7 +1502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5905334962066152452
 Transform:
   m_ObjectHideFlags: 0

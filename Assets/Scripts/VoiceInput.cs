@@ -39,7 +39,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         string transcript = recognizedResult.Split('~')[0];
 
         if (text != null)
-            text.text = transcript;
+            // text.text = transcript;
 
         for (int i = 0; i < boostKeyword.Length; i++)
         {
