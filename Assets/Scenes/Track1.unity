@@ -26077,6 +26077,10 @@ PrefabInstance:
       propertyPath: itemPhysics
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2290122284652303673, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2356192334561329754, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -26110,8 +26114,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 298259494}
     - target: {fileID: 2736705607993887442, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2736705607993887442, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_TagString
       value: Timer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3482223553815952987, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3657105201931637316, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_IsActive
@@ -26121,13 +26133,17 @@ PrefabInstance:
       propertyPath: level
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4643269344116139512, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5400386940250549644, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_TagString
       value: Score
       objectReference: {fileID: 0}
     - target: {fileID: 5904053132422581316, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5904053132422581316, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_TagString
@@ -26163,7 +26179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6313620901475173865, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7354076955581514507, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_text
@@ -26174,9 +26190,13 @@ PrefabInstance:
         Press
         ESC to pause'
       objectReference: {fileID: 0}
+    - target: {fileID: 7474959410586178313, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7653776330105103110, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8061625383899381994, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_Pivot.x
@@ -26258,6 +26278,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8225587036221507494, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326856798047683813, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8422349680271645709, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: nextLevel
       value: 2
@@ -26282,6 +26310,10 @@ PrefabInstance:
       propertyPath: 'muteAudio.Array.data[1]'
       value: 
       objectReference: {fileID: 1085071854}
+    - target: {fileID: 8425826771199980116, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9166568824737651182, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_TagString
       value: Score
@@ -26303,6 +26335,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8061625383899381994, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
   m_PrefabInstance: {fileID: 1108733673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1108733675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5905843093608628975, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
+  m_PrefabInstance: {fileID: 1108733673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cff0b5b1628abd4ea4125622a81c9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimplePause
 --- !u!4 &1110960603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2222111361405018444, guid: 88f2fd29f58b9734683512546acec310, type: 3}
@@ -37420,7 +37463,7 @@ MonoBehaviour:
   - {x: 41.994408, y: 2.8478994, z: 59.108376}
   - {x: 35.985718, y: 2.8478994, z: 37.38501}
   - {x: 31.971716, y: 2.8478994, z: 22.873089}
-  - {x: 19.681086, y: 0.2000122, z: 0.21227874}
+  - {x: 19.681093, y: 0.2000122, z: 0.21227874}
   - {x: 6.8136597, y: 0.2000122, z: 0.21228027}
   normals:
   - {x: 0.0046429797, y: 0.9949612, z: 0.100153156}
@@ -51015,6 +51058,16 @@ MonoBehaviour:
   - push cars away
   - move other cars away
   - clear my path
+  pauseKeyword:
+  - pause
+  - stop
+  - quit
+  - menu
+  - leave
+  - leave race
+  - return
+  - exit
+  pause: {fileID: 1108733675}
 --- !u!4 &2133812561
 Transform:
   m_ObjectHideFlags: 0

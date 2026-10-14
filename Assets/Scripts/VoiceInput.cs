@@ -11,6 +11,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect"};
     public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
+    public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit"};
+    public SimplePause pause;
 
     private SpeechRecognizerPlugin plugin;
     private bool active = false;
@@ -60,6 +62,52 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
                 {
                     text.text = "Boost: Inactive";
                 }
+                break;
+            }
+        }
+
+        for (int i = 0; i < shieldKeyword.Length; i++)
+        {
+            if (string.IsNullOrWhiteSpace(shieldKeyword[i]))
+                return;
+
+            string pattern = @"\b" + Regex.Escape(shieldKeyword[i].Trim()) + @"\b";
+
+            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+            {
+                Debug.Log("Keyword detected: " + shieldKeyword[i]);
+                // Trigger your gameplay action here.
+                break;
+            }
+        }
+
+        for (int i = 0; i < sirenKeyword.Length; i++)
+        {
+            if (string.IsNullOrWhiteSpace(sirenKeyword[i]))
+                return;
+
+            string pattern = @"\b" + Regex.Escape(sirenKeyword[i].Trim()) + @"\b";
+
+            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+            {
+                Debug.Log("Keyword detected: " + sirenKeyword[i]);
+                // Trigger your gameplay action here.
+                break;
+            }
+        }
+
+        for (int i = 0; i < pauseKeyword.Length; i++)
+        {
+            if (string.IsNullOrWhiteSpace(pauseKeyword[i]))
+                return;
+
+            string pattern = @"\b" + Regex.Escape(pauseKeyword[i].Trim()) + @"\b";
+
+            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+            {
+                Debug.Log("Keyword detected: " + pauseKeyword[i]);
+                // Trigger your gameplay action here.
+                    pause.PauseToggle();
                 break;
             }
         }
