@@ -6,7 +6,9 @@ using UnityEngine.AdaptivePerformance;
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
     
-    public TMP_Text text;
+    public TMP_Text boostText;
+    public TMP_Text shieldText;
+    public TMP_Text sirenText;
     public TMP_Text debugText;
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect"};
@@ -15,7 +17,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public SimplePause pause;
 
     private SpeechRecognizerPlugin plugin;
-    private bool active = false;
+    private bool boostActive = false;
+    private bool shieldActive = false;
+    private bool sirenActive = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -40,9 +44,6 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         // The plugin separates alternative transcripts with "~".
         string transcript = recognizedResult.Split('~')[0];
 
-        if (text != null)
-            // text.text = transcript;
-
         for (int i = 0; i < boostKeyword.Length; i++)
         {
             if (string.IsNullOrWhiteSpace(boostKeyword[i]))
@@ -54,13 +55,13 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             {
                 Debug.Log("Keyword detected: " + boostKeyword[i]);
                 // Trigger your gameplay action here.
-                active = !active;
-                if (active)
+                boostActive = !boostActive;
+                if (boostActive)
                 {
-                    text.text = "Boost: Active";
+                    boostText.text = "Boost: Active";
                 } else
                 {
-                    text.text = "Boost: Inactive";
+                    boostText.text = "Boost: Inactive";
                 }
                 break;
             }
@@ -77,6 +78,14 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             {
                 Debug.Log("Keyword detected: " + shieldKeyword[i]);
                 // Trigger your gameplay action here.
+                shieldActive = !shieldActive;
+                if (shieldActive)
+                {
+                    shieldText.text = "Shield: Active";
+                } else
+                {
+                    shieldText.text = "Shield: Inactive";
+                }
                 break;
             }
         }
@@ -92,6 +101,14 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             {
                 Debug.Log("Keyword detected: " + sirenKeyword[i]);
                 // Trigger your gameplay action here.
+                sirenActive = !sirenActive;
+                if (boostActive)
+                {
+                    sirenText.text = "Siren: Active";
+                } else
+                {
+                    sirenText.text = "Siren: Inactive";
+                }
                 break;
             }
         }
