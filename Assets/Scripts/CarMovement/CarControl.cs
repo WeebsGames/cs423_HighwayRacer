@@ -26,7 +26,7 @@ public class CarControl : MonoBehaviour
     [Min(1f)] public float fullSteeringTilt = 45f;
     [Min(1f)] public float fullAccelerationTilt = 30f;
     [Min(0f)] public float steeringDeadZone = 2f;
-    [Min(0f)] public float accelerationDeadZone = 2f;
+    [Min(0f)] public float accelerationDeadZone = 5f;
     [Min(0f)] public float inputSmoothing = 10f;
     [Tooltip("Throttle change per second at full tilt. Neutral tilt holds the current throttle.")]
     [Min(0f)] public float throttleChangeRate = 0.5f;

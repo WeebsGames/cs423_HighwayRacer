@@ -438,6 +438,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral46D60ACE7A47B0050F8A29DA3D0362843606260F
 IL2CPP_EXTERN_C String_t* _stringLiteral47A0278078BE655D0D9E5061C35ECD0FFBB6E136;
 IL2CPP_EXTERN_C String_t* _stringLiteral48BD39C88065748153A57182E04A394205F4686D;
 IL2CPP_EXTERN_C String_t* _stringLiteral4984C3CBA8E12C202491A3103620ADFB81CA34FC;
+IL2CPP_EXTERN_C String_t* _stringLiteral4F1FD785124509C5A61935445765B51A6E20561B;
 IL2CPP_EXTERN_C String_t* _stringLiteral51D166D4E98E546D1A4F6AF12FEFBF4208ACC717;
 IL2CPP_EXTERN_C String_t* _stringLiteral55ED31C2F2B3DE07E05565D7C8BB6DB81C724B0D;
 IL2CPP_EXTERN_C String_t* _stringLiteral55F097B2603C69F9353B2AE824F1FE43E6B46F87;
@@ -496,6 +497,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB90AEB71EEF73D732FF86A926D89C87006CD9ADF
 IL2CPP_EXTERN_C String_t* _stringLiteralBA1039E8CDAE53E44AC3E6185B0871F3D031A476;
 IL2CPP_EXTERN_C String_t* _stringLiteralBA379873D627F6D9C1559580315AA5E52D082D02;
 IL2CPP_EXTERN_C String_t* _stringLiteralBCB0D16199887E37F909DAF76D05B31B82328C6A;
+IL2CPP_EXTERN_C String_t* _stringLiteralBD8B4A1D712F1D15961F42100AAB144E271CEB2A;
 IL2CPP_EXTERN_C String_t* _stringLiteralBF33BA3C7883AB2776AF9B9030FD4CD66973936F;
 IL2CPP_EXTERN_C String_t* _stringLiteralC087E631060AB76B7C814C0E1B92D5C7C4C4B924;
 IL2CPP_EXTERN_C String_t* _stringLiteralC26EC0B528A7C6836D73CE52C6367D889A7BD757;
@@ -507,6 +509,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralCC2CEA7962D333728F07A883FB9E2A225FDE282F
 IL2CPP_EXTERN_C String_t* _stringLiteralCE88476E31BE404D4C70A7FFA6367AC9CF8B08D7;
 IL2CPP_EXTERN_C String_t* _stringLiteralCEDCB5801073B0C1AA5C9A7208B33D4CEB8EE5AC;
 IL2CPP_EXTERN_C String_t* _stringLiteralD0EC7A6CB445CA2A8454DE0AE1CD17395DD14926;
+IL2CPP_EXTERN_C String_t* _stringLiteralD137688503D487E77A32ECE380C22FE97C89509A;
 IL2CPP_EXTERN_C String_t* _stringLiteralD37CFB18BD95466D507B21CEEE8EA1B8ACF1A60E;
 IL2CPP_EXTERN_C String_t* _stringLiteralD4E7C9FC6D4B1339303AB426C1554B1584329A29;
 IL2CPP_EXTERN_C String_t* _stringLiteralD579F97F4A33C344330AED1285CC5B545618BC19;
@@ -570,6 +573,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_AddComponent_TisText_tD60B2346DA
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m0A41CB7A7F9A10FCC98D1C7B5799D57C2724D991_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m4F30DAB8E5B57E8DB6BD8C0C3BB11CCB57690C4A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisCameraFollow_tBD6591B769F73DC67048F5F58F6472198F4B140E_m443978A105C7B40CF3DE7E3379CF913BF3978BD8_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisItemPhysics_tA7EF6B4A305B2C5D89B06E23161B052185EAA02D_m21EBDA34F578A8BF5DB5C5BB7B815700A22C60EA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisLevelTimer_tA180CBDFDF48F5C3F2E14C577A21583AB92CE6FA_mB588E605BCE1BC08C4648639EB9EBA2266F40D81_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisPrometeoTouchInput_tFAD92DD5A9FDBE83596269DDCDC63642842C9836_mD5C4DAFE2EB8F30E0B5DD961FCBA48505186D670_RuntimeMethod_var;
@@ -3388,6 +3392,7 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 	float ___steeringDeadZone;
 	float ___accelerationDeadZone;
 	float ___inputSmoothing;
+	float ___throttleChangeRate;
 	bool ___invertSteering;
 	bool ___invertAcceleration;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
@@ -3395,8 +3400,11 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 	int32_t ___calibratedOrientation;
 	bool ___gyroCalibrated;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___gyroInput;
+	float ___throttle;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___brakeText;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startPos;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___throttleBar;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___throttleBarImage;
 };
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -5373,6 +5381,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CarControl_NormalizeTilt_mD75178B3DD87368542209B1BA33B613DAEBDA8AA (float ___0_angle, float ___1_deadZone, float ___2_fullTilt, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_Lerp_m1A36103F7967F653A929556E26E6D052C298C00C_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, float ___2_t, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_FindGameObjectWithTag_mF0229BC2074CE9EEA72FAB1E5A4BC2AEC3D2CDBE (String_t* ___0_tag, const RuntimeMethod* method) ;
+inline Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_m94F967AB31244EACE68C3BE1DD85B69ED3334C0E (RuntimeObject* ___0_message, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_context, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_set_fillAmount_m8A9B55F47F966A3214EAC4ACBFE198776A98FAA7 (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Rigidbody_get_centerOfMass_mA66BE4DE0469545EBCF49A66EE4FDD3A5D0ADF91 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, const RuntimeMethod* method) ;
 inline WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
 {
@@ -5394,7 +5410,6 @@ inline MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* Component_GetComp
 	return ((  MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* (*) (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3*, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* Renderer_get_material_m5BA2A00816C4CC66580D4B2E409CF10718C15656 (Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836 (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, String_t* ___0_name, float ___1_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_timeScale_m1F45A413D4EEA08B1E0988022512C137F6C1E616 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_Pause_m2C2A09359E8AA924FEADECC1AFEA519B3C915B26 (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
@@ -5669,7 +5684,6 @@ inline AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* GameObject_GetComp
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StabilityMeterUI_UpdateMeter_mC4AC4233B2DF101647D8426348F0E27DA09BBDD1 (StabilityMeterUI_tBE4BF2254BB65F55E467F9A9947B1A0A7A44629E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StabilityMeterUI_UpdateWarning_m11308838D955274BD55C9A74BDFAAE26DA3551D7 (StabilityMeterUI_tBE4BF2254BB65F55E467F9A9947B1A0A7A44629E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ItemPhysics_GetStability_m8DB7DB1370925C7315ED050CBB7BE925DDE30DBF (ItemPhysics_tA7EF6B4A305B2C5D89B06E23161B052185EAA02D* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image_set_fillAmount_m8A9B55F47F966A3214EAC4ACBFE198776A98FAA7 (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_Lerp_mE79F87889843ECDC188E4CB5B5E1F1B2256E5EBE_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_b, float ___2_t, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* AudioSource_get_clip_m4F5027066F9FC44B44192713142B0C277BB418FE (AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* __this, const RuntimeMethod* method) ;
@@ -10360,43 +10374,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnEnable_mDC986F31C0D7779885A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:47>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:53>
+		__this->___throttle = (0.0f);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:54>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		L_0 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___gyroInput = L_0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:48>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:55>
 		__this->___gyroCalibrated = (bool)0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:49>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:56>
 		bool L_1;
 		L_1 = SystemInfo_get_supportsGyroscope_m98477EC99D88396F076A93EF5C28A6129DC4E211(NULL);
 		if (!L_1)
 		{
-			goto IL_0041;
+			goto IL_004c;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:51>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:58>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_2;
 		L_2 = Input_get_gyro_m895498B803FE9A3124FBFE3C05966431F8840548(NULL);
 		__this->___gyro = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___gyro), (void*)L_2);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:52>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:59>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_3 = __this->___gyro;
 		NullCheck(L_3);
 		Gyroscope_set_enabled_m2B22BC93369BA61034A80350405FE1B493822DAB(L_3, (bool)1, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:53>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:60>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_4 = __this->___gyro;
 		NullCheck(L_4);
 		Gyroscope_set_updateInterval_m477CB8AF6D656813C14467CCB62EDC3BF1383925(L_4, (0.0166666675f), NULL);
 		return;
 	}
 
-IL_0041:
+IL_004c:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:57>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:64>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteral47A0278078BE655D0D9E5061C35ECD0FFBB6E136, __this, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:59>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:66>
 		return;
 	}
 }
@@ -10404,13 +10420,15 @@ IL_0041:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnDisable_m1162EA7EE2F642800E61E69685D6114E543C19BE (CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:63>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:70>
+		__this->___throttle = (0.0f);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:71>
 		__this->___gyroCalibrated = (bool)0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:64>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:72>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		L_0 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___gyroInput = L_0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:65>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:73>
 		return;
 	}
 }
@@ -10418,7 +10436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnDisable_m1162EA7EE2F642800E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnApplicationFocus_m4619C62EFBA4C2A979CEA4B6A99906BF3E3A0C7D (CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24* __this, bool ___0_hasFocus, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:69>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:77>
 		bool L_0 = ___0_hasFocus;
 		if (!L_0)
 		{
@@ -10426,9 +10444,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnApplicationFocus_m4619C62EF
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:71>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:79>
 		__this->___gyroCalibrated = (bool)0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:72>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:80>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___gyroInput = L_1;
@@ -10436,7 +10454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnApplicationFocus_m4619C62EF
 
 IL_0015:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:74>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:82>
 		return;
 	}
 }
@@ -10446,7 +10464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_CalibrateGyro_m6730B83D761654
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:78>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:86>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_0 = __this->___gyro;
 		if (!L_0)
 		{
@@ -10479,27 +10497,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_CalibrateGyro_m6730B83D761654
 
 IL_002f:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:80>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:88>
 		return;
 	}
 
 IL_0030:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:83>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:91>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_6;
 		L_6 = CarControl_GetScreenAttitude_m497170781873F18F0031412DC8790C519E4F224F(__this, NULL);
 		__this->___neutralAttitude = L_6;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:84>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:92>
 		int32_t L_7;
 		L_7 = Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E(NULL);
 		__this->___calibratedOrientation = L_7;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:85>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:93>
 		__this->___gyroCalibrated = (bool)1;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:86>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:94>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
 		L_8 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___gyroInput = L_8;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:87>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:95>
 		return;
 	}
 }
@@ -10513,13 +10531,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 	float V_2 = 0.0f;
 	int32_t V_3 = 0;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:91>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:99>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_0 = __this->___gyro;
 		NullCheck(L_0);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_1;
 		L_1 = Gyroscope_get_attitude_mF6D8131ED2D0E5BF979C7FC4AAC99E87A01CBE85(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:92>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:100>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_2 = V_0;
 		float L_3 = L_2.___x;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4 = V_0;
@@ -10529,7 +10547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8 = V_0;
 		float L_9 = L_8.___w;
 		Quaternion__ctor_m868FD60AA65DD5A8AC0C5DEB0608381A8D85FCD8_inline((&V_1), L_3, L_5, ((-L_7)), ((-L_9)), NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:93>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:101>
 		bool L_10;
 		L_10 = Input_get_compensateSensors_mE9736D598882AF6DCD6AA0CADDD299EE5871A281(NULL);
 		if (!L_10)
@@ -10538,16 +10556,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:95>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:103>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = V_1;
 		return L_11;
 	}
 
 IL_0036:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:98>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:106>
 		V_2 = (0.0f);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:99>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:107>
 		int32_t L_12;
 		L_12 = Screen_get_orientation_mA6B22A441187D50831B2B18CA48A8F64BD1BD89E(NULL);
 		V_3 = L_12;
@@ -10574,29 +10592,29 @@ IL_0036:
 
 IL_0058:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:102>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:110>
 		V_2 = (-90.0f);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:103>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:111>
 		goto IL_006e;
 	}
 
 IL_0060:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:105>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:113>
 		V_2 = (90.0f);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:106>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:114>
 		goto IL_006e;
 	}
 
 IL_0068:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:108>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:116>
 		V_2 = (180.0f);
 	}
 
 IL_006e:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:112>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:120>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = V_1;
 		float L_15 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
@@ -10613,7 +10631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CarControl_NormalizeTilt_mD75178B3DD873
 {
 	float V_0 = 0.0f;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:117>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:125>
 		float L_0 = ___1_deadZone;
 		float L_1 = ___2_fullTilt;
 		float L_2;
@@ -10621,7 +10639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float CarControl_NormalizeTilt_mD75178B3DD873
 		float L_3;
 		L_3 = Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline(L_0, (0.0f), ((float)il2cpp_codegen_subtract(L_2, (0.00999999978f))), NULL);
 		V_0 = L_3;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:118>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:126>
 		float L_4 = ___0_angle;
 		float L_5;
 		L_5 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_4, NULL);
@@ -10651,7 +10669,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_UpdateGyroInput_mD1829A100D78
 	float V_5 = 0.0f;
 	float G_B13_0 = 0.0f;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:123>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:131>
 		Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* L_0 = __this->___gyro;
 		if (!L_0)
 		{
@@ -10671,17 +10689,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_UpdateGyroInput_mD1829A100D78
 
 IL_0015:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:125>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:133>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
 		L_3 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___gyroInput = L_3;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:126>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:134>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:129>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:137>
 		bool L_4 = __this->___gyroCalibrated;
 		if (!L_4)
 		{
@@ -10700,15 +10718,15 @@ IL_0021:
 
 IL_0036:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:131>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:139>
 		CarControl_CalibrateGyro_m6730B83D7616549BCA71726EEC8D1D94E08067D2(__this, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:132>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:140>
 		return;
 	}
 
 IL_003d:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:135>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:143>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7 = __this->___neutralAttitude;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8;
 		L_8 = Quaternion_Inverse_mD9C060AC626A7B406F4984AC98F8358DC89EF512_inline(L_7, NULL);
@@ -10716,20 +10734,20 @@ IL_003d:
 		L_9 = CarControl_GetScreenAttitude_m497170781873F18F0031412DC8790C519E4F224F(__this, NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
 		L_10 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_8, L_9, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:136>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:144>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = L_10;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_11, L_12, NULL);
 		V_0 = L_13;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:137>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:145>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
 		L_14 = Vector3_get_forward_mAA55A7034304DF8B2152EAD49AE779FC4CA2EB4A_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_11, L_14, NULL);
 		V_1 = L_15;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:138>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:146>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_0;
 		float L_17 = L_16.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_0;
@@ -10737,8 +10755,8 @@ IL_003d:
 		float L_20;
 		L_20 = atan2f(L_17, L_19);
 		V_2 = ((float)il2cpp_codegen_multiply(L_20, (57.2957802f)));
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:139>
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:140>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:147>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:148>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = V_1;
 		float L_22 = L_21.___y;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_1;
@@ -10754,7 +10772,7 @@ IL_003d:
 		float L_32;
 		L_32 = atan2f(((-L_22)), L_31);
 		V_3 = ((float)il2cpp_codegen_multiply(L_32, (57.2957802f)));
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:141>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:149>
 		bool L_33 = __this->___invertSteering;
 		if (!L_33)
 		{
@@ -10762,14 +10780,14 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:141>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:149>
 		float L_34 = V_2;
 		V_2 = ((-L_34));
 	}
 
 IL_00c0:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:142>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:150>
 		bool L_35 = __this->___invertAcceleration;
 		if (!L_35)
 		{
@@ -10777,16 +10795,16 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:142>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:150>
 		float L_36 = V_3;
 		V_3 = ((-L_36));
 	}
 
 IL_00cb:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:144>
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:145>
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:146>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:152>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:153>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:154>
 		float L_37 = V_2;
 		float L_38 = __this->___steeringDeadZone;
 		float L_39 = __this->___fullSteeringTilt;
@@ -10797,42 +10815,66 @@ IL_00cb:
 		float L_43 = __this->___fullAccelerationTilt;
 		float L_44;
 		L_44 = CarControl_NormalizeTilt_mD75178B3DD87368542209B1BA33B613DAEBDA8AA(L_41, L_42, L_43, NULL);
-		float L_45;
-		L_45 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.0f), L_44, NULL);
-		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_4), L_40, L_45, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:147>
-		float L_46 = __this->___inputSmoothing;
-		if ((((float)L_46) > ((float)(0.0f))))
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_4), L_40, L_44, NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:155>
+		float L_45 = __this->___inputSmoothing;
+		if ((((float)L_45) > ((float)(0.0f))))
 		{
-			goto IL_0114;
+			goto IL_010a;
 		}
 	}
 	{
 		G_B13_0 = (1.0f);
-		goto IL_012c;
+		goto IL_0122;
 	}
 
-IL_0114:
+IL_010a:
 	{
-		float L_47 = __this->___inputSmoothing;
+		float L_46 = __this->___inputSmoothing;
+		float L_47;
+		L_47 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		float L_48;
-		L_48 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		float L_49;
-		L_49 = expf(((float)il2cpp_codegen_multiply(((-L_47)), L_48)));
-		G_B13_0 = ((float)il2cpp_codegen_subtract((1.0f), L_49));
+		L_48 = expf(((float)il2cpp_codegen_multiply(((-L_46)), L_47)));
+		G_B13_0 = ((float)il2cpp_codegen_subtract((1.0f), L_48));
 	}
 
-IL_012c:
+IL_0122:
 	{
 		V_5 = G_B13_0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:148>
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_50 = __this->___gyroInput;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_51 = V_4;
-		float L_52 = V_5;
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53;
-		L_53 = Vector2_Lerp_m1A36103F7967F653A929556E26E6D052C298C00C_inline(L_50, L_51, L_52, NULL);
-		__this->___gyroInput = L_53;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:149>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:156>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_49 = __this->___gyroInput;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_50 = V_4;
+		float L_51 = V_5;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_52;
+		L_52 = Vector2_Lerp_m1A36103F7967F653A929556E26E6D052C298C00C_inline(L_49, L_50, L_51, NULL);
+		__this->___gyroInput = L_52;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:158>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_53 = V_4;
+		float L_54 = L_53.___y;
+		if ((!(((float)L_54) == ((float)(0.0f)))))
+		{
+			goto IL_0157;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:160>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_55 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___gyroInput);
+		L_55->___y = (0.0f);
+	}
+
+IL_0157:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:162>
+		float L_56 = __this->___throttle;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_57 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___gyroInput);
+		float L_58 = L_57->___y;
+		float L_59 = __this->___throttleChangeRate;
+		float L_60;
+		L_60 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		float L_61;
+		L_61 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)il2cpp_codegen_add(L_56, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(L_58, L_59)), L_60)))), NULL);
+		__this->___throttle = L_61;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:163>
 		return;
 	}
 }
@@ -10844,65 +10886,144 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_Start_m9945202B68E5626B488893
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA59A63181077B821132B53D44724D7F86C6FECB3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4F1FD785124509C5A61935445765B51A6E20561B);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBD8B4A1D712F1D15961F42100AAB144E271CEB2A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD137688503D487E77A32ECE380C22FE97C89509A);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE559A7D14E2E424F2E08842513C405A19BC8ECF3);
 		s_Il2CppMethodInitialized = true;
 	}
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:154>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0;
-		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
-		__this->___rigidBody = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___rigidBody), (void*)L_0);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:157>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->___rigidBody;
-		NullCheck(L_1);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
-		L_2 = Rigidbody_get_centerOfMass_mA66BE4DE0469545EBCF49A66EE4FDD3A5D0ADF91(L_1, NULL);
-		V_0 = L_2;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:158>
-		float* L_3 = (float*)(&(&V_0)->___y);
-		float* L_4 = L_3;
-		float L_5 = *((float*)L_4);
-		float L_6 = __this->___centreOfGravityOffset;
-		*((float*)L_4) = (float)((float)il2cpp_codegen_add(L_5, L_6));
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:159>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_7 = __this->___rigidBody;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_0;
-		NullCheck(L_7);
-		Rigidbody_set_centerOfMass_m9D4A68D102498C7DBCD91278FF5EE7EE0BF2B188(L_7, L_8, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:162>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_9;
-		L_9 = Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6(__this, Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6_RuntimeMethod_var);
-		__this->___wheels = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___wheels), (void*)L_9);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:164>
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_10 = __this->___brakeText;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:168>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___throttleBar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_11;
-		L_11 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_11)
+		bool L_1;
+		L_1 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
 		{
-			goto IL_0064;
+			goto IL_001e;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:166>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
-		L_12 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralE559A7D14E2E424F2E08842513C405A19BC8ECF3, NULL);
-		NullCheck(L_12);
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_13;
-		L_13 = GameObject_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA59A63181077B821132B53D44724D7F86C6FECB3(L_12, GameObject_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA59A63181077B821132B53D44724D7F86C6FECB3_RuntimeMethod_var);
-		__this->___brakeText = L_13;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___brakeText), (void*)L_13);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:170>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
+		L_2 = GameObject_FindGameObjectWithTag_mF0229BC2074CE9EEA72FAB1E5A4BC2AEC3D2CDBE(_stringLiteralBD8B4A1D712F1D15961F42100AAB144E271CEB2A, NULL);
+		__this->___throttleBar = L_2;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___throttleBar), (void*)L_2);
 	}
 
-IL_0064:
+IL_001e:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:168>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:173>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___throttleBar;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_4;
+		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_4)
+		{
+			goto IL_006f;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:175>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___throttleBar;
+		NullCheck(L_5);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6;
+		L_6 = GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D(L_5, GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var);
+		__this->___throttleBarImage = L_6;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___throttleBarImage), (void*)L_6);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:176>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = __this->___throttleBarImage;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_8)
+		{
+			goto IL_005d;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:178>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___throttleBar;
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogError_m94F967AB31244EACE68C3BE1DD85B69ED3334C0E(_stringLiteral4F1FD785124509C5A61935445765B51A6E20561B, L_9, NULL);
+		goto IL_007a;
+	}
+
+IL_005d:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:182>
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___throttleBarImage;
+		NullCheck(L_10);
+		Image_set_fillAmount_m8A9B55F47F966A3214EAC4ACBFE198776A98FAA7(L_10, (0.0f), NULL);
+		goto IL_007a;
+	}
+
+IL_006f:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:187>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteralD137688503D487E77A32ECE380C22FE97C89509A, __this, NULL);
+	}
+
+IL_007a:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:190>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_11;
+		L_11 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
+		__this->___rigidBody = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___rigidBody), (void*)L_11);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:193>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_12 = __this->___rigidBody;
+		NullCheck(L_12);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
+		L_13 = Rigidbody_get_centerOfMass_mA66BE4DE0469545EBCF49A66EE4FDD3A5D0ADF91(L_12, NULL);
+		V_0 = L_13;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:194>
+		float* L_14 = (float*)(&(&V_0)->___y);
+		float* L_15 = L_14;
+		float L_16 = *((float*)L_15);
+		float L_17 = __this->___centreOfGravityOffset;
+		*((float*)L_15) = (float)((float)il2cpp_codegen_add(L_16, L_17));
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:195>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_18 = __this->___rigidBody;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_0;
+		NullCheck(L_18);
+		Rigidbody_set_centerOfMass_m9D4A68D102498C7DBCD91278FF5EE7EE0BF2B188(L_18, L_19, NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:198>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_20;
+		L_20 = Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6(__this, Component_GetComponentsInChildren_TisWheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2_mF676348C317A5E3E2F2C36447673E522621273E6_RuntimeMethod_var);
+		__this->___wheels = L_20;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___wheels), (void*)L_20);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:200>
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_21 = __this->___brakeText;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_22)
+		{
+			goto IL_00de;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:202>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23;
+		L_23 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteralE559A7D14E2E424F2E08842513C405A19BC8ECF3, NULL);
+		NullCheck(L_23);
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_24;
+		L_24 = GameObject_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA59A63181077B821132B53D44724D7F86C6FECB3(L_23, GameObject_GetComponent_TisTMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9_mA59A63181077B821132B53D44724D7F86C6FECB3_RuntimeMethod_var);
+		__this->___brakeText = L_24;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___brakeText), (void*)L_24);
+	}
+
+IL_00de:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:204>
 		return;
 	}
 }
@@ -10912,6 +11033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_Update_m6E7794AAB8C2EE88D25EF
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB);
 		s_Il2CppMethodInitialized = true;
@@ -10923,294 +11045,314 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_Update_m6E7794AAB8C2EE88D25EF
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:172>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:208>
 		CarControl_UpdateGyroInput_mD1829A100D787B6BA21F375F3854C601CBCB1CCD(__this, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:174>
-		bool L_0;
-		L_0 = Input_GetKeyUp_m9A962E395811A9901E7E05F267E198A533DBEF2F(((int32_t)114), NULL);
-		if (!L_0)
-		{
-			goto IL_006e;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:176>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->___rigidBody;
-		NullCheck(L_1);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
-		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_1, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___startPos;
-		NullCheck(L_3);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
-		L_4 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_3, NULL);
-		NullCheck(L_4);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
-		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
-		NullCheck(L_2);
-		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_2, L_5, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:177>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_6 = __this->___rigidBody;
-		NullCheck(L_6);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
-		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_6, NULL);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___startPos;
-		NullCheck(L_8);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
-		L_9 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_8, NULL);
-		NullCheck(L_9);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
-		L_10 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_9, NULL);
-		NullCheck(L_7);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_7, L_10, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:178>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_11 = __this->___rigidBody;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_12), (0.0f), (0.0f), (0.0f), NULL);
-		NullCheck(L_11);
-		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_11, L_12, NULL);
-	}
-
-IL_006e:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:183>
-		bool L_13;
-		L_13 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)32), NULL);
-		if (!L_13)
-		{
-			goto IL_0128;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:185>
-		__this->___handbraking = (bool)1;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:186>
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_14 = __this->___brakeText;
-		bool* L_15 = (bool*)(&__this->___handbraking);
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.boolean_class);
-		String_t* L_16;
-		L_16 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_15, NULL);
-		String_t* L_17;
-		L_17 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB, L_16, NULL);
-		NullCheck(L_14);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_14, L_17);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:187>
-		bool* L_18 = (bool*)(&__this->___handbraking);
-		String_t* L_19;
-		L_19 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_18, NULL);
-		String_t* L_20;
-		L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4, L_19, NULL);
-		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(L_20, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:188>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_21 = __this->___wheels;
-		V_0 = L_21;
-		V_1 = 0;
-		goto IL_0122;
-	}
-
-IL_00c6:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:188>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_22 = V_0;
-		int32_t L_23 = V_1;
-		NullCheck(L_22);
-		int32_t L_24 = L_23;
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_25 = (L_22)->GetAt(static_cast<il2cpp_array_size_t>(L_24));
-		V_2 = L_25;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:190>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_26 = V_2;
-		NullCheck(L_26);
-		bool L_27 = L_26->___steerable;
-		if (L_27)
-		{
-			goto IL_011e;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:192>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_28 = V_2;
-		NullCheck(L_28);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_29 = L_28->___WheelCollider;
-		NullCheck(L_29);
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_30;
-		L_30 = WheelCollider_get_sidewaysFriction_m7924ABBBB268B7F1FD8630733B6375CAFC2621E8(L_29, NULL);
-		__this->___sideFric = L_30;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:193>
-		bool L_31 = __this->___handbraking;
-		if (!L_31)
-		{
-			goto IL_00fd;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:195>
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_32 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
-		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_32, (0.400000006f), NULL);
-		goto IL_010d;
-	}
-
-IL_00fd:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:198>
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_33 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
-		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_33, (1.0f), NULL);
-	}
-
-IL_010d:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:200>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_34 = V_2;
-		NullCheck(L_34);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_35 = L_34->___WheelCollider;
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_36 = __this->___sideFric;
-		NullCheck(L_35);
-		WheelCollider_set_sidewaysFriction_mB2062696F29B4275C7F5B2874FD333ECD2325DA8(L_35, L_36, NULL);
-	}
-
-IL_011e:
-	{
-		int32_t L_37 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_37, 1));
-	}
-
-IL_0122:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:188>
-		int32_t L_38 = V_1;
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_39 = V_0;
-		NullCheck(L_39);
-		if ((((int32_t)L_38) < ((int32_t)((int32_t)(((RuntimeArray*)L_39)->max_length)))))
-		{
-			goto IL_00c6;
-		}
-	}
-
-IL_0128:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:207>
-		bool L_40;
-		L_40 = Input_GetKeyUp_m9A962E395811A9901E7E05F267E198A533DBEF2F(((int32_t)32), NULL);
-		if (!L_40)
-		{
-			goto IL_01e2;
-		}
-	}
-	{
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:209>
-		__this->___handbraking = (bool)0;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:210>
-		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_41 = __this->___brakeText;
-		bool* L_42 = (bool*)(&__this->___handbraking);
-		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.boolean_class);
-		String_t* L_43;
-		L_43 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_42, NULL);
-		String_t* L_44;
-		L_44 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB, L_43, NULL);
-		NullCheck(L_41);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_41, L_44);
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___throttleBarImage;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_1;
+		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_1)
+		{
+			goto IL_0025;
+		}
+	}
+	{
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:211>
-		bool* L_45 = (bool*)(&__this->___handbraking);
-		String_t* L_46;
-		L_46 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_45, NULL);
-		String_t* L_47;
-		L_47 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4, L_46, NULL);
-		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(L_47, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:212>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_48 = __this->___wheels;
-		V_0 = L_48;
-		V_1 = 0;
-		goto IL_01dc;
+		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___throttleBarImage;
+		float L_3 = __this->___throttle;
+		NullCheck(L_2);
+		Image_set_fillAmount_m8A9B55F47F966A3214EAC4ACBFE198776A98FAA7(L_2, L_3, NULL);
 	}
 
-IL_0180:
+IL_0025:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:212>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_49 = V_0;
-		int32_t L_50 = V_1;
-		NullCheck(L_49);
-		int32_t L_51 = L_50;
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_52 = (L_49)->GetAt(static_cast<il2cpp_array_size_t>(L_51));
-		V_3 = L_52;
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:214>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_53 = V_3;
-		NullCheck(L_53);
-		bool L_54 = L_53->___steerable;
-		if (L_54)
+		bool L_4;
+		L_4 = Input_GetKeyUp_m9A962E395811A9901E7E05F267E198A533DBEF2F(((int32_t)114), NULL);
+		if (!L_4)
 		{
-			goto IL_01d8;
+			goto IL_008d;
 		}
 	}
 	{
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:216>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_55 = V_3;
-		NullCheck(L_55);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_56 = L_55->___WheelCollider;
-		NullCheck(L_56);
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_57;
-		L_57 = WheelCollider_get_sidewaysFriction_m7924ABBBB268B7F1FD8630733B6375CAFC2621E8(L_56, NULL);
-		__this->___sideFric = L_57;
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_5 = __this->___rigidBody;
+		NullCheck(L_5);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
+		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_5, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___startPos;
+		NullCheck(L_7);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
+		L_8 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_7, NULL);
+		NullCheck(L_8);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_8, NULL);
+		NullCheck(L_6);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_6, L_9, NULL);
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:217>
-		bool L_58 = __this->___handbraking;
-		if (!L_58)
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_10 = __this->___rigidBody;
+		NullCheck(L_10);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
+		L_11 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_10, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___startPos;
+		NullCheck(L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_12, NULL);
+		NullCheck(L_13);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14;
+		L_14 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_13, NULL);
+		NullCheck(L_11);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_11, L_14, NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:218>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_15 = __this->___rigidBody;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
+		memset((&L_16), 0, sizeof(L_16));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_16), (0.0f), (0.0f), (0.0f), NULL);
+		NullCheck(L_15);
+		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_15, L_16, NULL);
+	}
+
+IL_008d:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:223>
+		bool L_17;
+		L_17 = Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2(((int32_t)32), NULL);
+		if (!L_17)
 		{
-			goto IL_01b7;
+			goto IL_0147;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:219>
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_59 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
-		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_59, (0.0f), NULL);
-		goto IL_01c7;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:225>
+		__this->___handbraking = (bool)1;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:226>
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_18 = __this->___brakeText;
+		bool* L_19 = (bool*)(&__this->___handbraking);
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.boolean_class);
+		String_t* L_20;
+		L_20 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_19, NULL);
+		String_t* L_21;
+		L_21 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB, L_20, NULL);
+		NullCheck(L_18);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_18, L_21);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:227>
+		bool* L_22 = (bool*)(&__this->___handbraking);
+		String_t* L_23;
+		L_23 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_22, NULL);
+		String_t* L_24;
+		L_24 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4, L_23, NULL);
+		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(L_24, NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:228>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_25 = __this->___wheels;
+		V_0 = L_25;
+		V_1 = 0;
+		goto IL_0141;
 	}
 
-IL_01b7:
+IL_00e5:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:222>
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_60 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
-		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_60, (1.0f), NULL);
-	}
-
-IL_01c7:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:224>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_61 = V_3;
-		NullCheck(L_61);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_62 = L_61->___WheelCollider;
-		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_63 = __this->___sideFric;
-		NullCheck(L_62);
-		WheelCollider_set_sidewaysFriction_mB2062696F29B4275C7F5B2874FD333ECD2325DA8(L_62, L_63, NULL);
-	}
-
-IL_01d8:
-	{
-		int32_t L_64 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_64, 1));
-	}
-
-IL_01dc:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:212>
-		int32_t L_65 = V_1;
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_66 = V_0;
-		NullCheck(L_66);
-		if ((((int32_t)L_65) < ((int32_t)((int32_t)(((RuntimeArray*)L_66)->max_length)))))
-		{
-			goto IL_0180;
-		}
-	}
-
-IL_01e2:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:229>
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_67 = __this->___rigidBody;
-		NullCheck(L_67);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_68;
-		L_68 = Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C(L_67, NULL);
-		V_4 = L_68;
-		float L_69;
-		L_69 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline((&V_4), NULL);
-		__this->___prevSpeed = L_69;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:228>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_26 = V_0;
+		int32_t L_27 = V_1;
+		NullCheck(L_26);
+		int32_t L_28 = L_27;
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_29 = (L_26)->GetAt(static_cast<il2cpp_array_size_t>(L_28));
+		V_2 = L_29;
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:230>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_30 = V_2;
+		NullCheck(L_30);
+		bool L_31 = L_30->___steerable;
+		if (L_31)
+		{
+			goto IL_013d;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:232>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_32 = V_2;
+		NullCheck(L_32);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_33 = L_32->___WheelCollider;
+		NullCheck(L_33);
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_34;
+		L_34 = WheelCollider_get_sidewaysFriction_m7924ABBBB268B7F1FD8630733B6375CAFC2621E8(L_33, NULL);
+		__this->___sideFric = L_34;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:233>
+		bool L_35 = __this->___handbraking;
+		if (!L_35)
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:235>
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_36 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
+		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_36, (0.400000006f), NULL);
+		goto IL_012c;
+	}
+
+IL_011c:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:238>
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_37 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
+		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_37, (1.0f), NULL);
+	}
+
+IL_012c:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:240>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_38 = V_2;
+		NullCheck(L_38);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_39 = L_38->___WheelCollider;
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_40 = __this->___sideFric;
+		NullCheck(L_39);
+		WheelCollider_set_sidewaysFriction_mB2062696F29B4275C7F5B2874FD333ECD2325DA8(L_39, L_40, NULL);
+	}
+
+IL_013d:
+	{
+		int32_t L_41 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_41, 1));
+	}
+
+IL_0141:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:228>
+		int32_t L_42 = V_1;
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_43 = V_0;
+		NullCheck(L_43);
+		if ((((int32_t)L_42) < ((int32_t)((int32_t)(((RuntimeArray*)L_43)->max_length)))))
+		{
+			goto IL_00e5;
+		}
+	}
+
+IL_0147:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:247>
+		bool L_44;
+		L_44 = Input_GetKeyUp_m9A962E395811A9901E7E05F267E198A533DBEF2F(((int32_t)32), NULL);
+		if (!L_44)
+		{
+			goto IL_0201;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:249>
+		__this->___handbraking = (bool)0;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:250>
+		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_45 = __this->___brakeText;
+		bool* L_46 = (bool*)(&__this->___handbraking);
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.boolean_class);
+		String_t* L_47;
+		L_47 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_46, NULL);
+		String_t* L_48;
+		L_48 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB, L_47, NULL);
+		NullCheck(L_45);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_45, L_48);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:251>
+		bool* L_49 = (bool*)(&__this->___handbraking);
+		String_t* L_50;
+		L_50 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63(L_49, NULL);
+		String_t* L_51;
+		L_51 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4, L_50, NULL);
+		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(L_51, NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:252>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_52 = __this->___wheels;
+		V_0 = L_52;
+		V_1 = 0;
+		goto IL_01fb;
+	}
+
+IL_019f:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:252>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_53 = V_0;
+		int32_t L_54 = V_1;
+		NullCheck(L_53);
+		int32_t L_55 = L_54;
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_56 = (L_53)->GetAt(static_cast<il2cpp_array_size_t>(L_55));
+		V_3 = L_56;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:254>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_57 = V_3;
+		NullCheck(L_57);
+		bool L_58 = L_57->___steerable;
+		if (L_58)
+		{
+			goto IL_01f7;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:256>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_59 = V_3;
+		NullCheck(L_59);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_60 = L_59->___WheelCollider;
+		NullCheck(L_60);
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_61;
+		L_61 = WheelCollider_get_sidewaysFriction_m7924ABBBB268B7F1FD8630733B6375CAFC2621E8(L_60, NULL);
+		__this->___sideFric = L_61;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:257>
+		bool L_62 = __this->___handbraking;
+		if (!L_62)
+		{
+			goto IL_01d6;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:259>
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_63 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
+		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_63, (0.0f), NULL);
+		goto IL_01e6;
+	}
+
+IL_01d6:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:262>
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810* L_64 = (WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810*)(&__this->___sideFric);
+		WheelFrictionCurve_set_stiffness_mBB10E953047898E37EC5BC7304C5ADA3225ECFA5(L_64, (1.0f), NULL);
+	}
+
+IL_01e6:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:264>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_65 = V_3;
+		NullCheck(L_65);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_66 = L_65->___WheelCollider;
+		WheelFrictionCurve_tB7103DCB44101BD02986974ED9D4EE6B880E8810 L_67 = __this->___sideFric;
+		NullCheck(L_66);
+		WheelCollider_set_sidewaysFriction_mB2062696F29B4275C7F5B2874FD333ECD2325DA8(L_66, L_67, NULL);
+	}
+
+IL_01f7:
+	{
+		int32_t L_68 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_68, 1));
+	}
+
+IL_01fb:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:252>
+		int32_t L_69 = V_1;
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_70 = V_0;
+		NullCheck(L_70);
+		if ((((int32_t)L_69) < ((int32_t)((int32_t)(((RuntimeArray*)L_70)->max_length)))))
+		{
+			goto IL_019f;
+		}
+	}
+
+IL_0201:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:269>
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_71 = __this->___rigidBody;
+		NullCheck(L_71);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72;
+		L_72 = Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C(L_71, NULL);
+		V_4 = L_72;
+		float L_73;
+		L_73 = Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline((&V_4), NULL);
+		__this->___prevSpeed = L_73;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:270>
 		return;
 	}
 }
@@ -11228,202 +11370,201 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_FixedUpdate_mE0AB2F117310C07A
 	int32_t V_8 = 0;
 	WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* V_9 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:236>
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_0 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___gyroInput);
-		float L_1 = L_0->___y;
-		V_0 = L_1;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:237>
-		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_2 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___gyroInput);
-		float L_3 = L_2->___x;
-		V_1 = L_3;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:240>
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
-		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_4);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
-		L_5 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_4, NULL);
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_6 = __this->___rigidBody;
-		NullCheck(L_6);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
-		L_7 = Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C(L_6, NULL);
-		float L_8;
-		L_8 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_5, L_7, NULL);
-		V_2 = L_8;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:241>
-		float L_9 = __this->___maxSpeed;
-		float L_10 = V_2;
-		float L_11;
-		L_11 = fabsf(L_10);
-		float L_12;
-		L_12 = Mathf_InverseLerp_mBD7EC6A7173CE082226077E1557D5BC2D2AE0D9D_inline((0.0f), L_9, L_11, NULL);
-		V_3 = L_12;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:244>
-		bool L_13 = __this->___handbraking;
-		if (!L_13)
-		{
-			goto IL_0070;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:246>
-		float L_14 = __this->___maxSpeed;
-		float L_15 = V_2;
-		float L_16;
-		L_16 = fabsf(L_15);
-		float L_17;
-		L_17 = Mathf_InverseLerp_mBD7EC6A7173CE082226077E1557D5BC2D2AE0D9D_inline((0.0f), ((float)il2cpp_codegen_multiply(L_14, (1.5f))), L_16, NULL);
-		V_3 = L_17;
-	}
-
-IL_0070:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:250>
-		float L_18 = __this->___motorTorque;
-		float L_19 = V_3;
-		float L_20;
-		L_20 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_18, (0.0f), L_19, NULL);
-		V_4 = L_20;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:251>
-		float L_21 = __this->___steeringRange;
-		float L_22 = __this->___steeringRangeAtMaxSpeed;
-		float L_23 = V_3;
-		float L_24;
-		L_24 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_21, L_22, L_23, NULL);
-		V_5 = L_24;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:254>
-		float L_25 = V_0;
-		float L_26;
-		L_26 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_25, NULL);
-		float L_27 = V_2;
-		float L_28;
-		L_28 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_27, NULL);
-		V_6 = (bool)((((float)L_26) == ((float)L_28))? 1 : 0);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:257>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_29 = __this->___wheels;
-		V_7 = L_29;
-		V_8 = 0;
-		goto IL_0140;
-	}
-
-IL_00b7:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:257>
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_30 = V_7;
-		int32_t L_31 = V_8;
-		NullCheck(L_30);
-		int32_t L_32 = L_31;
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_33 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_32));
-		V_9 = L_33;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:260>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_34 = V_9;
-		NullCheck(L_34);
-		bool L_35 = L_34->___steerable;
-		if (!L_35)
-		{
-			goto IL_00d7;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:262>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_36 = V_9;
-		NullCheck(L_36);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_37 = L_36->___WheelCollider;
-		float L_38 = V_1;
-		float L_39 = V_5;
-		NullCheck(L_37);
-		WheelCollider_set_steerAngle_m7BF83B27D8956355F873537939BE9F35CF3113C3(L_37, ((float)il2cpp_codegen_multiply(L_38, L_39)), NULL);
-	}
-
-IL_00d7:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:265>
-		bool L_40 = V_6;
-		if (!L_40)
-		{
-			goto IL_0107;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:268>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_41 = V_9;
-		NullCheck(L_41);
-		bool L_42 = L_41->___motorized;
-		if (!L_42)
-		{
-			goto IL_00f4;
-		}
-	}
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:270>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_43 = V_9;
-		NullCheck(L_43);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_44 = L_43->___WheelCollider;
-		float L_45 = V_0;
-		float L_46 = V_4;
-		NullCheck(L_44);
-		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_44, ((float)il2cpp_codegen_multiply(L_45, L_46)), NULL);
-	}
-
-IL_00f4:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:273>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_47 = V_9;
-		NullCheck(L_47);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_48 = L_47->___WheelCollider;
-		NullCheck(L_48);
-		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_48, (0.0f), NULL);
-		goto IL_013a;
-	}
-
-IL_0107:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:278>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_49 = V_9;
-		NullCheck(L_49);
-		bool L_50 = L_49->___motorized;
-		if (!L_50)
-		{
-			goto IL_013a;
-		}
-	}
-	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:276>
+		float L_0 = __this->___throttle;
+		V_0 = L_0;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:277>
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_1 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___gyroInput);
+		float L_2 = L_1->___x;
+		V_1 = L_2;
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:280>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_51 = V_9;
-		NullCheck(L_51);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_52 = L_51->___WheelCollider;
-		NullCheck(L_52);
-		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_52, (0.0f), NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_3, NULL);
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_5 = __this->___rigidBody;
+		NullCheck(L_5);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C(L_5, NULL);
+		float L_7;
+		L_7 = Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline(L_4, L_6, NULL);
+		V_2 = L_7;
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:281>
-		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_53 = V_9;
-		NullCheck(L_53);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_54 = L_53->___WheelCollider;
-		float L_55 = V_0;
-		float L_56;
-		L_56 = fabsf(L_55);
-		float L_57 = __this->___brakeTorque;
-		NullCheck(L_54);
-		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_54, ((float)il2cpp_codegen_multiply(L_56, L_57)), NULL);
-	}
-
-IL_013a:
-	{
-		int32_t L_58 = V_8;
-		V_8 = ((int32_t)il2cpp_codegen_add(L_58, 1));
-	}
-
-IL_0140:
-	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:257>
-		int32_t L_59 = V_8;
-		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_60 = V_7;
-		NullCheck(L_60);
-		if ((((int32_t)L_59) < ((int32_t)((int32_t)(((RuntimeArray*)L_60)->max_length)))))
+		float L_8 = __this->___maxSpeed;
+		float L_9 = V_2;
+		float L_10;
+		L_10 = fabsf(L_9);
+		float L_11;
+		L_11 = Mathf_InverseLerp_mBD7EC6A7173CE082226077E1557D5BC2D2AE0D9D_inline((0.0f), L_8, L_10, NULL);
+		V_3 = L_11;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:284>
+		bool L_12 = __this->___handbraking;
+		if (!L_12)
 		{
-			goto IL_00b7;
+			goto IL_006b;
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:287>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:286>
+		float L_13 = __this->___maxSpeed;
+		float L_14 = V_2;
+		float L_15;
+		L_15 = fabsf(L_14);
+		float L_16;
+		L_16 = Mathf_InverseLerp_mBD7EC6A7173CE082226077E1557D5BC2D2AE0D9D_inline((0.0f), ((float)il2cpp_codegen_multiply(L_13, (1.5f))), L_15, NULL);
+		V_3 = L_16;
+	}
+
+IL_006b:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:290>
+		float L_17 = __this->___motorTorque;
+		float L_18 = V_3;
+		float L_19;
+		L_19 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_17, (0.0f), L_18, NULL);
+		V_4 = L_19;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:291>
+		float L_20 = __this->___steeringRange;
+		float L_21 = __this->___steeringRangeAtMaxSpeed;
+		float L_22 = V_3;
+		float L_23;
+		L_23 = Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline(L_20, L_21, L_22, NULL);
+		V_5 = L_23;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:294>
+		float L_24 = V_0;
+		float L_25;
+		L_25 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_24, NULL);
+		float L_26 = V_2;
+		float L_27;
+		L_27 = Mathf_Sign_m42EE1F0BC041AF14F89DED7F762BE996E2C50D8A_inline(L_26, NULL);
+		V_6 = (bool)((((float)L_25) == ((float)L_27))? 1 : 0);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:297>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_28 = __this->___wheels;
+		V_7 = L_28;
+		V_8 = 0;
+		goto IL_013b;
+	}
+
+IL_00b2:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:297>
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_29 = V_7;
+		int32_t L_30 = V_8;
+		NullCheck(L_29);
+		int32_t L_31 = L_30;
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_32 = (L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
+		V_9 = L_32;
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:300>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_33 = V_9;
+		NullCheck(L_33);
+		bool L_34 = L_33->___steerable;
+		if (!L_34)
+		{
+			goto IL_00d2;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:302>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_35 = V_9;
+		NullCheck(L_35);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_36 = L_35->___WheelCollider;
+		float L_37 = V_1;
+		float L_38 = V_5;
+		NullCheck(L_36);
+		WheelCollider_set_steerAngle_m7BF83B27D8956355F873537939BE9F35CF3113C3(L_36, ((float)il2cpp_codegen_multiply(L_37, L_38)), NULL);
+	}
+
+IL_00d2:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:305>
+		bool L_39 = V_6;
+		if (!L_39)
+		{
+			goto IL_0102;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:308>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_40 = V_9;
+		NullCheck(L_40);
+		bool L_41 = L_40->___motorized;
+		if (!L_41)
+		{
+			goto IL_00ef;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:310>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_42 = V_9;
+		NullCheck(L_42);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_43 = L_42->___WheelCollider;
+		float L_44 = V_0;
+		float L_45 = V_4;
+		NullCheck(L_43);
+		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_43, ((float)il2cpp_codegen_multiply(L_44, L_45)), NULL);
+	}
+
+IL_00ef:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:313>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_46 = V_9;
+		NullCheck(L_46);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_47 = L_46->___WheelCollider;
+		NullCheck(L_47);
+		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_47, (0.0f), NULL);
+		goto IL_0135;
+	}
+
+IL_0102:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:318>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_48 = V_9;
+		NullCheck(L_48);
+		bool L_49 = L_48->___motorized;
+		if (!L_49)
+		{
+			goto IL_0135;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:320>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_50 = V_9;
+		NullCheck(L_50);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_51 = L_50->___WheelCollider;
+		NullCheck(L_51);
+		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_51, (0.0f), NULL);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:321>
+		WheelControl_tA0E77ECB956D948C928205D4D9279E4A01F8F4C2* L_52 = V_9;
+		NullCheck(L_52);
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_53 = L_52->___WheelCollider;
+		float L_54 = V_0;
+		float L_55;
+		L_55 = fabsf(L_54);
+		float L_56 = __this->___brakeTorque;
+		NullCheck(L_53);
+		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_53, ((float)il2cpp_codegen_multiply(L_55, L_56)), NULL);
+	}
+
+IL_0135:
+	{
+		int32_t L_57 = V_8;
+		V_8 = ((int32_t)il2cpp_codegen_add(L_57, 1));
+	}
+
+IL_013b:
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:297>
+		int32_t L_58 = V_8;
+		WheelControlU5BU5D_tBDACD3AC3998151C01BF573E440A872E88829D3E* L_59 = V_7;
+		NullCheck(L_59);
+		if ((((int32_t)L_58) < ((int32_t)((int32_t)(((RuntimeArray*)L_59)->max_length)))))
+		{
+			goto IL_00b2;
+		}
+	}
+	{
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:327>
 		return;
 	}
 }
@@ -11440,14 +11581,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnCollisionEnter_mA9FB0C0F6C8
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:291>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:331>
 		float* L_0 = (float*)(&__this->___prevSpeed);
 		String_t* L_1;
 		L_1 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972(L_0, NULL);
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral91D090688DB5FD92F3272319125FB9ADCA72E65E, L_1, NULL);
 		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(L_2, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:292>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:332>
 		float L_3 = __this->___prevSpeed;
 		int32_t L_4 = __this->___crashThreshold;
 		if ((!(((float)L_3) > ((float)((float)L_4)))))
@@ -11470,13 +11611,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnCollisionEnter_mA9FB0C0F6C8
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:294>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:334>
 		MonoBehaviour_print_m9E6FF71C673B651F35DD418C293CFC50C46803B6(_stringLiteralC7D169342488A2DC7373E6F55F058BA3D5546837, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:295>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:335>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_9 = __this->___crashSource;
 		NullCheck(L_9);
 		AudioSource_set_time_m6670372FD9C494978B7B3E01B7F4D220616F6204(L_9, (1.79999995f), NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:296>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:336>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_10 = __this->___crashSource;
 		NullCheck(L_10);
 		AudioSource_Play_m95DF07111C61D0E0F00257A00384D31531D590C3(L_10, NULL);
@@ -11484,7 +11625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl_OnCollisionEnter_mA9FB0C0F6C8
 
 IL_0075:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:298>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:338>
 		return;
 	}
 }
@@ -11516,6 +11657,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarControl__ctor_m1638E783105F3DC6738F8D
 		__this->___accelerationDeadZone = (2.0f);
 		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:30>
 		__this->___inputSmoothing = (10.0f);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/CarMovement/CarControl.cs:32>
+		__this->___throttleChangeRate = (0.5f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -24441,25 +24584,6 @@ IL_0047:
 		return L_17;
 	}
 }
-// Method Definition Index: 37543
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
-{
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
-		float L_1 = L_0.___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
-		float L_3 = L_2.___x;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
-		float L_5 = L_4.___y;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
-		float L_7 = L_6.___y;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
-		float L_9 = L_8.___z;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
-		float L_11 = L_10.___z;
-		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
-	}
-}
 // Method Definition Index: 37661
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
@@ -24506,6 +24630,25 @@ IL_002d:
 	{
 		float L_5 = V_1;
 		return L_5;
+	}
+}
+// Method Definition Index: 37543
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Dot_mBB86BB940AA0A32FA7D3C02AC42E5BC7095A5D52_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
+{
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_lhs;
+		float L_1 = L_0.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___1_rhs;
+		float L_3 = L_2.___x;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = ___0_lhs;
+		float L_5 = L_4.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___1_rhs;
+		float L_7 = L_6.___y;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = ___0_lhs;
+		float L_9 = L_8.___z;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = ___1_rhs;
+		float L_11 = L_10.___z;
+		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11))));
 	}
 }
 // Method Definition Index: 86620

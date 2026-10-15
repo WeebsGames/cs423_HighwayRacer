@@ -47097,6 +47097,7 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 	float ___steeringDeadZone;
 	float ___accelerationDeadZone;
 	float ___inputSmoothing;
+	float ___throttleChangeRate;
 	bool ___invertSteering;
 	bool ___invertAcceleration;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
@@ -47104,8 +47105,11 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 	int32_t ___calibratedOrientation;
 	bool ___gyroCalibrated;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___gyroInput;
+	float ___throttle;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___brakeText;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___startPos;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___throttleBar;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___throttleBarImage;
 };
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
