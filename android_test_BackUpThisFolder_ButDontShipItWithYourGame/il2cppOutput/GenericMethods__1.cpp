@@ -27088,7 +27088,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WhereSelectListIterator_2_Sele
 		return (RuntimeObject*)L_5;
 	}
 }
-// Method Definition Index: 90133
+// Method Definition Index: 90135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AStar_DefaultHeuristic_TisRuntimeObject_m912387962EB3198BD380022E448923DB7CDBA0A0_gshared (RuntimeObject* ___0_node, RuntimeObject* ___1_goal, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27109,7 +27109,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AStar_DefaultHeuristic_TisRuntimeObject
 		return L_5;
 	}
 }
-// Method Definition Index: 90134
+// Method Definition Index: 90136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* AStar_FindShortestPath_TisRuntimeObject_mC7AF5D486BDECBD9FD257EB63D002CEDA91E46A6_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_nodes, TwoDimensionalArray_1_t2783701A2A7EE203812A293EFCFAB9AD76CE94E7* ___1_weights, RuntimeObject* ___2_start, RuntimeObject* ___3_goal, Heuristic_1_tAF9A40A936BA9B9257FCD673B32437DE6C830D5E* ___4_heuristic, int32_t ___5_maxSteps, const RuntimeMethod* method) 
 {
 	if (!il2cpp_rgctx_is_initialized(method))
@@ -27464,7 +27464,7 @@ IL_01df:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_96, method);
 	}
 }
-// Method Definition Index: 90136
+// Method Definition Index: 90138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4BB3CF00DB4FEBF87734E554AAB5423BCFDED9C8* AStar_GetNeighbors_TisRuntimeObject_mF6FBC9157082ED9EA5D072126EAAF62243A4EDC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_nodes, TwoDimensionalArray_1_t2783701A2A7EE203812A293EFCFAB9AD76CE94E7* ___1_weights, RuntimeObject* ___2_current, const RuntimeMethod* method) 
 {
 	if (!il2cpp_rgctx_is_initialized(method))
@@ -27564,7 +27564,7 @@ IL_0043:
 		return L_24;
 	}
 }
-// Method Definition Index: 90135
+// Method Definition Index: 90137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* AStar_ReconstructPath_TisRuntimeObject_mE898F4C18A170140AA951C5325E133BAA3B6CF84_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___0_cameFrom, RuntimeObject* ___1_current, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

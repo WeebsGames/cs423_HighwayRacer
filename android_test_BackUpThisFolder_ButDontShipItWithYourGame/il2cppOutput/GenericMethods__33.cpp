@@ -23338,7 +23338,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 90176
+// Method Definition Index: 90178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float MyExtensions_GetWithDefault_TisRuntimeObject_TisSingle_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C_m0F700A22DEA40ACBF75DBF2D4516ACA0FE9F428E_gshared (Dictionary_2_t1E85CF9786F2C7C796C8CC2EB86ADA13A263ECAB* ___0_dict, RuntimeObject* ___1_key, float ___2_defaultValue, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -23366,7 +23366,7 @@ IL_000d:
 		return L_4;
 	}
 }
-// Method Definition Index: 90176
+// Method Definition Index: 90178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MyExtensions_GetWithDefault_TisIl2CppFullySharedGenericAny_TisIl2CppFullySharedGenericAny_mFCF256A3AC9BFB6E5D2950FAF5D34C91D77C87AF_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* ___0_dict, Il2CppFullySharedGenericAny ___1_key, Il2CppFullySharedGenericAny ___2_defaultValue, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

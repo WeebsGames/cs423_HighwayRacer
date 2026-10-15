@@ -102,7 +102,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
                 Debug.Log("Keyword detected: " + sirenKeyword[i]);
                 // Trigger your gameplay action here.
                 sirenActive = !sirenActive;
-                if (boostActive)
+                if (sirenActive)
                 {
                     sirenText.text = "Siren: Active";
                 } else
