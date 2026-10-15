@@ -244,9 +244,15 @@ extern void VisualSuspension_UpdateWheelSuspension_mBB53C1123A7BABF6367FBC87DBC8
 extern void VisualSuspension__ctor_m7754D19228A7CCC6B652CBC655328C4AB99AF389 (void);
 extern void VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80 (void);
 extern void VoiceInput_set_boostActive_m28D9292B73BB18E3B5D112E4EF707327894EAAAD (void);
+extern void VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096 (void);
+extern void VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4 (void);
+extern void VoiceInput_get_boostFillAmount_mC8166393875C5121A64B3772325A25E92D857646 (void);
+extern void VoiceInput_Awake_m7C33C178F4A83F32118F63105255B10217E7DE3E (void);
+extern void VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378 (void);
 extern void VoiceInput_Start_m1B9447ED20EFF3C791406D100703864C374CD477 (void);
 extern void VoiceInput_BeginListening_m1C4FBF7F095CBB2E04B3DFFFA7F2E2311D1F6B2B (void);
 extern void VoiceInput_OnResult_m1874430936265C7C409D658D99C710761FC4BC9A (void);
+extern void VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D (void);
 extern void VoiceInput_OnError_m0F416DAD1F47BBBB9D661A2ED1BD2FDE25C14F2C (void);
 extern void VoiceInput_OnDisable_mF167098DF7F9158C955B9DC857EF883D594768A2 (void);
 extern void VoiceInput_Update_mD04A2C3F56AF51B960C0E5FBD68C27B6DCD89EDB (void);
@@ -570,7 +576,7 @@ extern void ThirdPersonCamera_Move_m15EB46669D76829468B4E4AE7EC1C3801F54701F (vo
 extern void ThirdPersonCamera__ctor_mCB0B298CC2FB54E41B384CD575515605ED223D3D (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__cameraU7C6_0_m50675C74BEFA9F8E49B463DCE30F0DAF561808FB (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__targetU7C6_1_m685EAC5C4BF2F78AD94F72563EA8A5E2CA58EC70 (void);
-static Il2CppMethodPointer s_methodPointers[572] = 
+static Il2CppMethodPointer s_methodPointers[578] = 
 {
 	WaterReflection_Awake_m86F43948E686275B6F0C6D761C619EDAB40B1678,
 	WaterReflection_Update_mEAF4BCA28F1154AF68D716AC6E3A954482DED822,
@@ -818,9 +824,15 @@ static Il2CppMethodPointer s_methodPointers[572] =
 	VisualSuspension__ctor_m7754D19228A7CCC6B652CBC655328C4AB99AF389,
 	VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80,
 	VoiceInput_set_boostActive_m28D9292B73BB18E3B5D112E4EF707327894EAAAD,
+	VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096,
+	VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4,
+	VoiceInput_get_boostFillAmount_mC8166393875C5121A64B3772325A25E92D857646,
+	VoiceInput_Awake_m7C33C178F4A83F32118F63105255B10217E7DE3E,
+	VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378,
 	VoiceInput_Start_m1B9447ED20EFF3C791406D100703864C374CD477,
 	VoiceInput_BeginListening_m1C4FBF7F095CBB2E04B3DFFFA7F2E2311D1F6B2B,
 	VoiceInput_OnResult_m1874430936265C7C409D658D99C710761FC4BC9A,
+	VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D,
 	VoiceInput_OnError_m0F416DAD1F47BBBB9D661A2ED1BD2FDE25C14F2C,
 	VoiceInput_OnDisable_mF167098DF7F9158C955B9DC857EF883D594768A2,
 	VoiceInput_Update_mD04A2C3F56AF51B960C0E5FBD68C27B6DCD89EDB,
@@ -1148,9 +1160,9 @@ static Il2CppMethodPointer s_methodPointers[572] =
 extern void LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x0600021E, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
+	{ 0x06000224, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[572] = 
+static const int32_t s_InvokerIndices[578] = 
 {
 	16111,
 	16111,
@@ -1398,9 +1410,15 @@ static const int32_t s_InvokerIndices[572] =
 	16111,
 	15678,
 	12083,
+	16004,
+	12394,
+	16004,
+	16111,
+	12083,
 	16111,
 	16111,
 	12297,
+	22377,
 	12297,
 	16111,
 	16111,
@@ -1729,7 +1747,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	572,
+	578,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

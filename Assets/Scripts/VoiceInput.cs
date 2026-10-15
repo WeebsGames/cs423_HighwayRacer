@@ -15,6 +15,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
     public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit"};
     public SimplePause pause;
+    [Tooltip("Allows testBox-tagged boxes to move under physics. When off, they remain solid and immovable.")]
     public bool shieldActive = false;
     public bool sirenActive = false;
 
@@ -32,6 +33,16 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     private void Awake()
     {
         boostRemaining = maxBoostTime;
+        foreach (GameObject box in GameObject.FindGameObjectsWithTag("testBox"))
+        {
+            testBoxScript boxScript = box.GetComponent<testBoxScript>();
+            if (boxScript == null)
+            {
+                boxScript = box.AddComponent<testBoxScript>();
+            }
+            boxScript.Initialize(this);
+        }
+
         if (boostText == null)
         {
             Debug.LogWarning("No boost text assigned. Boost status text will not update.", this);

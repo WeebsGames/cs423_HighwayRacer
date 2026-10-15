@@ -22,6 +22,7 @@ TagManager:
   - ThrottleBar
   - Listener
   - BoostBar
+  - testBox
   layers:
   - Default
   - TransparentFX

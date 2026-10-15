@@ -1346,6 +1346,7 @@
             "scenes": [
               "Assets/Scenes/MainMenu2.unity",
               "Assets/Scenes/Track1.unity",
+              "Assets/Scenes/Track2.unity",
               "Assets/Scenes/Track3.unity",
               "Assets/Scenes/Track4.unity",
               "Assets/Scenes/Track6.unity"
