@@ -14,6 +14,15 @@ The existing drifting speed bonus stacks with boost. Turning boost off restores 
 and the normal top-speed target without abruptly clamping velocity. Braking and throttle input remain unchanged.
 Each driving scene using voice boost needs an active Listener-tagged object with VoiceInput attached.
 
+Voice siren doors:
+VoiceInput automatically adds and initializes slideScript on active doorBox-tagged boxes at scene start.
+The car must be tagged Player. While sirenActive is true and the car is within 3 world units of
+a box's original position, the box slides 1 world unit along X away from the car over 2 seconds.
+The opening direction is chosen when the box starts opening. Boxes stay open without drifting
+farther, and slide back at the same speed when the siren is off or the car leaves that radius.
+Interrupted slides reverse smoothly. Distance uses the original position to avoid opening/closing
+oscillation as the box moves; sliding pauses when the game is paused.
+
 
 To show the player the urgency of the task, the time has been set to night to simulate a late night emergency delivery. Think of it this way: Its 11:50pm and you have to make a same day delivery!
 

@@ -50,6 +50,32 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         SetBoostActive(false);
     }
 
+    private void InitializeDoorBoxes()
+    {
+        GameObject[] boxes = GameObject.FindGameObjectsWithTag("doorBox");
+        if (boxes.Length == 0)
+        {
+            return;
+        }
+
+        GameObject car = GameObject.FindGameObjectWithTag("Player");
+        if (car == null)
+        {
+            Debug.LogError("Cannot initialize doorBox sliding: no active Player-tagged car found.", this);
+            return;
+        }
+
+        foreach (GameObject box in boxes)
+        {
+            slideScript boxScript = box.GetComponent<slideScript>();
+            if (boxScript == null)
+            {
+                boxScript = box.AddComponent<slideScript>();
+            }
+            boxScript.Initialize(this, car.transform);
+        }
+    }
+
     private void SetBoostActive(bool active)
     {
         boostActive = active && boostRemaining > 0f;
@@ -62,6 +88,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        InitializeDoorBoxes();
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(
             gameObject.name);
         BeginListening();

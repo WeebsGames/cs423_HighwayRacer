@@ -23,6 +23,7 @@ TagManager:
   - Listener
   - BoostBar
   - testBox
+  - doorBox
   layers:
   - Default
   - TransparentFX
