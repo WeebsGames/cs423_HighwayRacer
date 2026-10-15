@@ -28,6 +28,8 @@ public class CarControl : MonoBehaviour
     [Min(0f)] public float steeringDeadZone = 2f;
     [Min(0f)] public float accelerationDeadZone = 2f;
     [Min(0f)] public float inputSmoothing = 10f;
+    [Tooltip("Throttle change per second at full tilt. Neutral tilt holds the current throttle.")]
+    [Min(0f)] public float throttleChangeRate = 0.5f;
     public bool invertSteering = false;
     public bool invertAcceleration = false;
 
@@ -36,6 +38,7 @@ public class CarControl : MonoBehaviour
     private ScreenOrientation calibratedOrientation;
     private bool gyroCalibrated;
     private Vector2 gyroInput;
+    private float throttle;
 
     [Header("OtherObjects")]
     // public TMP_Text speedText;
@@ -47,6 +50,7 @@ public class CarControl : MonoBehaviour
 
     private void OnEnable()
     {
+        throttle = 0f;
         gyroInput = Vector2.zero;
         gyroCalibrated = false;
         if (SystemInfo.supportsGyroscope)
@@ -63,6 +67,7 @@ public class CarControl : MonoBehaviour
 
     private void OnDisable()
     {
+        throttle = 0f;
         gyroCalibrated = false;
         gyroInput = Vector2.zero;
     }
@@ -146,9 +151,15 @@ public class CarControl : MonoBehaviour
 
         Vector2 targetInput = new Vector2(
             NormalizeTilt(steeringAngle, steeringDeadZone, fullSteeringTilt),
-            Mathf.Max(0f, NormalizeTilt(accelerationAngle, accelerationDeadZone, fullAccelerationTilt)));
+            NormalizeTilt(accelerationAngle, accelerationDeadZone, fullAccelerationTilt));
         float smoothing = inputSmoothing > 0f ? 1f - Mathf.Exp(-inputSmoothing * Time.deltaTime) : 1f;
         gyroInput = Vector2.Lerp(gyroInput, targetInput, smoothing);
+        // Stop adjustment immediately in the neutral dead zone, without smoothing drift.
+        if (targetInput.y == 0f)
+        {
+            gyroInput.y = 0f;
+        }
+        throttle = Mathf.Clamp01(throttle + gyroInput.y * throttleChangeRate * Time.deltaTime);
     }
 
     // Start is called before the first frame update
@@ -197,7 +208,7 @@ public class CarControl : MonoBehaviour
         UpdateGyroInput();
         if (throttleBarImage != null)
         {
-            throttleBarImage.fillAmount = Mathf.Clamp01(gyroInput.y);
+            throttleBarImage.fillAmount = throttle;
         }
 
         if (Input.GetKeyUp(KeyCode.R))
@@ -262,7 +273,7 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {
         // Get player input for acceleration and steering
-        float vInput = gyroInput.y; // Forward throttle input
+        float vInput = throttle; // Stored forward throttle
         float hInput = gyroInput.x; // Steering input
 
         // Calculate current speed along the car's forward axis
