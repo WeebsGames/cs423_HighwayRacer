@@ -53,6 +53,8 @@ public class CarControl : MonoBehaviour
     public GameObject shield;
     [Tooltip("Siren object whose active state follows VoiceInput.sirenActive.")]
     public GameObject siren;
+    [Tooltip("SirenBox trigger object enabled only while VoiceInput.sirenActive is true. If unassigned, finds a child named SirenBox, including inactive children.")]
+    public GameObject sirenTriggerBox;
 
     private UnityEngine.UI.Image throttleBarImage;
     private UnityEngine.UI.Image boostBarImage;
@@ -79,6 +81,10 @@ public class CarControl : MonoBehaviour
         throttle = 0f;
         gyroCalibrated = false;
         gyroInput = Vector2.zero;
+        if (sirenTriggerBox != null)
+        {
+            sirenTriggerBox.SetActive(false);
+        }
     }
 
     private void OnApplicationFocus(bool hasFocus)
@@ -198,6 +204,23 @@ public class CarControl : MonoBehaviour
             Debug.LogWarning("No siren object assigned. Siren display will not update.", this);
         }
 
+        if (sirenTriggerBox == null)
+        {
+            foreach (Transform child in GetComponentsInChildren<Transform>(true))
+            {
+                if (child.gameObject.name == "SirenBox")
+                {
+                    sirenTriggerBox = child.gameObject;
+                    break;
+                }
+            }
+        }
+        if (sirenTriggerBox == null)
+        {
+            Debug.LogWarning("No SirenBox trigger assigned or found under the car. Siren doors will not react to this car.", this);
+        }
+        UpdateSirenState();
+
         if (throttleBar == null)
         {
             throttleBar = GameObject.FindGameObjectWithTag("ThrottleBar");
@@ -258,6 +281,19 @@ public class CarControl : MonoBehaviour
         }
     }
 
+    private void UpdateSirenState()
+    {
+        bool active = voiceInput != null && voiceInput.sirenActive;
+        if (siren != null)
+        {
+            siren.SetActive(active);
+        }
+        if (sirenTriggerBox != null)
+        {
+            sirenTriggerBox.SetActive(active);
+        }
+    }
+
     void Update()
     {
         if (shield != null)
@@ -265,10 +301,7 @@ public class CarControl : MonoBehaviour
             shield.SetActive(voiceInput != null && voiceInput.shieldActive);
         }
 
-        if (siren != null)
-        {
-            siren.SetActive(voiceInput != null && voiceInput.sirenActive);
-        }
+        UpdateSirenState();
 
         UpdateGyroInput();
         if (throttleBarImage != null)

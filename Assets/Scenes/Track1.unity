@@ -21860,6 +21860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848654907}
   - component: {fileID: 848654906}
+  - component: {fileID: 848654908}
   m_Layer: 0
   m_Name: CollisionBoxes
   m_TagString: Untagged
@@ -21888,7 +21889,7 @@ Transform:
   m_GameObject: {fileID: 848654905}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 656.6725, y: 9.99817, z: 460.51746}
+  m_LocalPosition: {x: 656.6725, y: 11.62, z: 460.51746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21897,6 +21898,33 @@ Transform:
   - {fileID: 1179451973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &848654908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848654905}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &856708365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2807449429036539767, guid: f0c16f0ea935ea64297ca1d4d55d9746, type: 3}
@@ -34437,8 +34465,9 @@ GameObject:
   - component: {fileID: 1525590780}
   - component: {fileID: 1525590779}
   - component: {fileID: 1525590778}
+  - component: {fileID: 1525590781}
   m_Layer: 0
-  m_Name: Right
+  m_Name: Left
   m_TagString: doorBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34537,6 +34566,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525590776}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1525590781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525590776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df674141e3a643f4fa855ea39200f36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::slideScript
 --- !u!1 &1526036834
 GameObject:
   m_ObjectHideFlags: 0
@@ -38702,7 +38743,7 @@ MonoBehaviour:
   - {x: 41.994408, y: 2.8478994, z: 59.108376}
   - {x: 35.985718, y: 2.8478994, z: 37.38501}
   - {x: 31.971716, y: 2.8478994, z: 22.873089}
-  - {x: 19.681122, y: 0.2000122, z: 0.21227874}
+  - {x: 19.681166, y: 0.2000122, z: 0.21227874}
   - {x: 6.8136597, y: 0.2000122, z: 0.21228027}
   normals:
   - {x: 0.0046429797, y: 0.9949612, z: 0.100153156}
@@ -52306,8 +52347,9 @@ GameObject:
   - component: {fileID: 2125026075}
   - component: {fileID: 2125026074}
   - component: {fileID: 2125026073}
+  - component: {fileID: 2125026076}
   m_Layer: 0
-  m_Name: Left
+  m_Name: Right
   m_TagString: doorBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52406,6 +52448,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125026071}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2125026076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125026071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df674141e3a643f4fa855ea39200f36e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::slideScript
 --- !u!1001 &2125802385
 PrefabInstance:
   m_ObjectHideFlags: 0
