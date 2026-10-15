@@ -21,6 +21,7 @@ TagManager:
   - DriftPoints
   - ThrottleBar
   - Listener
+  - BoostBar
   layers:
   - Default
   - TransparentFX

@@ -47,12 +47,15 @@ public class CarControl : MonoBehaviour
     public GameObject startPos;
     [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged ThrottleBar. Displays gyro throttle from 0 to 1.")]
     public GameObject throttleBar;
+    [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged BoostBar. Displays remaining boost from 0 to 1.")]
+    public GameObject boostBar;
     [Tooltip("Shield object whose active state follows VoiceInput.shieldActive.")]
     public GameObject shield;
     [Tooltip("Siren object whose active state follows VoiceInput.sirenActive.")]
     public GameObject siren;
 
     private UnityEngine.UI.Image throttleBarImage;
+    private UnityEngine.UI.Image boostBarImage;
 
     private void OnEnable()
     {
@@ -217,6 +220,28 @@ public class CarControl : MonoBehaviour
             Debug.LogWarning("No active object tagged ThrottleBar found. Throttle display will not update.", this);
         }
 
+        if (boostBar == null)
+        {
+            boostBar = GameObject.FindGameObjectWithTag("BoostBar");
+        }
+
+        if (boostBar != null)
+        {
+            boostBarImage = boostBar.GetComponent<UnityEngine.UI.Image>();
+            if (boostBarImage == null)
+            {
+                Debug.LogError("Boost bar must have a UnityEngine.UI.Image component.", boostBar);
+            }
+            else
+            {
+                boostBarImage.fillAmount = voiceInput != null ? voiceInput.boostFillAmount : 0f;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No active object tagged BoostBar found. Boost display will not update.", this);
+        }
+
         rigidBody = GetComponent<Rigidbody>();
 
         // Adjust center of mass to improve stability and prevent rolling
@@ -249,6 +274,11 @@ public class CarControl : MonoBehaviour
         if (throttleBarImage != null)
         {
             throttleBarImage.fillAmount = throttle;
+        }
+
+        if (boostBarImage != null)
+        {
+            boostBarImage.fillAmount = voiceInput != null ? voiceInput.boostFillAmount : 0f;
         }
 
         if (Input.GetKeyUp(KeyCode.R))

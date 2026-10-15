@@ -18,8 +18,35 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public bool shieldActive = false;
     public bool sirenActive = false;
 
+    [Header("Boost")]
+    [Tooltip("Maximum boost duration in seconds. Starts fully charged.")]
+    [SerializeField, Min(0.01f)] private float maxBoostTime = 5f;
+    [Tooltip("Seconds to refill an empty boost counter while boost is off. Partial charges can be used.")]
+    [SerializeField, Min(0.01f)] private float boostRefillTime = 10f;
+
     private SpeechRecognizerPlugin plugin;
     public bool boostActive { get; private set; } = false;
+    public float boostRemaining { get; private set; }
+    public float boostFillAmount => Mathf.Clamp01(boostRemaining / maxBoostTime);
+
+    private void Awake()
+    {
+        boostRemaining = maxBoostTime;
+        if (boostText == null)
+        {
+            Debug.LogWarning("No boost text assigned. Boost status text will not update.", this);
+        }
+        SetBoostActive(false);
+    }
+
+    private void SetBoostActive(bool active)
+    {
+        boostActive = active && boostRemaining > 0f;
+        if (boostText != null)
+        {
+            boostText.text = boostActive ? "Boost: Active" : "Boost: Inactive";
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -42,93 +69,72 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         debugText.text = "Recognizer returned: " + recognizedResult;
 
         // The plugin separates alternative transcripts with "~".
-        string transcript = recognizedResult.Split('~')[0];
+        string[] transcripts = recognizedResult.Split('~');
 
-        for (int i = 0; i < boostKeyword.Length; i++)
+        string matchedKeyword = FindMatchingKeyword(boostKeyword, transcripts);
+        if (matchedKeyword != null)
         {
-            if (string.IsNullOrWhiteSpace(boostKeyword[i]))
-                return;
+            Debug.Log("Keyword detected: " + matchedKeyword);
+            SetBoostActive(!boostActive);
+        }
 
-            string pattern = @"\b" + Regex.Escape(boostKeyword[i].Trim()) + @"\b";
-
-            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+        matchedKeyword = FindMatchingKeyword(shieldKeyword, transcripts);
+        if (matchedKeyword != null)
+        {
+            Debug.Log("Keyword detected: " + matchedKeyword);
+            // Trigger your gameplay action here.
+            shieldActive = !shieldActive;
+            if (shieldActive)
             {
-                Debug.Log("Keyword detected: " + boostKeyword[i]);
-                // Trigger your gameplay action here.
-                boostActive = !boostActive;
-                if (boostActive)
-                {
-                    boostText.text = "Boost: Active";
-                } else
-                {
-                    boostText.text = "Boost: Inactive";
-                }
-                break;
+                shieldText.text = "Shield: Active";
+            } else
+            {
+                shieldText.text = "Shield: Inactive";
             }
         }
 
-        for (int i = 0; i < shieldKeyword.Length; i++)
+        matchedKeyword = FindMatchingKeyword(sirenKeyword, transcripts);
+        if (matchedKeyword != null)
         {
-            if (string.IsNullOrWhiteSpace(shieldKeyword[i]))
-                return;
-
-            string pattern = @"\b" + Regex.Escape(shieldKeyword[i].Trim()) + @"\b";
-
-            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+            Debug.Log("Keyword detected: " + matchedKeyword);
+            // Trigger your gameplay action here.
+            sirenActive = !sirenActive;
+            if (sirenActive)
             {
-                Debug.Log("Keyword detected: " + shieldKeyword[i]);
-                // Trigger your gameplay action here.
-                shieldActive = !shieldActive;
-                if (shieldActive)
-                {
-                    shieldText.text = "Shield: Active";
-                } else
-                {
-                    shieldText.text = "Shield: Inactive";
-                }
-                break;
+                sirenText.text = "Siren: Active";
+            } else
+            {
+                sirenText.text = "Siren: Inactive";
             }
         }
 
-        for (int i = 0; i < sirenKeyword.Length; i++)
+        matchedKeyword = FindMatchingKeyword(pauseKeyword, transcripts);
+        if (matchedKeyword != null)
         {
-            if (string.IsNullOrWhiteSpace(sirenKeyword[i]))
-                return;
+            Debug.Log("Keyword detected: " + matchedKeyword);
+            // Trigger your gameplay action here.
+            pause.PauseToggle();
+        }
+    }
 
-            string pattern = @"\b" + Regex.Escape(sirenKeyword[i].Trim()) + @"\b";
+    private static string FindMatchingKeyword(string[] keywords, string[] transcripts)
+    {
+        for (int i = 0; i < keywords.Length; i++)
+        {
+            if (string.IsNullOrWhiteSpace(keywords[i]))
+                continue;
 
-            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
+            string pattern = @"\b" + Regex.Escape(keywords[i].Trim()) + @"\b";
+            for (int transcriptIndex = 0;
+                transcriptIndex < transcripts.Length && transcriptIndex < 3;
+                transcriptIndex++)
             {
-                Debug.Log("Keyword detected: " + sirenKeyword[i]);
-                // Trigger your gameplay action here.
-                sirenActive = !sirenActive;
-                if (sirenActive)
-                {
-                    sirenText.text = "Siren: Active";
-                } else
-                {
-                    sirenText.text = "Siren: Inactive";
-                }
-                break;
+                if (Regex.IsMatch(transcripts[transcriptIndex], pattern, RegexOptions.IgnoreCase))
+                    return keywords[i];
             }
         }
 
-        for (int i = 0; i < pauseKeyword.Length; i++)
-        {
-            if (string.IsNullOrWhiteSpace(pauseKeyword[i]))
-                return;
-
-            string pattern = @"\b" + Regex.Escape(pauseKeyword[i].Trim()) + @"\b";
-
-            if (Regex.IsMatch(transcript, pattern, RegexOptions.IgnoreCase))
-            {
-                Debug.Log("Keyword detected: " + pauseKeyword[i]);
-                // Trigger your gameplay action here.
-                    pause.PauseToggle();
-                break;
-            }
-        }
-        
+        return null;
     }
 
     public void OnError(string recognizedError)
@@ -143,6 +149,18 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     // Update is called once per frame
     void Update()
     {
-        
+        if (boostActive)
+        {
+            boostRemaining = Mathf.Max(0f, boostRemaining - Time.deltaTime);
+            if (boostRemaining <= 0f)
+            {
+                SetBoostActive(false);
+            }
+        }
+        else
+        {
+            boostRemaining = Mathf.Min(maxBoostTime,
+                boostRemaining + maxBoostTime / boostRefillTime * Time.deltaTime);
+        }
     }
 }
