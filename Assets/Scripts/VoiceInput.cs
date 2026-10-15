@@ -15,7 +15,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
     public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit"};
     public SimplePause pause;
-    [Tooltip("Allows testBox-tagged boxes to move under physics. When off, they remain solid and immovable.")]
+    [Tooltip("Multiplies the car's collision impulse on testBox-tagged boxes by 5. Boxes always use normal physics.")]
     public bool shieldActive = false;
     public bool sirenActive = false;
 

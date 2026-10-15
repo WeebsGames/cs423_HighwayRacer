@@ -202,6 +202,9 @@ extern void RadioController__ctor_mF775168D4D13CD7A64EF34E1492D7BE3F363DB51 (voi
 extern void ScoreManager_GetTotal_mB85693721528E496FA47D60BBA21A799A95A281E (void);
 extern void ScoreManager_Reset_mE751CD7ABD9FA783C22F2DA455F0790D4261AEFC (void);
 extern void ScoreManager__ctor_mE5C264C34A9CBBAB72DCF99CCCC9841AF8F9FEE6 (void);
+extern void slideScript_Initialize_m1EFDFD27C21097DC1C98D889C168909E63BFBFE7 (void);
+extern void slideScript_Update_m4772E4A9FF39AE591D2D79BE603B4BB92124A16C (void);
+extern void slideScript__ctor_mE45D16B32B004F73E889D456DEB9158CA10D6CA7 (void);
 extern void SlipperySurface_OnTriggerEnter_mE2AED277BC6E6A6872AB7B60E1069F23A95CBE24 (void);
 extern void SlipperySurface_OnTriggerExit_m9AD10229AB168601608427B63B0A430A28AB7BE3 (void);
 extern void SlipperySurface_SetFriction_m81A140BB4ECC116C3756144411EFE965B90E1757 (void);
@@ -238,6 +241,10 @@ extern void StoplightFSM_OnTriggerEnter_m734E762708E8F9B65F131877A4EA709DABA7EAE
 extern void StoplightFSM_OnTriggerExit_m4154772BBA69730237F8D3ED42D8C8FC9AFBCEAC (void);
 extern void StoplightFSM_SetState_mD60A0664775879524250B406C0716740BD3FD1E2 (void);
 extern void StoplightFSM__ctor_m82A9CABB730C4CB731DEA36E996FC79852806829 (void);
+extern void testBoxScript_Initialize_m91775F46BA2A04B1FD0FE33BAACDC9C22FEEE601 (void);
+extern void testBoxScript_FixedUpdate_mDB9786369DAE4E396883F0716668EB52DF6CA6FF (void);
+extern void testBoxScript_UpdatePhysicsState_mA6AD027A1A5CF8BDB3FAD1509E9D9AFDD8D5B691 (void);
+extern void testBoxScript__ctor_m34318AF38854672C9F3EDD52768EAC0401B715FF (void);
 extern void VisualSuspension_Start_mDA314DC1E5DEB0800BDC49626ACF650C2ABD9E46 (void);
 extern void VisualSuspension_Update_mD4920DBC7297B669E768543C36ACF8375B92E259 (void);
 extern void VisualSuspension_UpdateWheelSuspension_mBB53C1123A7BABF6367FBC87DBC8CB5D9B5F566F (void);
@@ -248,6 +255,7 @@ extern void VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB
 extern void VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4 (void);
 extern void VoiceInput_get_boostFillAmount_mC8166393875C5121A64B3772325A25E92D857646 (void);
 extern void VoiceInput_Awake_m7C33C178F4A83F32118F63105255B10217E7DE3E (void);
+extern void VoiceInput_InitializeDoorBoxes_m3AE6FE279797EEFD578249FB5787639BD2438FF1 (void);
 extern void VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378 (void);
 extern void VoiceInput_Start_m1B9447ED20EFF3C791406D100703864C374CD477 (void);
 extern void VoiceInput_BeginListening_m1C4FBF7F095CBB2E04B3DFFFA7F2E2311D1F6B2B (void);
@@ -576,7 +584,7 @@ extern void ThirdPersonCamera_Move_m15EB46669D76829468B4E4AE7EC1C3801F54701F (vo
 extern void ThirdPersonCamera__ctor_mCB0B298CC2FB54E41B384CD575515605ED223D3D (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__cameraU7C6_0_m50675C74BEFA9F8E49B463DCE30F0DAF561808FB (void);
 extern void ThirdPersonCamera_U3CMoveU3Eg__targetU7C6_1_m685EAC5C4BF2F78AD94F72563EA8A5E2CA58EC70 (void);
-static Il2CppMethodPointer s_methodPointers[578] = 
+static Il2CppMethodPointer s_methodPointers[586] = 
 {
 	WaterReflection_Awake_m86F43948E686275B6F0C6D761C619EDAB40B1678,
 	WaterReflection_Update_mEAF4BCA28F1154AF68D716AC6E3A954482DED822,
@@ -773,6 +781,9 @@ static Il2CppMethodPointer s_methodPointers[578] =
 	ScoreManager_GetTotal_mB85693721528E496FA47D60BBA21A799A95A281E,
 	ScoreManager_Reset_mE751CD7ABD9FA783C22F2DA455F0790D4261AEFC,
 	ScoreManager__ctor_mE5C264C34A9CBBAB72DCF99CCCC9841AF8F9FEE6,
+	slideScript_Initialize_m1EFDFD27C21097DC1C98D889C168909E63BFBFE7,
+	slideScript_Update_m4772E4A9FF39AE591D2D79BE603B4BB92124A16C,
+	slideScript__ctor_mE45D16B32B004F73E889D456DEB9158CA10D6CA7,
 	SlipperySurface_OnTriggerEnter_mE2AED277BC6E6A6872AB7B60E1069F23A95CBE24,
 	SlipperySurface_OnTriggerExit_m9AD10229AB168601608427B63B0A430A28AB7BE3,
 	SlipperySurface_SetFriction_m81A140BB4ECC116C3756144411EFE965B90E1757,
@@ -818,6 +829,10 @@ static Il2CppMethodPointer s_methodPointers[578] =
 	StoplightFSM_OnTriggerExit_m4154772BBA69730237F8D3ED42D8C8FC9AFBCEAC,
 	StoplightFSM_SetState_mD60A0664775879524250B406C0716740BD3FD1E2,
 	StoplightFSM__ctor_m82A9CABB730C4CB731DEA36E996FC79852806829,
+	testBoxScript_Initialize_m91775F46BA2A04B1FD0FE33BAACDC9C22FEEE601,
+	testBoxScript_FixedUpdate_mDB9786369DAE4E396883F0716668EB52DF6CA6FF,
+	testBoxScript_UpdatePhysicsState_mA6AD027A1A5CF8BDB3FAD1509E9D9AFDD8D5B691,
+	testBoxScript__ctor_m34318AF38854672C9F3EDD52768EAC0401B715FF,
 	VisualSuspension_Start_mDA314DC1E5DEB0800BDC49626ACF650C2ABD9E46,
 	VisualSuspension_Update_mD4920DBC7297B669E768543C36ACF8375B92E259,
 	VisualSuspension_UpdateWheelSuspension_mBB53C1123A7BABF6367FBC87DBC8CB5D9B5F566F,
@@ -828,6 +843,7 @@ static Il2CppMethodPointer s_methodPointers[578] =
 	VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4,
 	VoiceInput_get_boostFillAmount_mC8166393875C5121A64B3772325A25E92D857646,
 	VoiceInput_Awake_m7C33C178F4A83F32118F63105255B10217E7DE3E,
+	VoiceInput_InitializeDoorBoxes_m3AE6FE279797EEFD578249FB5787639BD2438FF1,
 	VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378,
 	VoiceInput_Start_m1B9447ED20EFF3C791406D100703864C374CD477,
 	VoiceInput_BeginListening_m1C4FBF7F095CBB2E04B3DFFFA7F2E2311D1F6B2B,
@@ -1160,9 +1176,9 @@ static Il2CppMethodPointer s_methodPointers[578] =
 extern void LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	{ 0x06000224, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
+	{ 0x0600022C, LookWeight__ctor_m9495967FD619B277AD3CE8B1281B6F2A81FE4E84_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[578] = 
+static const int32_t s_InvokerIndices[586] = 
 {
 	16111,
 	16111,
@@ -1359,6 +1375,9 @@ static const int32_t s_InvokerIndices[578] =
 	16004,
 	16111,
 	16111,
+	6269,
+	16111,
+	16111,
 	12297,
 	12297,
 	6287,
@@ -1404,6 +1423,10 @@ static const int32_t s_InvokerIndices[578] =
 	12297,
 	12228,
 	16111,
+	12297,
+	16111,
+	16111,
+	16111,
 	16111,
 	16111,
 	6259,
@@ -1413,6 +1436,7 @@ static const int32_t s_InvokerIndices[578] =
 	16004,
 	12394,
 	16004,
+	16111,
 	16111,
 	12083,
 	16111,
@@ -1747,7 +1771,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	578,
+	586,
 	s_methodPointers,
 	1,
 	s_adjustorThunks,

@@ -157,6 +157,8 @@ extern void RaycastHit_get_rigidbody_mE6FCB1B1A9F0C8D4185A484C10B9A5403CCD6005 (
 extern void Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C (void);
 extern void Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985 (void);
 extern void Rigidbody_get_angularVelocity_m4EACCFCF15CA441CCD53B24322C2E7B8EEBDF6A8 (void);
+extern void Rigidbody_get_isKinematic_mC20906CA5A89983DE06EAC6E3AFC5BC012F90CA1 (void);
+extern void Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED (void);
 extern void Rigidbody_get_centerOfMass_mA66BE4DE0469545EBCF49A66EE4FDD3A5D0ADF91 (void);
 extern void Rigidbody_set_centerOfMass_m9D4A68D102498C7DBCD91278FF5EE7EE0BF2B188 (void);
 extern void Rigidbody_get_position_m4ECB79BDBBF8FD1EA572EDB792D3330DDED24691 (void);
@@ -171,6 +173,8 @@ extern void Rigidbody__ctor_mB4E21922228AED3B52D8696D54F5B514F922CB07 (void);
 extern void Rigidbody_get_linearVelocity_Injected_m0230F76BD25355A9762C9C5E32C60BF8249F4F6D (void);
 extern void Rigidbody_set_linearVelocity_Injected_mCAC97A87C8F0FAFA7007C394AF7974DD37073467 (void);
 extern void Rigidbody_get_angularVelocity_Injected_m8F8207351352DBE8B7103C3A703E03A25C3046CB (void);
+extern void Rigidbody_get_isKinematic_Injected_m14C47E2023F4EE3554769F07DD6917B3C62D2212 (void);
+extern void Rigidbody_set_isKinematic_Injected_m5613C03722F001F12F373B8AAB0C3CFF5512A78D (void);
 extern void Rigidbody_get_centerOfMass_Injected_m72ACFBB4953C0DA0E2F373D08D3F17C69E0497C0 (void);
 extern void Rigidbody_set_centerOfMass_Injected_m903ED712C17D74F6005C12BC6EAFC095B4CC58B0 (void);
 extern void Rigidbody_get_position_Injected_mD3AC6CDFE76252AAE5F4862BC7D18E0C479DDC8E (void);
@@ -179,7 +183,7 @@ extern void Rigidbody_MovePosition_Injected_m1FBFE36CBE00546E08E32E304FEB6EEA5EE
 extern void Rigidbody_MoveRotation_Injected_m45E52DDE97339CE0552EBF4169DFBBC87D3F02D5 (void);
 extern void Rigidbody_AddForce_Injected_m0063728ED4AA2811701ED30CDFC9765816402152 (void);
 extern void Rigidbody_AddTorque_Injected_m53C26367D5511FFDCC214CB10A2DEB920CE55F59 (void);
-static Il2CppMethodPointer s_methodPointers[172] = 
+static Il2CppMethodPointer s_methodPointers[176] = 
 {
 	Collision_get_impulse_mBA2EDD39B7F495FF335FB867B244253602C7EF5D,
 	Collision_get_rigidbody_mD7A14B9C8AA98352340D2AB0097FC3A424FBB81B,
@@ -331,6 +335,8 @@ static Il2CppMethodPointer s_methodPointers[172] =
 	Rigidbody_get_linearVelocity_m367F5415641E5FB968440A91BAE2FCB8CAEA2C8C,
 	Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985,
 	Rigidbody_get_angularVelocity_m4EACCFCF15CA441CCD53B24322C2E7B8EEBDF6A8,
+	Rigidbody_get_isKinematic_mC20906CA5A89983DE06EAC6E3AFC5BC012F90CA1,
+	Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED,
 	Rigidbody_get_centerOfMass_mA66BE4DE0469545EBCF49A66EE4FDD3A5D0ADF91,
 	Rigidbody_set_centerOfMass_m9D4A68D102498C7DBCD91278FF5EE7EE0BF2B188,
 	Rigidbody_get_position_m4ECB79BDBBF8FD1EA572EDB792D3330DDED24691,
@@ -345,6 +351,8 @@ static Il2CppMethodPointer s_methodPointers[172] =
 	Rigidbody_get_linearVelocity_Injected_m0230F76BD25355A9762C9C5E32C60BF8249F4F6D,
 	Rigidbody_set_linearVelocity_Injected_mCAC97A87C8F0FAFA7007C394AF7974DD37073467,
 	Rigidbody_get_angularVelocity_Injected_m8F8207351352DBE8B7103C3A703E03A25C3046CB,
+	Rigidbody_get_isKinematic_Injected_m14C47E2023F4EE3554769F07DD6917B3C62D2212,
+	Rigidbody_set_isKinematic_Injected_m5613C03722F001F12F373B8AAB0C3CFF5512A78D,
 	Rigidbody_get_centerOfMass_Injected_m72ACFBB4953C0DA0E2F373D08D3F17C69E0497C0,
 	Rigidbody_set_centerOfMass_Injected_m903ED712C17D74F6005C12BC6EAFC095B4CC58B0,
 	Rigidbody_get_position_Injected_mD3AC6CDFE76252AAE5F4862BC7D18E0C479DDC8E,
@@ -441,7 +449,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[42] =
 	{ 0x06000092, RaycastHit_get_transform_m89DB7FCFC50E0213A37CBE089400064B8FA19155_AdjustorThunk },
 	{ 0x06000093, RaycastHit_get_rigidbody_mE6FCB1B1A9F0C8D4185A484C10B9A5403CCD6005_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[172] = 
+static const int32_t s_InvokerIndices[176] = 
 {
 	16100,
 	15894,
@@ -593,6 +601,8 @@ static const int32_t s_InvokerIndices[172] =
 	16100,
 	12488,
 	16100,
+	15678,
+	12083,
 	16100,
 	12488,
 	16100,
@@ -607,6 +617,8 @@ static const int32_t s_InvokerIndices[172] =
 	23096,
 	23096,
 	23096,
+	25274,
+	23097,
 	23096,
 	23096,
 	23096,
@@ -620,7 +632,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenMod
 const Il2CppCodeGenModule g_UnityEngine_PhysicsModule_CodeGenModule = 
 {
 	"UnityEngine.PhysicsModule.dll",
-	172,
+	176,
 	s_methodPointers,
 	42,
 	s_adjustorThunks,
