@@ -15,11 +15,11 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
     public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit"};
     public SimplePause pause;
+    public bool shieldActive = false;
+    public bool sirenActive = false;
 
     private SpeechRecognizerPlugin plugin;
     public bool boostActive { get; private set; } = false;
-    private bool shieldActive = false;
-    private bool sirenActive = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()

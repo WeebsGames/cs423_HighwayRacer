@@ -47,6 +47,9 @@ public class CarControl : MonoBehaviour
     public GameObject startPos;
     [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged ThrottleBar. Displays gyro throttle from 0 to 1.")]
     public GameObject throttleBar;
+    [Tooltip("Shield object whose active state follows VoiceInput.shieldActive.")]
+    public GameObject shield;
+
     private UnityEngine.UI.Image throttleBarImage;
 
     private void OnEnable()
@@ -172,12 +175,17 @@ public class CarControl : MonoBehaviour
             voiceInput = listener.GetComponent<VoiceInput>();
             if (voiceInput == null)
             {
-                Debug.LogError("Object tagged Listener must have a VoiceInput component. Boost will be unavailable.", listener);
+                Debug.LogError("Object tagged Listener must have a VoiceInput component. Boost and shield will be unavailable.", listener);
             }
         }
         else
         {
-            Debug.LogWarning("No active object tagged Listener found. Boost will be unavailable.", this);
+            Debug.LogWarning("No active object tagged Listener found. Boost and shield will be unavailable.", this);
+        }
+
+        if (shield == null)
+        {
+            Debug.LogWarning("No shield object assigned. Shield display will not update.", this);
         }
 
         if (throttleBar == null)
@@ -220,6 +228,11 @@ public class CarControl : MonoBehaviour
 
     void Update()
     {
+        if (shield != null)
+        {
+            shield.SetActive(voiceInput != null && voiceInput.shieldActive);
+        }
+
         UpdateGyroInput();
         if (throttleBarImage != null)
         {
