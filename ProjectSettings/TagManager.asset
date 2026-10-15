@@ -19,6 +19,7 @@ TagManager:
   - MuteNoise
   - Score
   - DriftPoints
+  - ThrottleBar
   layers:
   - Default
   - TransparentFX

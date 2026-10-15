@@ -41,6 +41,9 @@ public class CarControl : MonoBehaviour
     // public TMP_Text speedText;
     public TMP_Text brakeText;
     public GameObject startPos;
+    [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged ThrottleBar. Displays gyro throttle from 0 to 1.")]
+    public GameObject throttleBar;
+    private UnityEngine.UI.Image throttleBarImage;
 
     private void OnEnable()
     {
@@ -151,6 +154,28 @@ public class CarControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (throttleBar == null)
+        {
+            throttleBar = GameObject.FindGameObjectWithTag("ThrottleBar");
+        }
+
+        if (throttleBar != null)
+        {
+            throttleBarImage = throttleBar.GetComponent<UnityEngine.UI.Image>();
+            if (throttleBarImage == null)
+            {
+                Debug.LogError("Throttle bar must have a UnityEngine.UI.Image component.", throttleBar);
+            }
+            else
+            {
+                throttleBarImage.fillAmount = 0f;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No active object tagged ThrottleBar found. Throttle display will not update.", this);
+        }
+
         rigidBody = GetComponent<Rigidbody>();
 
         // Adjust center of mass to improve stability and prevent rolling
@@ -170,6 +195,10 @@ public class CarControl : MonoBehaviour
     void Update()
     {
         UpdateGyroInput();
+        if (throttleBarImage != null)
+        {
+            throttleBarImage.fillAmount = Mathf.Clamp01(gyroInput.y);
+        }
 
         if (Input.GetKeyUp(KeyCode.R))
         {
