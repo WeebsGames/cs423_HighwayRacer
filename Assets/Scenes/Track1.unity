@@ -26603,7 +26603,7 @@ PrefabInstance:
       objectReference: {fileID: 321494319}
     - target: {fileID: 6024858010206668274, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: timeLimit
-      value: 30
+      value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 6313620901475173865, guid: 2046116f69d3877449e6bb53de2d6df7, type: 3}
       propertyPath: m_IsActive
@@ -37900,7 +37900,7 @@ MonoBehaviour:
   - {x: 41.994408, y: 2.8478994, z: 59.108376}
   - {x: 35.985718, y: 2.8478994, z: 37.38501}
   - {x: 31.971716, y: 2.8478994, z: 22.873089}
-  - {x: 19.681108, y: 0.2000122, z: 0.21227874}
+  - {x: 19.68111, y: 0.2000122, z: 0.21227874}
   - {x: 6.8136597, y: 0.2000122, z: 0.21228027}
   normals:
   - {x: 0.0046429797, y: 0.9949612, z: 0.100153156}
