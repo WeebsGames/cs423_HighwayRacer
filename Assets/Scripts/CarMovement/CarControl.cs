@@ -18,6 +18,7 @@ public class CarControl : MonoBehaviour
 
     private WheelControl[] wheels;
     private Rigidbody rigidBody;
+    private VoiceInput voiceInput;
     private WheelFrictionCurve sideFric;
     private bool handbraking = false;
     private float prevSpeed;
@@ -165,6 +166,20 @@ public class CarControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject listener = GameObject.FindGameObjectWithTag("Listener");
+        if (listener != null)
+        {
+            voiceInput = listener.GetComponent<VoiceInput>();
+            if (voiceInput == null)
+            {
+                Debug.LogError("Object tagged Listener must have a VoiceInput component. Boost will be unavailable.", listener);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No active object tagged Listener found. Boost will be unavailable.", this);
+        }
+
         if (throttleBar == null)
         {
             throttleBar = GameObject.FindGameObjectWithTag("ThrottleBar");
@@ -276,18 +291,22 @@ public class CarControl : MonoBehaviour
         float vInput = throttle; // Stored forward throttle
         float hInput = gyroInput.x; // Steering input
 
+        bool boostActive = voiceInput != null && voiceInput.boostActive;
+        float currentMaxSpeed = maxSpeed * (boostActive ? 1.25f : 1f);
+
         // Calculate current speed along the car's forward axis
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.linearVelocity);
-        float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed)); // Normalized speed factor
+        float speedFactor = Mathf.InverseLerp(0, currentMaxSpeed, Mathf.Abs(forwardSpeed)); // Normalized speed factor
 
         //incentivise drifting
         if (handbraking)
         {
-            speedFactor = Mathf.InverseLerp(0, maxSpeed * 1.5f, Mathf.Abs(forwardSpeed));
+            speedFactor = Mathf.InverseLerp(0, currentMaxSpeed * 1.5f, Mathf.Abs(forwardSpeed));
         }
 
         // Reduce motor torque and steering at high speeds for better handling
-        float currentMotorTorque = Mathf.Lerp(motorTorque, 0, speedFactor);
+        float boostMultiplier = boostActive ? 1.5f : 1f;
+        float currentMotorTorque = Mathf.Lerp(motorTorque, 0, speedFactor) * boostMultiplier;
         float currentSteerRange = Mathf.Lerp(steeringRange, steeringRangeAtMaxSpeed, speedFactor);
 
         // Determine if the player is accelerating or trying to reverse

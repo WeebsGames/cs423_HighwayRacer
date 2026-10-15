@@ -17,7 +17,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public SimplePause pause;
 
     private SpeechRecognizerPlugin plugin;
-    private bool boostActive = false;
+    public bool boostActive { get; private set; } = false;
     private bool shieldActive = false;
     private bool sirenActive = false;
 

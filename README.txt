@@ -7,6 +7,13 @@ The player needs to navigate through the levels while avoiding obstacles such as
 
 Itch.io link to download the game: https://areebj.itch.io/stacked-delivery
 
+Voice boost:
+CarControl finds the active object tagged Listener and reads its VoiceInput boostActive state.
+While boost is active, motor torque (acceleration) increases by 50% and top speed increases by 25%.
+The existing drifting speed bonus stacks with boost. Turning boost off restores normal torque
+and the normal top-speed target without abruptly clamping velocity. Braking and throttle input remain unchanged.
+Each driving scene using voice boost needs an active Listener-tagged object with VoiceInput attached.
+
 
 To show the player the urgency of the task, the time has been set to night to simulate a late night emergency delivery. Think of it this way: Its 11:50pm and you have to make a same day delivery!
 

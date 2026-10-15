@@ -37900,7 +37900,7 @@ MonoBehaviour:
   - {x: 41.994408, y: 2.8478994, z: 59.108376}
   - {x: 35.985718, y: 2.8478994, z: 37.38501}
   - {x: 31.971716, y: 2.8478994, z: 22.873089}
-  - {x: 19.681105, y: 0.2000122, z: 0.21227874}
+  - {x: 19.681108, y: 0.2000122, z: 0.21227874}
   - {x: 6.8136597, y: 0.2000122, z: 0.21228027}
   normals:
   - {x: 0.0046429797, y: 0.9949612, z: 0.100153156}
@@ -51635,7 +51635,7 @@ GameObject:
   - component: {fileID: 2133812560}
   m_Layer: 0
   m_Name: Listener
-  m_TagString: Untagged
+  m_TagString: Listener
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51652,7 +51652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a69a70347f9dd1438f2d3339433872a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  text: {fileID: 1467508389}
+  boostText: {fileID: 1467508389}
+  shieldText: {fileID: 637025210}
+  sirenText: {fileID: 1995241529}
   debugText: {fileID: 1371276632}
   boostKeyword:
   - boost
