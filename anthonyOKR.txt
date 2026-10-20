@@ -1,3 +1,0 @@
-item physics stability system - ItemPhysics.cs -- Fri by 5pm (estimate 8 hours)
-item stack wobble system -- Fri by 5pm (estimate: 4 hours)
-physics testing scene with vehicle -- Fri by 5pm (estimate: 4 hours)

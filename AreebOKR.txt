@@ -1,3 +1,0 @@
-- basic track design (1-2 hours)
-- driving physics (5-10 hours)
-- start and finish states (1 hour)
