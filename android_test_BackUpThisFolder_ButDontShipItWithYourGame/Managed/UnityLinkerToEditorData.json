@@ -590,7 +590,8 @@
           {
             "name": "SpriteRenderer",
             "scenes": [
-              "Assets/Scenes/MainMenu2.unity"
+              "Assets/Scenes/MainMenu2.unity",
+              "Assets/Scenes/Track1.unity"
             ],
             "dependencyType": 0,
             "icon": null

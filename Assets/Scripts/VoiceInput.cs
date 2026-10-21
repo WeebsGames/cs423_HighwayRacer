@@ -5,11 +5,15 @@ using UnityEngine.AdaptivePerformance;
 
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
-    
+    [Header("Debug Objects")]
     public TMP_Text boostText;
     public TMP_Text shieldText;
     public TMP_Text sirenText;
     public TMP_Text debugText;
+    [Header("Display Objects")]
+    public Object shieldSprite;
+    public Object sirenSprite;
+    [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
     public string[] sirenKeyword = {"siren", "three", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "alarm", "emergency lights"};

@@ -168,7 +168,6 @@ struct AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299;
 struct BaseRaycaster_t7DC8158FD3CA0193455344379DD5FF7CD5F1F832;
 struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA;
 struct Benchmark01_t5B476C61575B5B6B64FA318EE0B32114E702DD5D;
-struct Benchmark01_UGUI_t7DF9DF96E75AF6072B851B638B90BD76FEE0EFD7;
 struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
 struct BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23;
 struct ButtonControl_t85949109B98AAF5B7ADC0285F0EC98A61EC88ECF;
@@ -326,7 +325,6 @@ struct testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31;
 struct PCMReaderCallback_t3396D9613664F0AFF65FB91018FD0F901CC16F1E;
 struct PCMSetPositionCallback_t8D7135A2FB40647CAEC93F5254AD59E18DEB6072;
 struct U3CStartU3Ed__10_tB81FF4C98E539AF1EEA095D6A6C11409A26E7819;
-struct U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 struct WillRenderCanvases_tA4A6E66DBA797DCB45B995DBA449A9D1D80D0FBC;
 struct U3CStartU3Ed__4_t7AF0F1ABA8D3AE9575A02603D2DC2137FA816557;
@@ -387,7 +385,6 @@ IL2CPP_EXTERN_C RuntimeClass* SpriteSelectionEvent_t770551D2973013622C464E817FA7
 IL2CPP_EXTERN_C RuntimeClass* State_tDBBDFCD527DC0BFB1BA5AA496F05B22A6F64ACF7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TMP_TextUtilities_tD7ED516E31C2AA0EB607D587C0BB0FE71A8BB934_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__10_tB81FF4C98E539AF1EEA095D6A6C11409A26E7819_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CStartU3Ed__4_t7AF0F1ABA8D3AE9575A02603D2DC2137FA816557_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t1CBC6B47DF9981911FD31429F625764F1569E579_il2cpp_TypeInfo_var;
@@ -402,12 +399,14 @@ IL2CPP_EXTERN_C String_t* _stringLiteral00B28FF06B788B9B67C6B259800F404F9F3761FD
 IL2CPP_EXTERN_C String_t* _stringLiteral0397B516585B052CE5F107B86E7E69ED4FB93E81;
 IL2CPP_EXTERN_C String_t* _stringLiteral03FDAEFF3217CFFDE46B73C8CB43736EF93C8B89;
 IL2CPP_EXTERN_C String_t* _stringLiteral05300BC22C03EBF5F848C84F028186CC7FABAC41;
+IL2CPP_EXTERN_C String_t* _stringLiteral065DC8625839CD49D806184BA0C5FD3870DCC735;
 IL2CPP_EXTERN_C String_t* _stringLiteral09FD22DA3CEFEACE96CB263E19361486F432DB29;
 IL2CPP_EXTERN_C String_t* _stringLiteral0A5B75A180F8485D63D34FF1F4EDF6699CD0E2E0;
 IL2CPP_EXTERN_C String_t* _stringLiteral0B5ECFF84CE073C4971D637741C560F910E4D128;
 IL2CPP_EXTERN_C String_t* _stringLiteral0C2F8625A7EFB131D25E40BA861C2B1D4308D55A;
 IL2CPP_EXTERN_C String_t* _stringLiteral0DA5F1287115C49EF9D36AE3B84E6AB8E4CEF0F5;
 IL2CPP_EXTERN_C String_t* _stringLiteral0EF911B4E5C5A3E63DAB6CEA449EF637C363EF9B;
+IL2CPP_EXTERN_C String_t* _stringLiteral0F50E54B75F710BDC8BCBAA142EA34E24C514AED;
 IL2CPP_EXTERN_C String_t* _stringLiteral0FC24F250FD9FA27758D413EA3A135EB13F80229;
 IL2CPP_EXTERN_C String_t* _stringLiteral12546875F19950A5A5C74F489FBCD3449D19652C;
 IL2CPP_EXTERN_C String_t* _stringLiteral1485297402884111EB65302CED9B17E4FCA84360;
@@ -446,6 +445,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral47A0278078BE655D0D9E5061C35ECD0FFBB6E136
 IL2CPP_EXTERN_C String_t* _stringLiteral489EF223894DB4CE770614B5DA37C1DA42BFA5FB;
 IL2CPP_EXTERN_C String_t* _stringLiteral48BD39C88065748153A57182E04A394205F4686D;
 IL2CPP_EXTERN_C String_t* _stringLiteral4984C3CBA8E12C202491A3103620ADFB81CA34FC;
+IL2CPP_EXTERN_C String_t* _stringLiteral4EC142B21233DB052713D769F2F7615CC8A42E74;
 IL2CPP_EXTERN_C String_t* _stringLiteral4F1FD785124509C5A61935445765B51A6E20561B;
 IL2CPP_EXTERN_C String_t* _stringLiteral51D166D4E98E546D1A4F6AF12FEFBF4208ACC717;
 IL2CPP_EXTERN_C String_t* _stringLiteral55ED31C2F2B3DE07E05565D7C8BB6DB81C724B0D;
@@ -458,16 +458,19 @@ IL2CPP_EXTERN_C String_t* _stringLiteral5EECB64BE8049B66AB6AC267D44397763F03335C
 IL2CPP_EXTERN_C String_t* _stringLiteral5FEB131CC93985644742126EF69A6950A8D7E3F4;
 IL2CPP_EXTERN_C String_t* _stringLiteral60653C8DE1EE2FA7EDBDB4E13FC5947FDBAEE767;
 IL2CPP_EXTERN_C String_t* _stringLiteral63A7BC5625BD73B4EFFB4EB777EA75B79C73E722;
+IL2CPP_EXTERN_C String_t* _stringLiteral64F60223B84CAD2E9FFDDC7C983F7369A75BAB69;
 IL2CPP_EXTERN_C String_t* _stringLiteral68CDD998A3CA01F5924F0FDB3E2A99F58576DB7D;
 IL2CPP_EXTERN_C String_t* _stringLiteral68F9A1E01D191862090035E9072B460B42F11949;
 IL2CPP_EXTERN_C String_t* _stringLiteral6E545EC3ACBE0CBC0A74CE008CB92B55841F1D83;
 IL2CPP_EXTERN_C String_t* _stringLiteral73499AD646DE28369FB68F093FAB181683D5276F;
 IL2CPP_EXTERN_C String_t* _stringLiteral74B2792CA9A8161E31A31D22282CAA4956F9B5E1;
 IL2CPP_EXTERN_C String_t* _stringLiteral79B1E490F7FA035BF7AD82F54BDE4F545CB81EA3;
+IL2CPP_EXTERN_C String_t* _stringLiteral79F204B54A42986A822F7B83FDFA2387C1250719;
 IL2CPP_EXTERN_C String_t* _stringLiteral7A0C015EF046FFEAFB5FBA3E8CEB5C2098EF7888;
 IL2CPP_EXTERN_C String_t* _stringLiteral7A8DC9C329BF49B1C78B18CD4B8DBF9500B4CCDB;
 IL2CPP_EXTERN_C String_t* _stringLiteral7B13A7D14BC95046D3FA07F90EE26BEA83EB87EB;
 IL2CPP_EXTERN_C String_t* _stringLiteral7D1364D44BA8F634BB9CD0BC5617C11222D23BFC;
+IL2CPP_EXTERN_C String_t* _stringLiteral7DBDBEE0CD8B5072C3DC362C9F4A3CE9F9F7A67E;
 IL2CPP_EXTERN_C String_t* _stringLiteral7F8C014BD4810CC276D0F9F81A1E759C7B098B1E;
 IL2CPP_EXTERN_C String_t* _stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7;
 IL2CPP_EXTERN_C String_t* _stringLiteral805F44CEC41AD46DEE3CEBC945643746B389AFD1;
@@ -485,12 +488,14 @@ IL2CPP_EXTERN_C String_t* _stringLiteral939F8B5E339C62074605972D9B33D36F193577C0
 IL2CPP_EXTERN_C String_t* _stringLiteral93BBB7EFBA44C52521BD9E580CE4A0494E9E0239;
 IL2CPP_EXTERN_C String_t* _stringLiteral95B87D7D98C9367E26E09CA8201B974194676BA8;
 IL2CPP_EXTERN_C String_t* _stringLiteral960E5E7F211EFF3243DF14EDD1901DC9EF314D62;
+IL2CPP_EXTERN_C String_t* _stringLiteral96F3EE2BBDC4B77F52EF5B2DA5F6765988A94990;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A7E77DB84E1908153085B0037B2757EFD9E6B67;
 IL2CPP_EXTERN_C String_t* _stringLiteral9AE39423AFD3EF757F2EF3B82C40E78A795489A9;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C311850C974AD222115D59D4F9F42F19002BA4B;
 IL2CPP_EXTERN_C String_t* _stringLiteral9D329ACFC4F7EECCB821A7FEF99A0F23E1C721B7;
 IL2CPP_EXTERN_C String_t* _stringLiteral9F965FF9EB3EC331ED8F7649C378FAD42C5B355C;
 IL2CPP_EXTERN_C String_t* _stringLiteral9FE7DE6E4A774722D708D23472147520CD80F951;
+IL2CPP_EXTERN_C String_t* _stringLiteralA08BB6F4CF99A90BBD638AB4D0818BF584A29E2B;
 IL2CPP_EXTERN_C String_t* _stringLiteralA220A22C5FAAB625E013DB9D2FE393F2A347F292;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3DFC0C77ACADE0EE48DCC73E795A597D0270A73;
 IL2CPP_EXTERN_C String_t* _stringLiteralA467BFC7CEA8E6EA5E3E11154C4339125D8FB893;
@@ -523,6 +528,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralCEDCB5801073B0C1AA5C9A7208B33D4CEB8EE5AC
 IL2CPP_EXTERN_C String_t* _stringLiteralD0EC7A6CB445CA2A8454DE0AE1CD17395DD14926;
 IL2CPP_EXTERN_C String_t* _stringLiteralD137688503D487E77A32ECE380C22FE97C89509A;
 IL2CPP_EXTERN_C String_t* _stringLiteralD37CFB18BD95466D507B21CEEE8EA1B8ACF1A60E;
+IL2CPP_EXTERN_C String_t* _stringLiteralD3B2251FC42898421AC4A1B02DD85E2A9665F202;
 IL2CPP_EXTERN_C String_t* _stringLiteralD44FCC15CFBAEC32C2A061525B7730BE94DD0F4C;
 IL2CPP_EXTERN_C String_t* _stringLiteralD4E7C9FC6D4B1339303AB426C1554B1584329A29;
 IL2CPP_EXTERN_C String_t* _stringLiteralD579F97F4A33C344330AED1285CC5B545618BC19;
@@ -540,6 +546,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralE559A7D14E2E424F2E08842513C405A19BC8ECF3
 IL2CPP_EXTERN_C String_t* _stringLiteralE5C37D372367C69DCD30FE688631A1B0CE49EA73;
 IL2CPP_EXTERN_C String_t* _stringLiteralE7C1A32A1D884DF31689AB9D1BB1A38903E507EA;
 IL2CPP_EXTERN_C String_t* _stringLiteralE7D1ABCCE5D2193F90FBE422209D3464C574C1C0;
+IL2CPP_EXTERN_C String_t* _stringLiteralE8FD5B9EA69C70DE31437AF940CFC97C2582880D;
 IL2CPP_EXTERN_C String_t* _stringLiteralE99988D7E17291294B5C198C829219AF78860BBA;
 IL2CPP_EXTERN_C String_t* _stringLiteralEB8E87F5F2A33DEB3FF64315EB8EF1259A40FC28;
 IL2CPP_EXTERN_C String_t* _stringLiteralEEAFF4EA4BDCF3E59399FCE8A6B2965DE0964BA8;
@@ -794,13 +801,6 @@ struct U3CStartU3Ed__10_tB81FF4C98E539AF1EEA095D6A6C11409A26E7819  : public Runt
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	Benchmark01_t5B476C61575B5B6B64FA318EE0B32114E702DD5D* ___U3CU3E4__this;
-	int32_t ___U3CiU3E5__2;
-};
-struct U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00  : public RuntimeObject
-{
-	int32_t ___U3CU3E1__state;
-	RuntimeObject* ___U3CU3E2__current;
-	Benchmark01_UGUI_t7DF9DF96E75AF6072B851B638B90BD76FEE0EFD7* ___U3CU3E4__this;
 	int32_t ___U3CiU3E5__2;
 };
 struct U3CU3Ec_t1CBC6B47DF9981911FD31429F625764F1569E579  : public RuntimeObject
@@ -3354,17 +3354,6 @@ struct Benchmark01_t5B476C61575B5B6B64FA318EE0B32114E702DD5D  : public MonoBehav
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_material01;
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_material02;
 };
-struct Benchmark01_UGUI_t7DF9DF96E75AF6072B851B638B90BD76FEE0EFD7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	int32_t ___BenchmarkType;
-	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___canvas;
-	TMP_FontAsset_t923BF2F78D7C5AC36376E168A1193B7CB4855160* ___TMProFont;
-	Font_tC95270EA3198038970422D78B74A7F2E218A96B6* ___TextMeshFont;
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___m_textMeshPro;
-	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___m_textMesh;
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_material01;
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___m_material02;
-};
 struct BystanderAnimator_t4A41F3837D18AF8F0494E420318076534291B3E9  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___animator;
@@ -3836,6 +3825,8 @@ struct VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9  : public MonoBehavi
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___shieldText;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___sirenText;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* ___debugText;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___shieldSprite;
+	Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___sirenSprite;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___boostKeyword;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___shieldKeyword;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___sirenKeyword;
@@ -5940,7 +5931,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_fontSize_mAB9F7FFC0E4DB759B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_anchor_m3FCB7C4B1FF66CE189B56076C0306AFE984FCD32 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, int32_t ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_Text_SetText_mC6973FFC60DB6A96B0C4253CD2FD9D0789ECC533 (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* __this, String_t* ___0_sourceText, float ___1_arg0, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartU3Ed__10__ctor_m515F107569D5BDE7C81F5DFDAB4A298A5399EB5A (U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_LookRotation_m489E6A5E916949FFE91C0B11A60C6016D996C1E0 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_forward, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___1_upwards, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_Lerp_mB9D9E19C29CA86767758B70DCFF9DB7C65821B39 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, float ___2_t, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_FromEulerRad_mD0C4C0EFE1D70EC0EA4A92B11F1A4D5B0A134E49 (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_euler, const RuntimeMethod* method) ;
@@ -20465,7 +20455,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VisualSuspension__ctor_m7754D19228A7CCC6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80 (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:29>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:33>
 		bool L_0 = __this->___U3CboostActiveU3Ek__BackingField;
 		return L_0;
 	}
@@ -20474,7 +20464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool VoiceInput_get_boostActive_m9C2937464C50
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_set_boostActive_m28D9292B73BB18E3B5D112E4EF707327894EAAAD (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:29>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:33>
 		bool L_0 = ___0_value;
 		__this->___U3CboostActiveU3Ek__BackingField = L_0;
 		return;
@@ -20484,7 +20474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_set_boostActive_m28D9292B73BB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096 (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:30>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:34>
 		float L_0 = __this->___U3CboostRemainingU3Ek__BackingField;
 		return L_0;
 	}
@@ -20493,7 +20483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float VoiceInput_get_boostRemaining_m4D8B76A8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4 (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:30>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:34>
 		float L_0 = ___0_value;
 		__this->___U3CboostRemainingU3Ek__BackingField = L_0;
 		return;
@@ -20503,7 +20493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_set_boostRemaining_mEE4C42904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float VoiceInput_get_boostFillAmount_mC8166393875C5121A64B3772325A25E92D857646 (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:31>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:35>
 		float L_0;
 		L_0 = VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096_inline(__this, NULL);
 		float L_1 = __this->___maxBoostTime;
@@ -20531,10 +20521,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Awake_m7C33C178F4A83F32118F63
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31* V_3 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:35>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:39>
 		float L_0 = __this->___maxBoostTime;
 		VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4_inline(__this, L_0, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:36>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:40>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1;
 		L_1 = GameObject_FindGameObjectsWithTag_mB8AA805DA664EF0221BB338446014F662771B4E3(_stringLiteral90BF41DD9CE6D3EA23AF81F60E3A4D8BF242554E, NULL);
 		V_0 = L_1;
@@ -20544,20 +20534,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Awake_m7C33C178F4A83F32118F63
 
 IL_001b:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:36>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:40>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:38>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:42>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = V_2;
 		NullCheck(L_6);
 		testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31* L_7;
 		L_7 = GameObject_GetComponent_TistestBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31_m79222C23D8FCF38391A81192498764B2287972AD(L_6, GameObject_GetComponent_TistestBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31_m79222C23D8FCF38391A81192498764B2287972AD_RuntimeMethod_var);
 		V_3 = L_7;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:39>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:43>
 		testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31* L_8 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -20568,7 +20558,7 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:41>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:45>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = V_2;
 		NullCheck(L_10);
 		testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31* L_11;
@@ -20578,7 +20568,7 @@ IL_001b:
 
 IL_0036:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:43>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:47>
 		testBoxScript_tBBD376BA3D404202D758CC3EB402ECCDD8A5AB31* L_12 = V_3;
 		NullCheck(L_12);
 		testBoxScript_Initialize_m91775F46BA2A04B1FD0FE33BAACDC9C22FEEE601(L_12, __this, NULL);
@@ -20588,7 +20578,7 @@ IL_0036:
 
 IL_0041:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:36>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:40>
 		int32_t L_14 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_15 = V_0;
 		NullCheck(L_15);
@@ -20598,7 +20588,7 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:46>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:50>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_16 = __this->___boostText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -20609,16 +20599,16 @@ IL_0041:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:48>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:52>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteralE7D1ABCCE5D2193F90FBE422209D3464C574C1C0, __this, NULL);
 	}
 
 IL_0060:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:50>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:54>
 		VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378(__this, (bool)0, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:51>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:55>
 		return;
 	}
 }
@@ -20642,7 +20632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_SetBoostActive_m0F8C6929D66FA
 	String_t* G_B7_0 = NULL;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* G_B7_1 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:55>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:59>
 		bool L_0 = ___0_active;
 		if (!L_0)
 		{
@@ -20669,7 +20659,7 @@ IL_0014:
 	{
 		NullCheck(G_B3_1);
 		VoiceInput_set_boostActive_m28D9292B73BB18E3B5D112E4EF707327894EAAAD_inline(G_B3_1, (bool)G_B3_0, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:56>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:60>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___boostText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -20680,7 +20670,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:58>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:62>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___boostText;
 		bool L_5;
 		L_5 = VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80_inline(__this, NULL);
@@ -20711,7 +20701,7 @@ IL_0041:
 
 IL_0046:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:60>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:64>
 		return;
 	}
 }
@@ -20719,8 +20709,8 @@ IL_0046:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Start_m1B9447ED20EFF3C791406D100703864C374CD477 (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:65>
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:66>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:69>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:70>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_0);
@@ -20730,9 +20720,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Start_m1B9447ED20EFF3C791406D
 		L_2 = SpeechRecognizerPlugin_GetPlatformPluginVersion_m5886662D27C01E834424562F318A334FE43F28CA(L_1, NULL);
 		__this->___plugin = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___plugin), (void*)L_2);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:67>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:71>
 		VoiceInput_BeginListening_m1C4FBF7F095CBB2E04B3DFFFA7F2E2311D1F6B2B(__this, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:68>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:72>
 		return;
 	}
 }
@@ -20748,7 +20738,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_BeginListening_m1C4FBF7F095CB
 	SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* G_B2_0 = NULL;
 	SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* G_B1_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:72>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:76>
 		SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* L_0 = __this->___plugin;
 		SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* L_1 = L_0;
 		if (L_1)
@@ -20766,7 +20756,7 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		VirtualActionInvoker3< bool, String_t*, int32_t >::Invoke(6, G_B2_0, (bool)1, _stringLiteral3A971881AF6B7B211E34707E857DEC5F36487877, ((int32_t)10));
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:73>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:77>
 		return;
 	}
 }
@@ -20788,7 +20778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_OnResult_m1874430936265C7C409
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_0 = NULL;
 	String_t* V_1 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:77>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:81>
 		String_t* L_0 = ___0_recognizedResult;
 		bool L_1;
 		L_1 = String_IsNullOrWhiteSpace_m42E1F3B2C358068D645E46F01CF1834DC77A5A10(L_0, NULL);
@@ -20798,32 +20788,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_OnResult_m1874430936265C7C409
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:78>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:82>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:80>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:84>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___debugText;
 		String_t* L_3 = ___0_recognizedResult;
 		String_t* L_4;
 		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2E6B6BCF890EB7A550006AA2FB3DCCBA382355DB, L_3, NULL);
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_2, L_4);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:83>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:87>
 		String_t* L_5 = ___0_recognizedResult;
 		NullCheck(L_5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6;
 		L_6 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_5, ((int32_t)126), 0, NULL);
 		V_0 = L_6;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:85>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:89>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = __this->___boostKeyword;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = V_0;
 		String_t* L_9;
 		L_9 = VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D(L_7, L_8, NULL);
 		V_1 = L_9;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:86>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:90>
 		String_t* L_10 = V_1;
 		if (!L_10)
 		{
@@ -20831,13 +20821,13 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:88>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:92>
 		String_t* L_11 = V_1;
 		String_t* L_12;
 		L_12 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1485297402884111EB65302CED9B17E4FCA84360, L_11, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_12, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:89>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:93>
 		bool L_13;
 		L_13 = VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80_inline(__this, NULL);
 		VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378(__this, (bool)((((int32_t)L_13) == ((int32_t)0))? 1 : 0), NULL);
@@ -20845,13 +20835,13 @@ IL_0009:
 
 IL_0058:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:92>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:96>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = __this->___shieldKeyword;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = V_0;
 		String_t* L_16;
 		L_16 = VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D(L_14, L_15, NULL);
 		V_1 = L_16;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:93>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:97>
 		String_t* L_17 = V_1;
 		if (!L_17)
 		{
@@ -20859,16 +20849,16 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:95>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:99>
 		String_t* L_18 = V_1;
 		String_t* L_19;
 		L_19 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1485297402884111EB65302CED9B17E4FCA84360, L_18, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_19, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:97>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:101>
 		bool L_20 = __this->___shieldActive;
 		__this->___shieldActive = (bool)((((int32_t)L_20) == ((int32_t)0))? 1 : 0);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:98>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:102>
 		bool L_21 = __this->___shieldActive;
 		if (!L_21)
 		{
@@ -20876,7 +20866,7 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:100>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:104>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_22 = __this->___shieldText;
 		NullCheck(L_22);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_22, _stringLiteralFAA3358A3D1070F5C8B520F7E24FB8FCCC727895);
@@ -20885,7 +20875,7 @@ IL_0058:
 
 IL_00a1:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:103>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:107>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_23 = __this->___shieldText;
 		NullCheck(L_23);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_23, _stringLiteralE151FD4141C08C19D070A007805485DB4D742BC7);
@@ -20893,13 +20883,13 @@ IL_00a1:
 
 IL_00b1:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:107>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:111>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = __this->___sirenKeyword;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25 = V_0;
 		String_t* L_26;
 		L_26 = VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D(L_24, L_25, NULL);
 		V_1 = L_26;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:108>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:112>
 		String_t* L_27 = V_1;
 		if (!L_27)
 		{
@@ -20907,16 +20897,16 @@ IL_00b1:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:110>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:114>
 		String_t* L_28 = V_1;
 		String_t* L_29;
 		L_29 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1485297402884111EB65302CED9B17E4FCA84360, L_28, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_29, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:112>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:116>
 		bool L_30 = __this->___sirenActive;
 		__this->___sirenActive = (bool)((((int32_t)L_30) == ((int32_t)0))? 1 : 0);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:113>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:117>
 		bool L_31 = __this->___sirenActive;
 		if (!L_31)
 		{
@@ -20924,7 +20914,7 @@ IL_00b1:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:115>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:119>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_32 = __this->___sirenText;
 		NullCheck(L_32);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_32, _stringLiteral489EF223894DB4CE770614B5DA37C1DA42BFA5FB);
@@ -20933,7 +20923,7 @@ IL_00b1:
 
 IL_00fa:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:118>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:122>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_33 = __this->___sirenText;
 		NullCheck(L_33);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_33, _stringLiteral320FBDCAD623BF56D70079749953E4DAB9BCBAA0);
@@ -20941,13 +20931,13 @@ IL_00fa:
 
 IL_010a:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:122>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:126>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_34 = __this->___pauseKeyword;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_35 = V_0;
 		String_t* L_36;
 		L_36 = VoiceInput_FindMatchingKeyword_m7481037EBE77CB9DC8B9C4AD996268E930E2AE6D(L_34, L_35, NULL);
 		V_1 = L_36;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:123>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:127>
 		String_t* L_37 = V_1;
 		if (!L_37)
 		{
@@ -20955,13 +20945,13 @@ IL_010a:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:125>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:129>
 		String_t* L_38 = V_1;
 		String_t* L_39;
 		L_39 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1485297402884111EB65302CED9B17E4FCA84360, L_38, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_39, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:127>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:131>
 		SimplePause_tB4B541A00319F2A46F59A8424C5CE3EC20E3A6C4* L_40 = __this->___pause;
 		NullCheck(L_40);
 		SimplePause_PauseToggle_mDCBA5CCF7D5FE86AD009F4B92C5FEE22AAD703C4(L_40, NULL);
@@ -20969,7 +20959,7 @@ IL_010a:
 
 IL_0135:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:129>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:133>
 		return;
 	}
 }
@@ -20987,14 +20977,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* VoiceInput_FindMatchingKeyword_m748
 	String_t* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:133>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:137>
 		V_0 = 0;
 		goto IL_0051;
 	}
 
 IL_0004:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:135>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:139>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = ___0_keywords;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -21008,7 +20998,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:138>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:142>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = ___0_keywords;
 		int32_t L_6 = V_0;
 		NullCheck(L_5);
@@ -21023,14 +21013,14 @@ IL_0004:
 		String_t* L_11;
 		L_11 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral5962E944D7340CE47999BF097B4AFD70C1501FB9, L_10, _stringLiteral5962E944D7340CE47999BF097B4AFD70C1501FB9, NULL);
 		V_1 = L_11;
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:139>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:143>
 		V_2 = 0;
 		goto IL_0043;
 	}
 
 IL_002f:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:143>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:147>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = ___1_transcripts;
 		int32_t L_13 = V_2;
 		NullCheck(L_12);
@@ -21046,7 +21036,7 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:144>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:148>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = ___0_keywords;
 		int32_t L_19 = V_0;
 		NullCheck(L_18);
@@ -21057,14 +21047,14 @@ IL_002f:
 
 IL_003f:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:141>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:145>
 		int32_t L_22 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_22, 1));
 	}
 
 IL_0043:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:140>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:144>
 		int32_t L_23 = V_2;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = ___1_transcripts;
 		NullCheck(L_24);
@@ -21083,14 +21073,14 @@ IL_0043:
 
 IL_004d:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:133>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:137>
 		int32_t L_26 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_26, 1));
 	}
 
 IL_0051:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:133>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:137>
 		int32_t L_27 = V_0;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = ___0_keywords;
 		NullCheck(L_28);
@@ -21100,7 +21090,7 @@ IL_0051:
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:148>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:152>
 		return (String_t*)NULL;
 	}
 }
@@ -21115,13 +21105,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_OnError_m0F416DAD1F47BBBB9D66
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:153>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:157>
 		String_t* L_0 = ___0_recognizedError;
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB7148BE1FD71E91052AD0C5EE8F963E4D45A1507, L_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_1, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:154>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:158>
 		return;
 	}
 }
@@ -21131,7 +21121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_OnDisable_mF167098DF7F9158C95
 	SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* G_B2_0 = NULL;
 	SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* G_B1_0 = NULL;
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:158>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:162>
 		SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* L_0 = __this->___plugin;
 		SpeechRecognizerPlugin_tDB3E930B195C4A2C61E088E9094D85664602AB0A* L_1 = L_0;
 		if (L_1)
@@ -21149,7 +21139,7 @@ IL_000b:
 	{
 		NullCheck(G_B2_0);
 		VirtualActionInvoker0::Invoke(7, G_B2_0);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:159>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:163>
 		return;
 	}
 }
@@ -21157,7 +21147,7 @@ IL_000b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Update_mD04A2C3F56AF51B960C0E5FBD68C27B6DCD89EDB (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:163>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:167>
 		bool L_0;
 		L_0 = VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80_inline(__this, NULL);
 		if (!L_0)
@@ -21166,7 +21156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Update_mD04A2C3F56AF51B960C0E
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:165>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:169>
 		float L_1;
 		L_1 = VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096_inline(__this, NULL);
 		float L_2;
@@ -21174,7 +21164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Update_mD04A2C3F56AF51B960C0E
 		float L_3;
 		L_3 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.0f), ((float)il2cpp_codegen_subtract(L_1, L_2)), NULL);
 		VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4_inline(__this, L_3, NULL);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:166>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:170>
 		float L_4;
 		L_4 = VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096_inline(__this, NULL);
 		if ((!(((float)L_4) <= ((float)(0.0f)))))
@@ -21183,15 +21173,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput_Update_mD04A2C3F56AF51B960C0E
 		}
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:168>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:172>
 		VoiceInput_SetBoostActive_m0F8C6929D66FA32E1E4907505085E1BF266C1378(__this, (bool)0, NULL);
 		return;
 	}
 
 IL_0039:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:173>
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:174>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:177>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:178>
 		float L_5 = __this->___maxBoostTime;
 		float L_6;
 		L_6 = VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096_inline(__this, NULL);
@@ -21206,7 +21196,7 @@ IL_0039:
 
 IL_0064:
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:176>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:180>
 		return;
 	}
 }
@@ -21217,35 +21207,45 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput__ctor_mEDEC44AC12A36B948EB2FF
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral065DC8625839CD49D806184BA0C5FD3870DCC735);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0B5ECFF84CE073C4971D637741C560F910E4D128);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0F50E54B75F710BDC8BCBAA142EA34E24C514AED);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2482E3BD37A553E7BBDF77C14F2DEE1DBA3F51AA);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral25F5EF17AC725A91FE3F3CE895C16ED6DD9B3499);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2D61429A77614470501E536C4B7A7CB204B9125B);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3A7330399E593D3DB9B53A7013D17D3D20BB8A44);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4EC142B21233DB052713D769F2F7615CC8A42E74);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral57D2FD25C1AE5D41727DFD32BE1A13E7EC299EEF);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral60653C8DE1EE2FA7EDBDB4E13FC5947FDBAEE767);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral63A7BC5625BD73B4EFFB4EB777EA75B79C73E722);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral64F60223B84CAD2E9FFDDC7C983F7369A75BAB69);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral73499AD646DE28369FB68F093FAB181683D5276F);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral74B2792CA9A8161E31A31D22282CAA4956F9B5E1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral79B1E490F7FA035BF7AD82F54BDE4F545CB81EA3);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral79F204B54A42986A822F7B83FDFA2387C1250719);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7A8DC9C329BF49B1C78B18CD4B8DBF9500B4CCDB);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7DBDBEE0CD8B5072C3DC362C9F4A3CE9F9F7A67E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral81C8E69C2DB7F9594F379CF5B9D353AB80D11AAA);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8274F61D1E1812BA75021D0E56F0791F12C56723);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral93BBB7EFBA44C52521BD9E580CE4A0494E9E0239);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral96F3EE2BBDC4B77F52EF5B2DA5F6765988A94990);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9FE7DE6E4A774722D708D23472147520CD80F951);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA08BB6F4CF99A90BBD638AB4D0818BF584A29E2B);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA8045E997F6A30602D5147099A2B221E2F630869);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCC2CEA7962D333728F07A883FB9E2A225FDE282F);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD0EC7A6CB445CA2A8454DE0AE1CD17395DD14926);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD3B2251FC42898421AC4A1B02DD85E2A9665F202);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD4E7C9FC6D4B1339303AB426C1554B1584329A29);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE5065DB1B1D87023A03EC8CAB8213A7C95030EF1);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE8FD5B9EA69C70DE31437AF940CFC97C2582880D);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEB8E87F5F2A33DEB3FF64315EB8EF1259A40FC28);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEEAFF4EA4BDCF3E59399FCE8A6B2965DE0964BA8);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:13>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:17>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_0 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_1 = L_0;
 		NullCheck(L_1);
 		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral79B1E490F7FA035BF7AD82F54BDE4F545CB81EA3);
@@ -21261,83 +21261,110 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VoiceInput__ctor_mEDEC44AC12A36B948EB2FF
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = L_4;
 		NullCheck(L_5);
 		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral2D61429A77614470501E536C4B7A7CB204B9125B);
-		__this->___boostKeyword = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___boostKeyword), (void*)L_5);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:14>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)6);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = L_5;
+		NullCheck(L_6);
+		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteralE8FD5B9EA69C70DE31437AF940CFC97C2582880D);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
 		NullCheck(L_7);
-		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral73499AD646DE28369FB68F093FAB181683D5276F);
+		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteralA08BB6F4CF99A90BBD638AB4D0818BF584A29E2B);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = L_7;
 		NullCheck(L_8);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral93BBB7EFBA44C52521BD9E580CE4A0494E9E0239);
+		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral64F60223B84CAD2E9FFDDC7C983F7369A75BAB69);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = L_8;
 		NullCheck(L_9);
-		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral60653C8DE1EE2FA7EDBDB4E13FC5947FDBAEE767);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
-		NullCheck(L_10);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral74B2792CA9A8161E31A31D22282CAA4956F9B5E1);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteral0F50E54B75F710BDC8BCBAA142EA34E24C514AED);
+		__this->___boostKeyword = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___boostKeyword), (void*)L_9);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:18>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)7);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
 		NullCheck(L_11);
-		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral81C8E69C2DB7F9594F379CF5B9D353AB80D11AAA);
+		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral73499AD646DE28369FB68F093FAB181683D5276F);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_12 = L_11;
 		NullCheck(L_12);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteralEB8E87F5F2A33DEB3FF64315EB8EF1259A40FC28);
-		__this->___shieldKeyword = L_12;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___shieldKeyword), (void*)L_12);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:15>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)6);
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral93BBB7EFBA44C52521BD9E580CE4A0494E9E0239);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = L_12;
+		NullCheck(L_13);
+		(L_13)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral60653C8DE1EE2FA7EDBDB4E13FC5947FDBAEE767);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_13;
 		NullCheck(L_14);
-		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralE5065DB1B1D87023A03EC8CAB8213A7C95030EF1);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral74B2792CA9A8161E31A31D22282CAA4956F9B5E1);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15 = L_14;
 		NullCheck(L_15);
-		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral93BBB7EFBA44C52521BD9E580CE4A0494E9E0239);
+		(L_15)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral81C8E69C2DB7F9594F379CF5B9D353AB80D11AAA);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = L_15;
 		NullCheck(L_16);
-		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral7A8DC9C329BF49B1C78B18CD4B8DBF9500B4CCDB);
+		(L_16)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteralEB8E87F5F2A33DEB3FF64315EB8EF1259A40FC28);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_17 = L_16;
 		NullCheck(L_17);
-		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral9FE7DE6E4A774722D708D23472147520CD80F951);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = L_17;
-		NullCheck(L_18);
-		(L_18)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral8274F61D1E1812BA75021D0E56F0791F12C56723);
+		(L_17)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral79F204B54A42986A822F7B83FDFA2387C1250719);
+		__this->___shieldKeyword = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___shieldKeyword), (void*)L_17);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:19>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_19 = L_18;
 		NullCheck(L_19);
-		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteralD0EC7A6CB445CA2A8454DE0AE1CD17395DD14926);
-		__this->___sirenKeyword = L_19;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___sirenKeyword), (void*)L_19);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:16>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_20 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)8);
+		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteralE5065DB1B1D87023A03EC8CAB8213A7C95030EF1);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_20 = L_19;
+		NullCheck(L_20);
+		(L_20)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral065DC8625839CD49D806184BA0C5FD3870DCC735);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_21 = L_20;
 		NullCheck(L_21);
-		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral63A7BC5625BD73B4EFFB4EB777EA75B79C73E722);
+		(L_21)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteral7A8DC9C329BF49B1C78B18CD4B8DBF9500B4CCDB);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_22 = L_21;
 		NullCheck(L_22);
-		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7);
+		(L_22)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral9FE7DE6E4A774722D708D23472147520CD80F951);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_23 = L_22;
 		NullCheck(L_23);
-		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralA8045E997F6A30602D5147099A2B221E2F630869);
+		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteral8274F61D1E1812BA75021D0E56F0791F12C56723);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_24 = L_23;
 		NullCheck(L_24);
-		(L_24)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral0B5ECFF84CE073C4971D637741C560F910E4D128);
+		(L_24)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteralD0EC7A6CB445CA2A8454DE0AE1CD17395DD14926);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25 = L_24;
 		NullCheck(L_25);
-		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralEEAFF4EA4BDCF3E59399FCE8A6B2965DE0964BA8);
+		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteralD3B2251FC42898421AC4A1B02DD85E2A9665F202);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_26 = L_25;
 		NullCheck(L_26);
-		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral57D2FD25C1AE5D41727DFD32BE1A13E7EC299EEF);
+		(L_26)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral4EC142B21233DB052713D769F2F7615CC8A42E74);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27 = L_26;
 		NullCheck(L_27);
-		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral25F5EF17AC725A91FE3F3CE895C16ED6DD9B3499);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = L_27;
-		NullCheck(L_28);
-		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral2482E3BD37A553E7BBDF77C14F2DEE1DBA3F51AA);
-		__this->___pauseKeyword = L_28;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___pauseKeyword), (void*)L_28);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:24>
+		(L_27)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteral96F3EE2BBDC4B77F52EF5B2DA5F6765988A94990);
+		__this->___sirenKeyword = L_27;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___sirenKeyword), (void*)L_27);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:20>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_28 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_29 = L_28;
+		NullCheck(L_29);
+		(L_29)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral63A7BC5625BD73B4EFFB4EB777EA75B79C73E722);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = L_29;
+		NullCheck(L_30);
+		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)_stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = L_30;
+		NullCheck(L_31);
+		(L_31)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralA8045E997F6A30602D5147099A2B221E2F630869);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_32 = L_31;
+		NullCheck(L_32);
+		(L_32)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)_stringLiteral0B5ECFF84CE073C4971D637741C560F910E4D128);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_33 = L_32;
+		NullCheck(L_33);
+		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralEEAFF4EA4BDCF3E59399FCE8A6B2965DE0964BA8);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_34 = L_33;
+		NullCheck(L_34);
+		(L_34)->SetAt(static_cast<il2cpp_array_size_t>(5), (String_t*)_stringLiteral57D2FD25C1AE5D41727DFD32BE1A13E7EC299EEF);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_35 = L_34;
+		NullCheck(L_35);
+		(L_35)->SetAt(static_cast<il2cpp_array_size_t>(6), (String_t*)_stringLiteral25F5EF17AC725A91FE3F3CE895C16ED6DD9B3499);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_36 = L_35;
+		NullCheck(L_36);
+		(L_36)->SetAt(static_cast<il2cpp_array_size_t>(7), (String_t*)_stringLiteral2482E3BD37A553E7BBDF77C14F2DEE1DBA3F51AA);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_37 = L_36;
+		NullCheck(L_37);
+		(L_37)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteral7DBDBEE0CD8B5072C3DC362C9F4A3CE9F9F7A67E);
+		__this->___pauseKeyword = L_37;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___pauseKeyword), (void*)L_37);
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:28>
 		__this->___maxBoostTime = (5.0f);
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:26>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:30>
 		__this->___boostRefillTime = (10.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -24123,41 +24150,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CStartU3Ed__10_System_Collec
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 85726
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Benchmark01_UGUI_Start_m565A619941AAFFC17BB16A4A73DF63F7E54E3AFA (Benchmark01_UGUI_t7DF9DF96E75AF6072B851B638B90BD76FEE0EFD7* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00* L_0 = (U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00*)il2cpp_codegen_object_new(U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00_il2cpp_TypeInfo_var);
-		U3CStartU3Ed__10__ctor_m515F107569D5BDE7C81F5DFDAB4A298A5399EB5A(L_0, 0, NULL);
-		U3CStartU3Ed__10_t06713955D554742C727996BE112A81AD0BCF3D00* L_1 = L_0;
-		NullCheck(L_1);
-		L_1->___U3CU3E4__this = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		return L_1;
-	}
-}
-// Method Definition Index: 85727
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Benchmark01_UGUI__ctor_m9DCE74210552C6961BF7460C1F812E484771F8EB (Benchmark01_UGUI_t7DF9DF96E75AF6072B851B638B90BD76FEE0EFD7* __this, const RuntimeMethod* method) 
-{
-	{
-		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 // Method Definition Index: 37566
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
@@ -25026,7 +25018,7 @@ IL_002d:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool VoiceInput_get_boostActive_m9C2937464C50EA019748A4FEF2C8FD51B85CAC80_inline (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:29>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:33>
 		bool L_0 = __this->___U3CboostActiveU3Ek__BackingField;
 		return L_0;
 	}
@@ -25325,7 +25317,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VoiceInput_get_boostRemaining_m4D8B76A899F6FFECB0AD24F655D6A8F23DAFB096_inline (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:30>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:34>
 		float L_0 = __this->___U3CboostRemainingU3Ek__BackingField;
 		return L_0;
 	}
@@ -25334,7 +25326,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float VoiceInput_get_boostRemaini
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VoiceInput_set_boostRemaining_mEE4C429047BB7C944CDC2FA3354859B6DF6D23F4_inline (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:30>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:34>
 		float L_0 = ___0_value;
 		__this->___U3CboostRemainingU3Ek__BackingField = L_0;
 		return;
@@ -25344,7 +25336,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VoiceInput_set_boostRemainin
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VoiceInput_set_boostActive_m28D9292B73BB18E3B5D112E4EF707327894EAAAD_inline (VoiceInput_t744882DF7BEEF1D088E815C399305F3F6F17ABE9* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:29>
+		//<source_info:E:/UnityProjects/StackedDelivery/cs423_HighwayRacer/Assets/Scripts/VoiceInput.cs:33>
 		bool L_0 = ___0_value;
 		__this->___U3CboostActiveU3Ek__BackingField = L_0;
 		return;
