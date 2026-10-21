@@ -10,10 +10,10 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public TMP_Text shieldText;
     public TMP_Text sirenText;
     public TMP_Text debugText;
-    public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed"};
-    public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect"};
-    public string[] sirenKeyword = {"siren", "two", "clear the path", "push cars away", "move other cars away", "clear my path"};
-    public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit"};
+    public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
+    public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
+    public string[] sirenKeyword = {"siren", "three", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "alarm", "emergency lights"};
+    public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit", "freeze"};
     public SimplePause pause;
     [Tooltip("Multiplies the car's collision impulse on testBox-tagged boxes by 5. Boxes always use normal physics.")]
     public bool shieldActive = false;
