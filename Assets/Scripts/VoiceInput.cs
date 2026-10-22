@@ -100,11 +100,20 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 
         // The plugin separates alternative transcripts with "~".
         string[] transcripts = recognizedResult.Split('~');
-        string[] recognizedWords = Regex.Split(transcripts[0].Trim(), @"\s+");
-        int displayedWordCount = Mathf.Min(3, recognizedWords.Length);
         if (voiceFeedback != null)
         {
-            voiceFeedback.text = string.Join(" ", recognizedWords, 0, displayedWordCount);
+            string[] recognizedPhrases = new string[3];
+            int displayedPhraseCount = 0;
+            for (int i = 0; i < transcripts.Length && displayedPhraseCount < recognizedPhrases.Length; i++)
+            {
+                string phrase = transcripts[i].Trim();
+                if (!string.IsNullOrEmpty(phrase))
+                {
+                    recognizedPhrases[displayedPhraseCount++] = phrase;
+                }
+            }
+
+            voiceFeedback.text = string.Join("\n", recognizedPhrases, 0, displayedPhraseCount);
         }
 
         string matchedKeyword = FindMatchingKeyword(boostKeyword, transcripts);
