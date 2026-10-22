@@ -6,6 +6,8 @@ using NUnit.Framework;
 
 public class CarControl : MonoBehaviour
 {
+    private const float MinimumThrottle = -0.5f;
+
     [Header("Car Properties")]
     public float motorTorque = 2000f;
     public float brakeTorque = 2000f;
@@ -29,7 +31,7 @@ public class CarControl : MonoBehaviour
     [Min(0f)] public float steeringDeadZone = 2f;
     [Min(0f)] public float accelerationDeadZone = 5f;
     [Min(0f)] public float inputSmoothing = 10f;
-    [Tooltip("Throttle change per second at full tilt. Neutral tilt holds the current throttle.")]
+    [Tooltip("Throttle change per second at full tilt, clamped from -0.5 to 1. Negative throttle applies brakes; neutral tilt holds the current throttle.")]
     [Min(0f)] public float throttleChangeRate = 0.5f;
     public bool invertSteering = false;
     public bool invertAcceleration = false;
@@ -45,8 +47,10 @@ public class CarControl : MonoBehaviour
     // public TMP_Text speedText;
     public TMP_Text brakeText;
     public GameObject startPos;
-    [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged ThrottleBar. Displays gyro throttle from 0 to 1.")]
+    [Tooltip("Filled UI Image for positive throttle. If unassigned, finds ThrottleFrontPositive, then falls back to the ThrottleBar tag.")]
     public GameObject throttleBar;
+    [Tooltip("Filled UI Image for braking. If unassigned, finds ThrottleFrontNegative. Fills from empty at zero throttle to full at -0.5 throttle.")]
+    public GameObject negativeThrottleBar;
     [Tooltip("UI Image object with Image Type set to Filled. If unassigned, finds the active object tagged BoostBar. Displays remaining boost from 0 to 1.")]
     public GameObject boostBar;
     [Tooltip("Shield object whose active state follows VoiceInput.shieldActive.")]
@@ -57,6 +61,7 @@ public class CarControl : MonoBehaviour
     public GameObject sirenTriggerBox;
 
     private UnityEngine.UI.Image throttleBarImage;
+    private UnityEngine.UI.Image negativeThrottleBarImage;
     private UnityEngine.UI.Image boostBarImage;
 
     private void OnEnable()
@@ -174,7 +179,7 @@ public class CarControl : MonoBehaviour
         {
             gyroInput.y = 0f;
         }
-        throttle = Mathf.Clamp01(throttle + gyroInput.y * throttleChangeRate * Time.deltaTime);
+        throttle = Mathf.Clamp(throttle + gyroInput.y * throttleChangeRate * Time.deltaTime, MinimumThrottle, 1f);
     }
 
     // Start is called before the first frame update
@@ -223,7 +228,11 @@ public class CarControl : MonoBehaviour
 
         if (throttleBar == null)
         {
-            throttleBar = GameObject.FindGameObjectWithTag("ThrottleBar");
+            throttleBar = GameObject.Find("ThrottleFrontPositive");
+            if (throttleBar == null)
+            {
+                throttleBar = GameObject.FindGameObjectWithTag("ThrottleBar");
+            }
         }
 
         if (throttleBar != null)
@@ -241,6 +250,28 @@ public class CarControl : MonoBehaviour
         else
         {
             Debug.LogWarning("No active object tagged ThrottleBar found. Throttle display will not update.", this);
+        }
+
+        if (negativeThrottleBar == null)
+        {
+            negativeThrottleBar = GameObject.Find("ThrottleFrontNegative");
+        }
+
+        if (negativeThrottleBar != null)
+        {
+            negativeThrottleBarImage = negativeThrottleBar.GetComponent<UnityEngine.UI.Image>();
+            if (negativeThrottleBarImage == null)
+            {
+                Debug.LogError("Negative throttle bar must have a UnityEngine.UI.Image component.", negativeThrottleBar);
+            }
+            else
+            {
+                negativeThrottleBarImage.fillAmount = 0f;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No ThrottleFrontNegative object assigned or found. Negative throttle display will not update.", this);
         }
 
         if (boostBar == null)
@@ -306,7 +337,11 @@ public class CarControl : MonoBehaviour
         UpdateGyroInput();
         if (throttleBarImage != null)
         {
-            throttleBarImage.fillAmount = throttle;
+            throttleBarImage.fillAmount = Mathf.Max(0f, throttle);
+        }
+        if (negativeThrottleBarImage != null)
+        {
+            negativeThrottleBarImage.fillAmount = Mathf.Clamp01(throttle / MinimumThrottle);
         }
 
         if (boostBarImage != null)
@@ -376,7 +411,7 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {
         // Get player input for acceleration and steering
-        float vInput = throttle; // Stored forward throttle
+        float vInput = throttle; // Negative throttle brakes instead of reversing.
         float hInput = gyroInput.x; // Steering input
 
         bool boostActive = voiceInput != null && voiceInput.boostActive;
@@ -397,8 +432,7 @@ public class CarControl : MonoBehaviour
         float currentMotorTorque = Mathf.Lerp(motorTorque, 0, speedFactor) * boostMultiplier;
         float currentSteerRange = Mathf.Lerp(steeringRange, steeringRangeAtMaxSpeed, speedFactor);
 
-        // Determine if the player is accelerating or trying to reverse
-        bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(forwardSpeed);
+        bool isAccelerating = vInput >= 0f && forwardSpeed >= 0f;
 
 
         foreach (var wheel in wheels)
@@ -421,12 +455,12 @@ public class CarControl : MonoBehaviour
             }
             else
             {
-                // Apply brakes when reversing direction
+                // Negative throttle only brakes, even when stopped or rolling backward.
                 if (wheel.motorized)
                 {
                     wheel.WheelCollider.motorTorque = 0f;
-                    wheel.WheelCollider.brakeTorque = Mathf.Abs(vInput) * brakeTorque;
                 }
+                wheel.WheelCollider.brakeTorque = Mathf.Abs(vInput) * brakeTorque;
             }
         }
 

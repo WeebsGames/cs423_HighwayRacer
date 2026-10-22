@@ -43,9 +43,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public float boostFillAmount => Mathf.Clamp01(boostRemaining / maxBoostTime);
 
     private float shieldRemaining;
-    private float shieldFillAmount => Mathf.Clamp01(shieldRemaining / maxShieldTime);
+    private float shieldFillAmount => shieldActive ? 0f : 1f - Mathf.Clamp01(shieldRemaining / maxShieldTime);
     private float sirenRemaining;
-    private float sirenFillAmount => Mathf.Clamp01(sirenRemaining / maxSirenTime);
+    private float sirenFillAmount => sirenActive ? 0f : 1f - Mathf.Clamp01(sirenRemaining / maxSirenTime);
 
     private void Awake()
     {
@@ -209,7 +209,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         }
         else
         {
-            sirenRemaining = Mathf.Min(sirenCD,
+            sirenRemaining = Mathf.Min(maxSirenTime,
                 sirenRemaining + maxSirenTime / sirenCD * Time.deltaTime);
         }
         shieldImage.fillAmount = shieldFillAmount;

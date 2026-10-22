@@ -21,6 +21,13 @@ Link to original repo: https://github.com/WeebsGames/cs426_Stacked_Delivery
     We wanted to see how NUIs would help/detrement the gaming experience, so we decided to implement voice and gyro, (maybe gestures), controls.
         Voice is used to active the three powerups and navigate menus. 
         Gyro controls are used to control the movement of the car; steering and acceleration
+        Tilting adjusts stored throttle from -0.5 to 1; neutral tilt holds the current value.
+        Negative throttle applies up to 50% brake torque without driving in reverse.
+        ThrottleFrontPositive shows acceleration, while ThrottleFrontNegative fills as braking increases
+        (full at -0.5). Both UI Images should use the Filled image type.
+        Shield and siren cooldown Images should also use the Filled image type.
+        Their overlays are empty while ready or active, then fill completely when
+        the effect ends and drain to empty as the cooldown finishes.
 
 
 

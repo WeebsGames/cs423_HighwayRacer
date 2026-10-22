@@ -1763,7 +1763,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -3040,6 +3040,7 @@ MonoBehaviour:
   brakeText: {fileID: 0}
   startPos: {fileID: 0}
   throttleBar: {fileID: 0}
+  negativeThrottleBar: {fileID: 0}
   boostBar: {fileID: 0}
   shield: {fileID: 3292704700101094412}
   siren: {fileID: 8405634148021898624}
@@ -4562,7 +4563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5368565375510599455
 Transform:
   m_ObjectHideFlags: 0

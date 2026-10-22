@@ -4066,7 +4066,7 @@ GameObject:
   - component: {fileID: 226235765}
   - component: {fileID: 226235764}
   m_Layer: 5
-  m_Name: ThrottleFront
+  m_Name: ThrottleFrontPositive
   m_TagString: ThrottleBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4088,8 +4088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 39.30732, y: 0}
-  m_SizeDelta: {x: 78.61481, y: 403.1835}
+  m_AnchoredPosition: {x: 39.30732, y: 100.8}
+  m_SizeDelta: {x: 78.6148, y: 201.59}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &226235764
 MonoBehaviour:
@@ -16328,7 +16328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &637025209
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32679,7 +32679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1371276632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34380,7 +34380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1467508389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39954,7 +39954,7 @@ MonoBehaviour:
   - {x: 41.994408, y: 2.8478994, z: 59.108376}
   - {x: 35.985718, y: 2.8478994, z: 37.38501}
   - {x: 31.971716, y: 2.8478994, z: 22.873089}
-  - {x: 19.681175, y: 0.2000122, z: 0.21227874}
+  - {x: 19.68118, y: 0.2000122, z: 0.21227874}
   - {x: 6.8136597, y: 0.2000122, z: 0.21228027}
   normals:
   - {x: 0.0046429797, y: 0.9949612, z: 0.100153156}
@@ -40141,6 +40141,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9069115365609054727, guid: 60f79905accf3b24fa0114b941f1aac0, type: 3}
   m_PrefabInstance: {fileID: 1713134132}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1715177861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715177862}
+  - component: {fileID: 1715177864}
+  - component: {fileID: 1715177863}
+  m_Layer: 5
+  m_Name: ThrottleFrontNegative
+  m_TagString: ThrottleBar
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1715177862
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715177861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2062965066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 39.307, y: -100.79}
+  m_SizeDelta: {x: 78.6148, y: 201.59}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &1715177863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715177861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.2630803, b: 0.25, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7482667652216324306, guid: 23c3431c780b3b64c96cb67543f54c8e, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 1
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1715177864
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715177861}
+  m_CullTransparentMesh: 1
 --- !u!43 &1716076764
 Mesh:
   m_ObjectHideFlags: 0
@@ -48901,7 +48976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1995241528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50475,6 +50550,7 @@ RectTransform:
   m_Children:
   - {fileID: 472978793}
   - {fileID: 226235763}
+  - {fileID: 1715177862}
   - {fileID: 105039548}
   m_Father: {fileID: 1108733674}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
