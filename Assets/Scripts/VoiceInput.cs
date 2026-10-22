@@ -16,9 +16,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public TMP_Text voiceFeedback;
     public UnityEngine.UI.Image voiceBar;
     [Header("Keywords")]
-    public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
-    public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
-    public string[] sirenKeyword = {"siren", "three", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "alarm", "emergency lights", "silent"};
+    public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts"};
+    public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", };
+    public string[] sirenKeyword = {"siren", "three", "alarm", "emergency lights", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "silent"};
     public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit", "freeze"};
     public SimplePause pause;
     [Tooltip("Multiplies the car's collision impulse on testBox-tagged boxes by 5. Boxes always use normal physics.")]
