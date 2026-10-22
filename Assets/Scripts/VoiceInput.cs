@@ -81,6 +81,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        shieldRemaining = maxShieldTime;
+        sirenRemaining = maxSirenTime;
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(
             gameObject.name);
         BeginListening();
