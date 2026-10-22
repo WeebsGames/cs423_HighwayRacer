@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using UnityEngine.AdaptivePerformance;
+using Microsoft.Unity.VisualStudio.Editor;
 
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
@@ -11,8 +12,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public TMP_Text sirenText;
     public TMP_Text debugText;
     [Header("Display Objects")]
-    public Object shieldSprite;
-    public Object sirenSprite;
+    public UnityEngine.UI.Image shieldImage;
+    public UnityEngine.UI.Image sirenImage;
     [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
@@ -25,14 +26,27 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 
     [Header("Boost")]
     [Tooltip("Maximum boost duration in seconds. Starts fully charged.")]
-    [SerializeField, Min(0.01f)] private float maxBoostTime = 5f;
+    [SerializeField, Min(0.01f)] 
+    private float maxBoostTime = 5f;
     [Tooltip("Seconds to refill an empty boost counter while boost is off. Partial charges can be used.")]
-    [SerializeField, Min(0.01f)] private float boostRefillTime = 10f;
+    [SerializeField, Min(0.01f)] 
+    private float boostRefillTime = 10f;
+    [Header("Shield")]
+    public float maxShieldTime = 6f;
+    public float shieldCD = 15f;
+    [Header("Siren")]
+    public float maxSirenTime = 5f;
+    public float sirenCD = 15f;
 
     private SpeechRecognizerPlugin plugin;
     public bool boostActive { get; private set; } = false;
     public float boostRemaining { get; private set; }
     public float boostFillAmount => Mathf.Clamp01(boostRemaining / maxBoostTime);
+
+    private float shieldRemaining;
+    private float shieldFillAmount => Mathf.Clamp01(shieldRemaining / maxShieldTime);
+    private float sirenRemaining;
+    private float sirenFillAmount => Mathf.Clamp01(sirenRemaining / maxSirenTime);
 
     private void Awake()
     {
@@ -177,5 +191,33 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             boostRemaining = Mathf.Min(maxBoostTime,
                 boostRemaining + maxBoostTime / boostRefillTime * Time.deltaTime);
         }
+        if (shieldActive)
+        {
+            shieldRemaining = Mathf.Max(0f, shieldRemaining - Time.deltaTime);
+            if (shieldRemaining <= 0f)
+            {
+                shieldActive = false;;
+            }
+        }
+        else
+        {
+            shieldRemaining = Mathf.Min(maxShieldTime,
+                shieldRemaining + maxShieldTime / shieldCD * Time.deltaTime);
+        }
+        if (sirenActive)
+        {
+            sirenRemaining = Mathf.Max(0f, sirenRemaining - Time.deltaTime);
+            if (sirenRemaining <= 0f)
+            {
+                sirenActive = false;
+            }
+        }
+        else
+        {
+            sirenRemaining = Mathf.Min(maxBoostTime,
+                sirenRemaining + maxShieldTime / sirenCD * Time.deltaTime);
+        }
+        shieldImage.fillAmount = shieldFillAmount;
+        sirenImage.fillAmount = sirenFillAmount;
     }
 }
