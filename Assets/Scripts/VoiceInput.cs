@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using UnityEngine.AdaptivePerformance;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
