@@ -13,6 +13,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     [Header("Display Objects")]
     public UnityEngine.UI.Image shieldImage;
     public UnityEngine.UI.Image sirenImage;
+    public TMP_Text voiceFeedback;
+    public UnityEngine.UI.Image voiceBar;
     [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
@@ -98,6 +100,12 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 
         // The plugin separates alternative transcripts with "~".
         string[] transcripts = recognizedResult.Split('~');
+        string[] recognizedWords = Regex.Split(transcripts[0].Trim(), @"\s+");
+        int displayedWordCount = Mathf.Min(3, recognizedWords.Length);
+        if (voiceFeedback != null)
+        {
+            voiceFeedback.text = string.Join(" ", recognizedWords, 0, displayedWordCount);
+        }
 
         string matchedKeyword = FindMatchingKeyword(boostKeyword, transcripts);
         if (matchedKeyword != null)
