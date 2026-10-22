@@ -111,13 +111,10 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         {
             Debug.Log("Keyword detected: " + matchedKeyword);
             // Trigger your gameplay action here.
-            shieldActive = !shieldActive;
-            if (shieldActive)
+            if(shieldRemaining == maxShieldTime)
             {
-                shieldText.text = "Shield: Active";
-            } else
-            {
-                shieldText.text = "Shield: Inactive";
+                shieldActive = true;
+                shieldText.text = "Shield: Active";      
             }
         }
 
@@ -126,13 +123,10 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         {
             Debug.Log("Keyword detected: " + matchedKeyword);
             // Trigger your gameplay action here.
-            sirenActive = !sirenActive;
-            if (sirenActive)
+            if(sirenRemaining == maxSirenTime)
             {
+                sirenActive = true;
                 sirenText.text = "Siren: Active";
-            } else
-            {
-                sirenText.text = "Siren: Inactive";
             }
         }
 
@@ -195,7 +189,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             shieldRemaining = Mathf.Max(0f, shieldRemaining - Time.deltaTime);
             if (shieldRemaining <= 0f)
             {
-                shieldActive = false;;
+                shieldActive = false;
+                shieldText.text = "Shield: Inactive";
             }
         }
         else
@@ -209,12 +204,13 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             if (sirenRemaining <= 0f)
             {
                 sirenActive = false;
+                sirenText.text = "Siren: Inactive";
             }
         }
         else
         {
-            sirenRemaining = Mathf.Min(maxBoostTime,
-                sirenRemaining + maxShieldTime / sirenCD * Time.deltaTime);
+            sirenRemaining = Mathf.Min(sirenCD,
+                sirenRemaining + maxSirenTime / sirenCD * Time.deltaTime);
         }
         shieldImage.fillAmount = shieldFillAmount;
         sirenImage.fillAmount = sirenFillAmount;
