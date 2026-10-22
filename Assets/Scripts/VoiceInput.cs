@@ -18,7 +18,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "Get my speed boost ready", "Prepare the boost for me", "speed", "faster", "go fast", "nitro", "nos"};
     public string[] shieldKeyword = {"shield", "two", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "Protect", "protection"};
-    public string[] sirenKeyword = {"siren", "three", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "alarm", "emergency lights"};
+    public string[] sirenKeyword = {"siren", "three", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "alarm", "emergency lights", "silent"};
     public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit", "freeze"};
     public SimplePause pause;
     [Tooltip("Multiplies the car's collision impulse on testBox-tagged boxes by 5. Boxes always use normal physics.")]
@@ -95,6 +95,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 
     public void OnResult(string recognizedResult)
     {
+        if (voiceFeedback != null)
+            voiceFeedback.color = Color.white;
+
         if (string.IsNullOrWhiteSpace(recognizedResult))
             return;
 
@@ -118,9 +121,11 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             voiceFeedback.text = string.Join("\n", recognizedPhrases, 0, displayedPhraseCount);
         }
 
+        bool recognizedKeyword = false;
         string matchedKeyword = FindMatchingKeyword(boostKeyword, transcripts);
         if (matchedKeyword != null)
         {
+            recognizedKeyword = true;
             Debug.Log("Keyword detected: " + matchedKeyword);
             SetBoostActive(!boostActive);
         }
@@ -128,6 +133,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         matchedKeyword = FindMatchingKeyword(shieldKeyword, transcripts);
         if (matchedKeyword != null)
         {
+            recognizedKeyword = true;
             Debug.Log("Keyword detected: " + matchedKeyword);
             // Trigger your gameplay action here.
             if(shieldRemaining == maxShieldTime)
@@ -140,6 +146,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         matchedKeyword = FindMatchingKeyword(sirenKeyword, transcripts);
         if (matchedKeyword != null)
         {
+            recognizedKeyword = true;
             Debug.Log("Keyword detected: " + matchedKeyword);
             // Trigger your gameplay action here.
             if(sirenRemaining == maxSirenTime)
@@ -152,10 +159,14 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         matchedKeyword = FindMatchingKeyword(pauseKeyword, transcripts);
         if (matchedKeyword != null)
         {
+            recognizedKeyword = true;
             Debug.Log("Keyword detected: " + matchedKeyword);
             // Trigger your gameplay action here.
             pause.PauseToggle();
         }
+
+        if (voiceFeedback != null && recognizedKeyword)
+            voiceFeedback.color = Color.green;
     }
 
     private static string FindMatchingKeyword(string[] keywords, string[] transcripts)
