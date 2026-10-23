@@ -1,15 +1,3 @@
-The game that we used to create the highway racer was Stacked Delivery
-
-A single player car game where the objective is to deliver items to a designated area as fast as possible! However, the twist of the game is that the items are stacked on the roof of the vehicle, so the player must manage balancing the items without them flying off, as well as reaching the destination as quickly as possible!
-
-The player needs to navigate through the levels while avoiding obstacles such as traffic and wildlife to get to the end of the level. Traffic forces the player to take different racing lines depending on how fast they are. Wildlife does the same, except is much more unpredictable and forces the player to be more cautious. The player must find the optimal balance between speed and safety to deliver the boxes on time. Streetlights guide the way through the level and show the player the recommended routing. Routes that aren't lit up are either suboptimal or are very difficult. 
-
-
-Itch.io link to download the game: https://areebj.itch.io/stacked-delivery
-
-Link to original repo: https://github.com/WeebsGames/cs426_Stacked_Delivery 
-
-
             >>>>HIGHWAY RACER<<<<
 
     The idea behind this was to create a classic highway racer where players had to speed for as long as possible on a highway while avoiding other cars on the road.
@@ -29,6 +17,8 @@ Link to original repo: https://github.com/WeebsGames/cs426_Stacked_Delivery
         Their overlays are empty while ready or active, then fill completely when
         the effect ends and drain to empty as the cooldown finishes.
 
+To play the game, you must have an android device. The current build of the game is labeled android_test.apk. Open the apk on your android device to play the game.
+
 
 
 >AI<
@@ -36,6 +26,18 @@ AI was used to understand how to use the UnityAndroidSpeechRecognizer library.
 It was also used to generate a skeleton for some functions, specifically gyro controls and voice controls. The siren powerup was initially created using AI, but was refined later (AI wasn't able to produce what I wanted).
 
 Below are where we found most of the assests for the game.
+
+The game that we used to create the highway racer was Stacked Delivery
+
+A single player car game where the objective is to deliver items to a designated area as fast as possible! However, the twist of the game is that the items are stacked on the roof of the vehicle, so the player must manage balancing the items without them flying off, as well as reaching the destination as quickly as possible!
+
+The player needs to navigate through the levels while avoiding obstacles such as traffic and wildlife to get to the end of the level. Traffic forces the player to take different racing lines depending on how fast they are. Wildlife does the same, except is much more unpredictable and forces the player to be more cautious. The player must find the optimal balance between speed and safety to deliver the boxes on time. Streetlights guide the way through the level and show the player the recommended routing. Routes that aren't lit up are either suboptimal or are very difficult. 
+
+
+Itch.io link to download the game: https://areebj.itch.io/stacked-delivery
+
+Link to original repo: https://github.com/WeebsGames/cs426_Stacked_Delivery 
+
 
 Audio used:
 https://opengameart.org/content/super-santa-claus - christmas themed music for level 2
