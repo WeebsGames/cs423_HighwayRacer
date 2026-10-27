@@ -18,9 +18,9 @@ public class CarController : MonoBehaviour
         float turnInput = Input.GetAxis("Horizontal");
 
         Vector3 move = transform.forward * moveInput * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + move);
+        // rb.MovePosition(rb.position + move);
 
-        Quaternion turn = Quaternion.Euler(0f, turnInput * turnSpeed * Time.fixedDeltaTime, 0f);
-        rb.MoveRotation(rb.rotation * turn);
+        Vector3 turn = transform.right * turnInput * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + turn);
     }
 }
