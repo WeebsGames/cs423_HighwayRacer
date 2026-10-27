@@ -3,8 +3,11 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float turnSpeed = 100f;
-
+    public float fullSteeringTilt = 45f;
+    public float fullAccelerationTilt = 30f;
+    public float steeringDeadZone = 2f;
+    public float accelerationDeadZone = 5f;
+    public float inputSmoothing = 10f;
     private Gyroscope gyro;
     private Quaternion neutralAttitude;
     private ScreenOrientation calibratedOrientation;
@@ -33,6 +36,7 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
+        UpdateGyroInput();
         float moveInput = Input.GetAxis("Vertical");
         // float turnInput = Input.GetAxis("Horizontal");
         float hInput = gyroInput.x;
@@ -81,5 +85,44 @@ public class CarController : MonoBehaviour
         }
 
         return unityAttitude * Quaternion.AngleAxis(screenRotation, Vector3.forward);
+    }
+
+    private void UpdateGyroInput()
+    {
+        if (gyro == null || !gyro.enabled)
+        {
+            gyroInput = Vector2.zero;
+            return;
+        }
+
+        if (!gyroCalibrated || calibratedOrientation != Screen.orientation)
+        {
+            CalibrateGyro();
+            return;
+        }
+
+        Quaternion relativeAttitude = Quaternion.Inverse(neutralAttitude) * GetScreenAttitude();
+        Vector3 deviceUp = relativeAttitude * Vector3.up;
+        Vector3 deviceForward = relativeAttitude * Vector3.forward;
+        float steeringAngle = Mathf.Atan2(deviceUp.x, deviceUp.y) * Mathf.Rad2Deg;
+        float accelerationAngle = Mathf.Atan2(-deviceForward.y,
+            Mathf.Sqrt(deviceForward.x * deviceForward.x + deviceForward.z * deviceForward.z)) * Mathf.Rad2Deg;
+
+        Vector2 targetInput = new Vector2(
+            NormalizeTilt(steeringAngle, steeringDeadZone, fullSteeringTilt),
+            NormalizeTilt(accelerationAngle, accelerationDeadZone, fullAccelerationTilt));
+        float smoothing = inputSmoothing > 0f ? 1f - Mathf.Exp(-inputSmoothing * Time.deltaTime) : 1f;
+        gyroInput = Vector2.Lerp(gyroInput, targetInput, smoothing);
+        // Stop adjustment immediately in the neutral dead zone, without smoothing drift.
+        if (targetInput.y == 0f)
+        {
+            gyroInput.y = 0f;
+        }
+    }
+
+    private static float NormalizeTilt(float angle, float deadZone, float fullTilt)
+    {
+        float effectiveDeadZone = Mathf.Clamp(deadZone, 0f, Mathf.Max(1f, fullTilt) - 0.01f);
+        return Mathf.Sign(angle) * Mathf.InverseLerp(effectiveDeadZone, Mathf.Max(1f, fullTilt), Mathf.Abs(angle));
     }
 }

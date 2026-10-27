@@ -20264,7 +20264,11 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	float ___moveSpeed;
-	float ___turnSpeed;
+	float ___fullSteeringTilt;
+	float ___fullAccelerationTilt;
+	float ___steeringDeadZone;
+	float ___accelerationDeadZone;
+	float ___inputSmoothing;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___neutralAttitude;
 	int32_t ___calibratedOrientation;
@@ -26599,9 +26603,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10214[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10215[4] = 
 {
 	static_cast<int32_t>(offsetof(CameraMovement_tF96219C0A51576E5F631C99326572CE14C492022, ___car)),static_cast<int32_t>(offsetof(CameraMovement_tF96219C0A51576E5F631C99326572CE14C492022, ___smoothing)),static_cast<int32_t>(offsetof(CameraMovement_tF96219C0A51576E5F631C99326572CE14C492022, ___cameraDistancce)),static_cast<int32_t>(offsetof(CameraMovement_tF96219C0A51576E5F631C99326572CE14C492022, ___offset)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10216[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10216[12] = 
 {
-	static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___moveSpeed)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___turnSpeed)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyro)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___neutralAttitude)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___calibratedOrientation)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyroCalibrated)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyroInput)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___rb)),};
+	static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___moveSpeed)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___fullSteeringTilt)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___fullAccelerationTilt)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___steeringDeadZone)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___accelerationDeadZone)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___inputSmoothing)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyro)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___neutralAttitude)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___calibratedOrientation)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyroCalibrated)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___gyroInput)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___rb)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10217[11] = 
 {
 	static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___steeringRadius)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___acceleration)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___maxSpeed)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___speed)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___turn)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___collisions)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___vel)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___grounded)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___rb)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___t)),static_cast<int32_t>(offsetof(CarMovement_tD31CF4A8DD799B9D061821ACF966B6C00DAF9393, ___dir)),};

@@ -47915,7 +47915,11 @@ struct CarControl_t32D5AD5BE0DB683D8B2CD67BB90CDB4E7A21EF24  : public MonoBehavi
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	float ___moveSpeed;
-	float ___turnSpeed;
+	float ___fullSteeringTilt;
+	float ___fullAccelerationTilt;
+	float ___steeringDeadZone;
+	float ___accelerationDeadZone;
+	float ___inputSmoothing;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___neutralAttitude;
 	int32_t ___calibratedOrientation;
