@@ -21,6 +21,6 @@ public class GroundMovement : MonoBehaviour
         {
             self.position += new Vector3(0,0,2000);
         }
-        self.position -= new Vector3(0,0,speed);
+        self.position -= new Vector3(0,0,speed) * Time.deltaTime;
     }
 }

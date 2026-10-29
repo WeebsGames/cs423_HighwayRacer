@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundMovement
   resetPoint: {fileID: 0}
-  speed: 0.1
+  speed: 50
 --- !u!1 &686546501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000295190}
+  - component: {fileID: 1000295191}
   m_Layer: 0
   m_Name: CameraPos
   m_TagString: Untagged
@@ -1115,6 +1116,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000295191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000295189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a776757dfc0c784c9b2de57f873d2b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  car: {fileID: 1107376789}
 --- !u!1001 &1107376784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1589,7 +1603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundMovement
   resetPoint: {fileID: 0}
-  speed: 0.1
+  speed: 50
 --- !u!64 &1618200139
 MeshCollider:
   m_ObjectHideFlags: 0
