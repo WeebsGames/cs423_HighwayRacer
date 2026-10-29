@@ -44,7 +44,21 @@ public class CarController : MonoBehaviour
         float hInput = gyroInput.x;
 
         Vector3 move = transform.forward * vInput * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + move);
+        if(rb.transform.position.z + move.z < -40 || rb.transform.position.z + move.z > 20)
+        {
+            if(rb.transform.position.z + move.z < -40)
+            {
+                rb.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, -40);
+            }
+            if(rb.transform.position.z + move.z > 20)
+            {
+                rb.transform.position = new Vector3(rb.transform.position.x, rb.transform.position.y, 20);
+            }
+        } else
+        {
+            rb.MovePosition(rb.position + move);
+        }
+        
 
         Vector3 turn = transform.right * hInput * moveSpeed * Time.fixedDeltaTime;
         if (math.abs(rb.position.x + turn.x) > 9){
