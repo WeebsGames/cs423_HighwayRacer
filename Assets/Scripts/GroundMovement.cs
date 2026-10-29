@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 public class GroundMovement : MonoBehaviour
 {
     public GameObject resetPoint;
-    public int speed;
+    public float speed;
 
     private Transform self;
     
