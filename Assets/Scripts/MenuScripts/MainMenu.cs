@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     Transform lastPos;
     public void PlayGame()
     {
-        SceneManager.LoadScene("Track1");
+        SceneManager.LoadScene("Scene1");
         // lastPos = cam.GetComponent<CameraFollow>().carTransform;
         // cam.GetComponent<CameraFollow>().carTransform = lvlCamPos;
         // // Camera.main.transform.position = lvlCamPos.position;
