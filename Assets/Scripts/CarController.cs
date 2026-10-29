@@ -1,3 +1,5 @@
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -37,15 +39,26 @@ public class CarController : MonoBehaviour
     void FixedUpdate()
     {
         UpdateGyroInput();
-        float moveInput = Input.GetAxis("Vertical");
+        float vInput = gyroInput.y;
         // float turnInput = Input.GetAxis("Horizontal");
         float hInput = gyroInput.x;
 
-        Vector3 move = transform.forward * moveInput * moveSpeed * Time.fixedDeltaTime;
-        // rb.MovePosition(rb.position + move);
+        Vector3 move = transform.forward * vInput * moveSpeed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + move);
 
         Vector3 turn = transform.right * hInput * moveSpeed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + turn);
+        if (math.abs(rb.position.x + turn.x) > 9){
+            if(rb.transform.position.x < 0)
+            {
+                rb.transform.position = new Vector3(-9, rb.transform.position.y, rb.transform.position.z);
+            } else
+            {
+                rb.transform.position = new Vector3(9, rb.transform.position.y, rb.transform.position.z);
+            }
+        } else
+        {
+            rb.MovePosition(rb.position + turn);
+        }
     }
 
     public void CalibrateGyro()
