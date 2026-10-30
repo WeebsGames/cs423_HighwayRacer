@@ -75,6 +75,16 @@ public class CarController : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Traffic")
+        {
+            //end game if no shield (or boost)
+        }
+    }
+
+
+    //Helper Functions
     public void CalibrateGyro()
     {
         if (gyro == null || !gyro.enabled || gyro.gravity.sqrMagnitude < 0.25f)
