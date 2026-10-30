@@ -24,7 +24,7 @@ public class SpawnTraffic : MonoBehaviour
         if(timePassed >= spawnDelay)
         {
             Debug.Log("spawned car");
-            Instantiate(trafficCar, spawnPoints[Random.Range(0, 3)].position, Quaternion.identity);
+            Instantiate(trafficCar, spawnPoints[Random.Range(0, 4)].position, Quaternion.identity);
             timePassed = 0;
         }
     }

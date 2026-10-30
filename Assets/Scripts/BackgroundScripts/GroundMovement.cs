@@ -4,14 +4,15 @@ using UnityEngine.UIElements;
 public class GroundMovement : MonoBehaviour
 {
     public GameObject resetPoint;
-    public float speed;
-
+    
+    private float speed;
     private Transform self;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         self = GetComponent<Transform>();
+        speed = GameObject.FindWithTag("GameController").GetComponent<GlobalVars>().groundSpeed;
     }
 
     // Update is called once per frame
