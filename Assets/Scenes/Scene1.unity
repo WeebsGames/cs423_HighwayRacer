@@ -1625,6 +1625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372082f5233b8e44291a8543bfc3aa72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  spawnDelay: 5
+  trafficCar: {fileID: 182072271990575567, guid: 3833c6d0d1095a74eb4ef3db2c233ad4, type: 3}
 --- !u!1001 &1107376784
 PrefabInstance:
   m_ObjectHideFlags: 0
