@@ -5,12 +5,13 @@ public class GlobalVars : MonoBehaviour
 {
     public int groundSpeed;
     public bool gameEnd = false;
-
+    public GameObject gameOverScreen;
     void Update()
     {
         if (gameEnd)
         {
-            SceneManager.LoadScene("MainMenu2");
+            Time.timeScale = 0;
+            gameOverScreen.SetActive(true);
         }
     }
 }
