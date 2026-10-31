@@ -1,7 +1,5 @@
 using TMPro;
 using UnityEngine;
-using System.Text.RegularExpressions;
-using UnityEngine.AdaptivePerformance;
 
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
@@ -101,7 +99,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         if (string.IsNullOrWhiteSpace(recognizedResult))
             return;
 
-        debugText.text = "Recognizer returned: " + recognizedResult;
+        if (debugText != null)
+            debugText.text = "Recognizer returned: " + recognizedResult;
 
         // The plugin separates alternative transcripts with "~".
         string[] transcripts = recognizedResult.Split('~');
@@ -122,7 +121,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         }
 
         bool recognizedKeyword = false;
-        string matchedKeyword = FindMatchingKeyword(boostKeyword, transcripts);
+        string matchedKeyword = VoiceKeywordMatcher.FindMatch(boostKeyword, transcripts);
         if (matchedKeyword != null)
         {
             recognizedKeyword = true;
@@ -130,7 +129,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             SetBoostActive(!boostActive);
         }
 
-        matchedKeyword = FindMatchingKeyword(shieldKeyword, transcripts);
+        matchedKeyword = VoiceKeywordMatcher.FindMatch(shieldKeyword, transcripts);
         if (matchedKeyword != null)
         {
             recognizedKeyword = true;
@@ -143,7 +142,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             }
         }
 
-        matchedKeyword = FindMatchingKeyword(sirenKeyword, transcripts);
+        matchedKeyword = VoiceKeywordMatcher.FindMatch(sirenKeyword, transcripts);
         if (matchedKeyword != null)
         {
             recognizedKeyword = true;
@@ -156,7 +155,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             }
         }
 
-        matchedKeyword = FindMatchingKeyword(pauseKeyword, transcripts);
+        matchedKeyword = VoiceKeywordMatcher.FindMatch(pauseKeyword, transcripts);
         if (matchedKeyword != null)
         {
             recognizedKeyword = true;
@@ -167,26 +166,6 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
 
         if (voiceFeedback != null && recognizedKeyword)
             voiceFeedback.color = Color.green;
-    }
-
-    private static string FindMatchingKeyword(string[] keywords, string[] transcripts)
-    {
-        for (int i = 0; i < keywords.Length; i++)
-        {
-            if (string.IsNullOrWhiteSpace(keywords[i]))
-                continue;
-
-            string pattern = @"\b" + Regex.Escape(keywords[i].Trim()) + @"\b";
-            for (int transcriptIndex = 0;
-                transcriptIndex < transcripts.Length && transcriptIndex < 3;
-                transcriptIndex++)
-            {
-                if (Regex.IsMatch(transcripts[transcriptIndex], pattern, RegexOptions.IgnoreCase))
-                    return keywords[i];
-            }
-        }
-
-        return null;
     }
 
     public void OnError(string recognizedError)
