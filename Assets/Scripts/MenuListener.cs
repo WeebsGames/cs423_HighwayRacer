@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
 
 public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
@@ -63,7 +62,7 @@ public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecogni
             voiceFeedback.text = string.Join("\n", recognizedPhrases, 0, displayedPhraseCount);
         }
 
-        string matchedKeyword = FindMatchingKeyword(playKeyword, transcripts);
+        string matchedKeyword = VoiceKeywordMatcher.FindMatch(playKeyword, transcripts);
         if (matchedKeyword != null)
         {
             Debug.Log("Keyword detected: " + matchedKeyword);
@@ -73,26 +72,6 @@ public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecogni
             isLoadingScene = true;
             SceneManager.LoadScene("Track1");
         }
-    }
-
-    private static string FindMatchingKeyword(string[] keywords, string[] transcripts)
-    {
-        for (int i = 0; i < keywords.Length; i++)
-        {
-            if (string.IsNullOrWhiteSpace(keywords[i]))
-                continue;
-
-            string pattern = @"\b" + Regex.Escape(keywords[i].Trim()) + @"\b";
-            for (int transcriptIndex = 0;
-                transcriptIndex < transcripts.Length && transcriptIndex < 3;
-                transcriptIndex++)
-            {
-                if (Regex.IsMatch(transcripts[transcriptIndex], pattern, RegexOptions.IgnoreCase))
-                    return keywords[i];
-            }
-        }
-
-        return null;
     }
 
     public void OnError(string recognizedError)
