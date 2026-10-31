@@ -79,6 +79,8 @@ public class CarController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Traffic")
         {
+            Debug.Log("car hit");
+            Destroy(collision.gameObject);
             //end game if no shield (or boost)
         }
     }
