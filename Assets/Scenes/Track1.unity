@@ -57327,23 +57327,34 @@ MonoBehaviour:
   boostKeyword:
   - boost
   - one
+  - speed
+  - faster
+  - go fast
+  - nitro
   - Get my speed boost ready
   - Prepare the boost for me
-  - speed
+  - nos
+  - boosts
   shieldKeyword:
   - shield
   - two
+  - protect
+  - protection
+  - shields
   - Get my shield ready
   - Prepare the crash protection
   - Prepare the power-up that protects my car
-  - Protect
   sirenKeyword:
   - siren
-  - two
+  - three
+  - alarm
+  - emergency lights
   - clear the path
   - push cars away
   - move other cars away
   - clear my path
+  - out of the way
+  - silent
   pauseKeyword:
   - pause
   - stop
@@ -57353,6 +57364,7 @@ MonoBehaviour:
   - leave race
   - return
   - exit
+  - freeze
   pause: {fileID: 1108733675}
   shieldActive: 0
   sirenActive: 0
