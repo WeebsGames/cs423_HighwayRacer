@@ -17,10 +17,12 @@ public class CarController : MonoBehaviour
     private Vector2 gyroInput;
 
     private Rigidbody rb;
+    private GameObject manager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        manager = GameObject.FindWithTag("GameController");
 
         gyroInput = Vector2.zero;
         gyroCalibrated = false;
@@ -75,6 +77,19 @@ public class CarController : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Traffic")
+        {
+            manager.GetComponent<GlobalVars>().gameEnd = true;
+            Debug.Log("car hit");
+            Destroy(collision.gameObject);
+            //end game if no shield (or boost)
+        }
+    }
+
+
+    //Helper Functions
     public void CalibrateGyro()
     {
         if (gyro == null || !gyro.enabled || gyro.gravity.sqrMagnitude < 0.25f)

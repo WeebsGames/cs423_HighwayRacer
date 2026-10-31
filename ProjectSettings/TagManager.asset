@@ -24,6 +24,7 @@ TagManager:
   - BoostBar
   - testBox
   - doorBox
+  - Traffic
   layers:
   - Default
   - TransparentFX
