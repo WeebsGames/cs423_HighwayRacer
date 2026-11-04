@@ -62,10 +62,10 @@ public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecogni
             voiceFeedback.text = string.Join("\n", recognizedPhrases, 0, displayedPhraseCount);
         }
 
-        string matchedKeyword = VoiceKeywordMatcher.FindMatch(playKeyword, transcripts);
-        if (matchedKeyword != null)
+        VoiceCommandMatch match = VoiceCommandParser.Parse(recognizedResult, playKeyword);
+        if (match.CommandIndex >= 0)
         {
-            Debug.Log("Keyword detected: " + matchedKeyword);
+            Debug.Log("Keyword detected: " + match.Keyword);
             if (voiceFeedback != null)
                 voiceFeedback.color = Color.green;
 

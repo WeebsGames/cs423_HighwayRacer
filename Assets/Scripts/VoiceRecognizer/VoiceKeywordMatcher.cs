@@ -29,7 +29,7 @@ public static class VoiceKeywordMatcher
         return null;
     }
 
-    private static string Normalize(string text)
+    internal static string Normalize(string text)
     {
         if (string.IsNullOrWhiteSpace(text))
             return string.Empty;
