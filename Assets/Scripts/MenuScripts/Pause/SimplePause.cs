@@ -15,6 +15,7 @@ public class SimplePause : MonoBehaviour
     public LevelTimer levelTimer;
 
     bool paused = false;
+    public bool IsPaused => paused;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
