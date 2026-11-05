@@ -194,6 +194,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26858243}
   m_CullTransparentMesh: 1
+--- !u!1 &74933353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74933355}
+  - component: {fileID: 74933354}
+  m_Layer: 0
+  m_Name: Listener
+  m_TagString: Listener
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &74933354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74933353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a69a70347f9dd1438f2d3339433872a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  boostText: {fileID: 0}
+  shieldText: {fileID: 0}
+  sirenText: {fileID: 0}
+  debugText: {fileID: 0}
+  shieldImage: {fileID: 276976334}
+  sirenImage: {fileID: 752145306}
+  voiceFeedback: {fileID: 348402947}
+  voiceBar: {fileID: 1937495375}
+  boostKeyword:
+  - boost
+  - one
+  - speed
+  - faster
+  - go fast
+  - nitro
+  - Get my speed boost ready
+  - Prepare the boost for me
+  - nos
+  - boosts
+  shieldKeyword:
+  - shield
+  - two
+  - protect
+  - protection
+  - shields
+  - Get my shield ready
+  - Prepare the crash protection
+  - Prepare the power-up that protects my car
+  sirenKeyword:
+  - siren
+  - three
+  - alarm
+  - emergency lights
+  - clear the path
+  - push cars away
+  - move other cars away
+  - clear my path
+  - out of the way
+  - silent
+  pauseKeyword:
+  - pause
+  - stop
+  - quit
+  - menu
+  - leave
+  - leave race
+  - return
+  - exit
+  - freeze
+  pause: {fileID: 1028822125}
+  correctionWindowSeconds: 5
+  shieldActive: 0
+  sirenActive: 0
+  maxBoostTime: 5
+  boostRefillTime: 10
+  maxShieldTime: 6
+  shieldCD: 15
+  maxSirenTime: 5
+  sirenCD: 15
+--- !u!4 &74933355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 74933353}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24891, y: 5.04354, z: 13.8839}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &79913571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1637,7 @@ RectTransform:
   - {fileID: 1585550605}
   - {fileID: 1937495374}
   - {fileID: 348402946}
-  m_Father: {fileID: 1028822124}
+  m_Father: {fileID: 1249448057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1681,7 +1784,7 @@ GameObject:
   - component: {fileID: 440404826}
   - component: {fileID: 440404825}
   m_Layer: 5
-  m_Name: SirenImage
+  m_Name: ShieldImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2060,11 +2163,11 @@ RectTransform:
   m_Children:
   - {fileID: 697280666}
   - {fileID: 549837608}
-  m_Father: {fileID: 1028822124}
+  m_Father: {fileID: 1249448057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -46.265625, y: 0}
+  m_AnchoredPosition: {x: 726.2344, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &659141272
@@ -3089,11 +3192,11 @@ RectTransform:
   - {fileID: 1407324106}
   - {fileID: 26858244}
   - {fileID: 753248880}
-  m_Father: {fileID: 1028822124}
+  m_Father: {fileID: 1249448057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 104.52606, y: -172.71643}
+  m_AnchoredPosition: {x: -667.97394, y: -172.71643}
   m_SizeDelta: {x: 78.614746, y: 403.1835}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &832575517
@@ -3400,6 +3503,7 @@ GameObject:
   - component: {fileID: 1028822123}
   - component: {fileID: 1028822122}
   - component: {fileID: 1028822121}
+  - component: {fileID: 1028822125}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3482,11 +3586,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 656228973}
-  - {fileID: 769893018}
-  - {fileID: 423426165}
   - {fileID: 1075401853}
   - {fileID: 2027554909}
+  - {fileID: 1249448057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3494,6 +3596,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1028822125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028822120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cff0b5b1628abd4ea4125622a81c9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimplePause
+  level: 1
+  text: {fileID: 1778308409}
+  others:
+  - {fileID: 1249448056}
+  pause: {fileID: 1075401852}
+  levelTimer: {fileID: 0}
 --- !u!1 &1075401852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,6 +4005,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227174867}
   m_CullTransparentMesh: 1
+--- !u!1 &1249448056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249448057}
+  m_Layer: 5
+  m_Name: Play
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1249448057
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249448056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 656228973}
+  - {fileID: 769893018}
+  - {fileID: 423426165}
+  m_Father: {fileID: 1028822124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1399355791
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,7 +5165,7 @@ GameObject:
   - component: {fileID: 1937495376}
   - component: {fileID: 1937495375}
   m_Layer: 5
-  m_Name: BoostFront
+  m_Name: VoiceFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5163,3 +5321,4 @@ SceneRoots:
   - {fileID: 1399355793}
   - {fileID: 1028822124}
   - {fileID: 161186285}
+  - {fileID: 74933355}
