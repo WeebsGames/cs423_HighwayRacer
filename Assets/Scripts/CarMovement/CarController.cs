@@ -10,12 +10,12 @@ public class CarController : MonoBehaviour
     public float steeringDeadZone = 2f;
     public float accelerationDeadZone = 5f;
     public float inputSmoothing = 10f;
+    
     private Gyroscope gyro;
     private Quaternion neutralAttitude;
     private ScreenOrientation calibratedOrientation;
     private bool gyroCalibrated;
     private Vector2 gyroInput;
-
     private Rigidbody rb;
     private GameObject manager;
 
