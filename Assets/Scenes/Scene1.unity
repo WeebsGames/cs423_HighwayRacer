@@ -4304,7 +4304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   groundSpeed: 50
   gameEnd: 0
-  gameOverScreen: {fileID: 0}
+  gameOverScreen: {fileID: 2027554908}
 --- !u!4 &1399355793
 Transform:
   m_ObjectHideFlags: 0

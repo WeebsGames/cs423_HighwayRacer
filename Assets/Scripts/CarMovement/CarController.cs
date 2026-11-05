@@ -10,7 +10,9 @@ public class CarController : MonoBehaviour
     public float steeringDeadZone = 2f;
     public float accelerationDeadZone = 5f;
     public float inputSmoothing = 10f;
-    
+    public GameObject shield;
+    public GameObject siren;
+
     private Gyroscope gyro;
     private Quaternion neutralAttitude;
     private ScreenOrientation calibratedOrientation;
@@ -75,6 +77,22 @@ public class CarController : MonoBehaviour
         {
             rb.MovePosition(rb.position + turn);
         }
+
+        if (manager.GetComponent<GlobalVars>().shieldActive)
+        {
+            shield.SetActive(true);
+        } else
+        {
+            shield.SetActive(false);
+        }
+        if (manager.GetComponent<GlobalVars>().sirenActive)
+        {
+            siren.SetActive(true);
+        } else
+        {
+            siren.SetActive(false);
+        }
+
     }
 
     void OnCollisionEnter(Collision collision)

@@ -5,6 +5,9 @@ public class GlobalVars : MonoBehaviour
 {
     public int groundSpeed;
     public bool gameEnd = false;
+    public bool boostActive = false;
+    public bool shieldActive = false;
+    public bool sirenActive = false;
     public GameObject gameOverScreen;
     void Update()
     {
