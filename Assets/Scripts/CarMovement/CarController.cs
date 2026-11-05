@@ -5,6 +5,7 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     public float moveSpeed = 10f;
+    public int boostSpeed;
     public float fullSteeringTilt = 45f;
     public float fullAccelerationTilt = 30f;
     public float steeringDeadZone = 2f;
@@ -20,11 +21,13 @@ public class CarController : MonoBehaviour
     private Vector2 gyroInput;
     private Rigidbody rb;
     private GameObject manager;
+    private GlobalVars globalVars;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         manager = GameObject.FindWithTag("GameController");
+        globalVars = manager.GetComponent<GlobalVars>(); 
 
         gyroInput = Vector2.zero;
         gyroCalibrated = false;
@@ -47,7 +50,9 @@ public class CarController : MonoBehaviour
         // float turnInput = Input.GetAxis("Horizontal");
         float hInput = gyroInput.x;
 
+
         Vector3 move = transform.forward * vInput * moveSpeed * Time.fixedDeltaTime;
+        
         if(rb.transform.position.z + move.z < -40 || rb.transform.position.z + move.z > 20)
         {
             if(rb.transform.position.z + move.z < -40)
