@@ -3814,11 +3814,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarController
   moveSpeed: 100
+  boostSpeed: 0
   fullSteeringTilt: 45
   fullAccelerationTilt: 30
   steeringDeadZone: 2
   accelerationDeadZone: 5
   inputSmoothing: 10
+  shield: {fileID: 1135104463}
+  siren: {fileID: 1992496314}
 --- !u!65 &1107376787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4303,7 +4306,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   groundSpeed: 50
+  boostSpeed: 0
   gameEnd: 0
+  boostActive: 0
+  shieldActive: 0
+  sirenActive: 0
   gameOverScreen: {fileID: 2027554908}
 --- !u!4 &1399355793
 Transform:
