@@ -104,7 +104,11 @@ public class CarController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Traffic")
         {
-            manager.GetComponent<GlobalVars>().gameEnd = true;
+            if (!shield.activeSelf)
+            {
+                manager.GetComponent<GlobalVars>().gameEnd = true;
+                
+            }
             Debug.Log("car hit");
             Destroy(collision.gameObject);
             //end game if no shield (or boost)
