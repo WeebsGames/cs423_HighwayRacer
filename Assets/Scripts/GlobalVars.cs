@@ -6,6 +6,7 @@ public class GlobalVars : MonoBehaviour
 {
     public int groundSpeed;
     public int boostSpeed;
+    public int score;
     public bool gameEnd = false;
     public bool boostActive = false;
     public bool shieldActive = false;
@@ -13,10 +14,12 @@ public class GlobalVars : MonoBehaviour
     public GameObject gameOverScreen;
 
     private int originalSpeed;
+    private VoiceInput voiceInput;
 
     void Start()
     {
         originalSpeed = groundSpeed;
+        voiceInput = GameObject.FindGameObjectWithTag("Listener").GetComponent<VoiceInput>();
     }
     void Update()
     {
@@ -33,5 +36,9 @@ public class GlobalVars : MonoBehaviour
         {
             groundSpeed = originalSpeed;
         }
+        boostActive = voiceInput.boostActive;
+        shieldActive = voiceInput.shieldActive;
+        sirenActive = voiceInput.sirenActive;
+
     }
 }
