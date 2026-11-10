@@ -17,12 +17,16 @@ public class TrafficMovement : MonoBehaviour
         playerPos = GameObject.FindWithTag("Player");
 
         self = GetComponent<Transform>();
-        speed = manager.GetComponent<GlobalVars>().groundSpeed - 20;
+        speed = globalVars.groundSpeed - 20;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (globalVars.gameEnd)
+        {
+            speed = 0;
+        }
         self.position -= new UnityEngine.Vector3(0,0,speed) * Time.deltaTime;
         if(self.position.z < -50)
         {
@@ -38,5 +42,6 @@ public class TrafficMovement : MonoBehaviour
                 self.position -= new UnityEngine.Vector3(1,0,0) * Time.deltaTime;
             }
         }
+        
     }
 }

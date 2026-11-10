@@ -13,6 +13,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public UnityEngine.UI.Image sirenImage;
     public TMP_Text voiceFeedback;
     public UnityEngine.UI.Image voiceBar;
+    public UnityEngine.UI.Image boostBar;
+
     [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts"};
     public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", };
@@ -364,6 +366,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             sirenRemaining = Mathf.Min(maxSirenTime,
                 sirenRemaining + maxSirenTime / sirenCD * Time.deltaTime);
         }
+
+        boostBar.fillAmount = boostRemaining / maxBoostTime;
+
         RefreshPowerUpUI();
     }
 }
