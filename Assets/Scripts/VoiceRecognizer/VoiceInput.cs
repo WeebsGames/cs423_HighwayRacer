@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognizerPlugin
 {
@@ -19,7 +20,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts"};
     public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", };
     public string[] sirenKeyword = {"siren", "three", "alarm", "emergency lights", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "silent"};
-    public string[] pauseKeyword = {"pause", "stop", "quit", "menu", "leave", "leave race", "return", "exit", "freeze"};
+    public string[] pauseKeyword = {"pause", "stop", "freeze"};
+    public string[] restartKeyword = {"restart", "restart race", "restart game", "start over", "try again"};
+    public string[] quitKeyword = {"quit", "menu", "main menu", "leave", "leave race", "return", "exit"};
     public SimplePause pause;
     [Header("Voice Corrections")]
     [Tooltip("Real-time seconds in which an explicit correction can replace the last voice action, including while paused.")]
@@ -52,7 +55,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     private float sirenRemaining;
     private float sirenFillAmount => sirenActive ? 0f : 1f - Mathf.Clamp01(sirenRemaining / maxSirenTime);
 
-    private enum Command { Boost, Shield, Siren, Pause }
+    private enum Command { Boost, Shield, Siren, Pause, Restart, Quit }
     private struct VoiceAction
     {
         public Command Command;
@@ -147,8 +150,10 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             voiceFeedback.text = string.Join("\n", recognizedPhrases, 0, displayedPhraseCount);
         }
 
+        string[] pauseOnlyKeywords = pauseKeyword == null ? null : System.Array.FindAll(
+            pauseKeyword, keyword => VoiceKeywordMatcher.FindMatch(quitKeyword, new[] { keyword }) == null);
         VoiceCommandMatch match = VoiceCommandParser.Parse(
-            recognizedResult, boostKeyword, shieldKeyword, sirenKeyword, pauseKeyword);
+            recognizedResult, boostKeyword, shieldKeyword, sirenKeyword, pauseOnlyKeywords, restartKeyword, quitKeyword);
         float now = Time.unscaledTime;
         float window = Mathf.Max(0f, correctionWindowSeconds);
         bool recentAction = hasLastVoiceAction && now - lastVoiceActionTime <= window;
@@ -172,16 +177,27 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
                 awaitingCorrection = true;
                 correctionRequestedTime = now;
                 pendingOriginalCommandIndex = originalCommandIndex;
-                ShowFeedback("What did you mean? Say boost, shield, siren or pause.", false);
+                ShowFeedback("What did you mean? Say boost, shield, siren, pause, restart or quit.", false);
             }
             else
             {
-                ShowFeedback("Say one command: boost, shield, siren or pause.", false);
+                ShowFeedback("Say one command: boost, shield, siren, pause, restart or quit.", false);
             }
             return;
         }
 
         Command command = (Command)match.CommandIndex;
+        if (command == Command.Restart)
+        {
+            Restart();
+            return;
+        }
+        if (command == Command.Quit)
+        {
+            Quit();
+            return;
+        }
+
         bool undoPrevious = isCorrection && recentAction &&
             (!inlineCorrection || originalCommandIndex == (int)lastVoiceAction.Command);
 
@@ -321,6 +337,17 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         pendingOriginalCommandIndex = -1;
         if (!Application.isEditor)
             plugin?.StopListening();
+    }
+
+    void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void Quit(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu2");
     }
     // Update is called once per frame
     void Update()
