@@ -49,7 +49,11 @@ public class CarController : MonoBehaviour
         float vInput = gyroInput.y;
         // float turnInput = Input.GetAxis("Horizontal");
         float hInput = gyroInput.x;
-
+        if (globalVars.gameEnd)
+        {
+            vInput = 0;
+            hInput = 0;
+        }
 
         Vector3 move = transform.forward * vInput * moveSpeed * Time.fixedDeltaTime;
         
@@ -104,9 +108,15 @@ public class CarController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Traffic")
         {
-            manager.GetComponent<GlobalVars>().gameEnd = true;
+            if (!shield.activeSelf)
+            {
+                manager.GetComponent<GlobalVars>().gameEnd = true;
+                
+            } else
+            {
+                Destroy(collision.gameObject);
+            }
             Debug.Log("car hit");
-            Destroy(collision.gameObject);
             //end game if no shield (or boost)
         }
     }

@@ -13,6 +13,8 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public UnityEngine.UI.Image sirenImage;
     public TMP_Text voiceFeedback;
     public UnityEngine.UI.Image voiceBar;
+    public UnityEngine.UI.Image boostBar;
+
     [Header("Keywords")]
     public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts"};
     public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", };
@@ -64,9 +66,14 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     private bool awaitingCorrection;
     private float correctionRequestedTime;
     private int pendingOriginalCommandIndex = -1;
+    private GameObject manager;
+    private GlobalVars globalVars;
 
     private void Awake()
     {
+        manager = GameObject.FindWithTag("GameController");
+        globalVars = manager.GetComponent<GlobalVars>();
+
         boostRemaining = maxBoostTime;
         foreach (GameObject box in GameObject.FindGameObjectsWithTag("testBox"))
         {
@@ -88,6 +95,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     private void SetBoostActive(bool active)
     {
         boostActive = active && boostRemaining > 0f;
+        globalVars.boostActive = boostActive;
         if (boostText != null)
         {
             boostText.text = boostActive ? "Boost: Active" : "Boost: Inactive";
@@ -97,6 +105,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+
         shieldRemaining = maxShieldTime;
         sirenRemaining = maxSirenTime;
         plugin = SpeechRecognizerPlugin.GetPlatformPluginVersion(
@@ -357,6 +366,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             sirenRemaining = Mathf.Min(maxSirenTime,
                 sirenRemaining + maxSirenTime / sirenCD * Time.deltaTime);
         }
+
+        boostBar.fillAmount = boostRemaining / maxBoostTime;
+
         RefreshPowerUpUI();
     }
 }
