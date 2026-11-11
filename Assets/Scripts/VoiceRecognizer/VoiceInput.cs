@@ -177,11 +177,11 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
                 awaitingCorrection = true;
                 correctionRequestedTime = now;
                 pendingOriginalCommandIndex = originalCommandIndex;
-                ShowFeedback("What did you mean? Say boost, shield, siren, pause, restart or quit.", false);
+                ShowFeedback("What did you mean?", false);
             }
             else
             {
-                ShowFeedback("Say one command: boost, shield, siren, pause, restart or quit.", false);
+                ShowFeedback("Command not recognized.", false);
             }
             return;
         }
