@@ -266,12 +266,6 @@ MonoBehaviour:
   pauseKeyword:
   - pause
   - stop
-  - quit
-  - menu
-  - leave
-  - leave race
-  - return
-  - exit
   - freeze
   restartKeyword:
   - restart
@@ -279,6 +273,8 @@ MonoBehaviour:
   - restart game
   - start over
   - try again
+  - recalibrate
+  - calibrate
   quitKeyword:
   - quit
   - menu
