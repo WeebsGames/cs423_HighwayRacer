@@ -70,7 +70,7 @@ public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecogni
                 voiceFeedback.color = Color.green;
 
             isLoadingScene = true;
-            SceneManager.LoadScene("Track1");
+            SceneManager.LoadScene("Scene1");
         }
     }
 
