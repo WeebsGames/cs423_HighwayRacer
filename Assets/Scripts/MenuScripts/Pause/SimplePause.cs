@@ -45,8 +45,6 @@ public class SimplePause : MonoBehaviour
 
     public void PauseToggle()
     {
-        ItemPhysics itemPhysics = FindAnyObjectByType<ItemPhysics>();
-        if (itemPhysics != null && itemPhysics.GetItemsFallen()) return;
 
         paused = !paused;
         GameObject car = GameObject.FindWithTag("Player");
@@ -54,15 +52,6 @@ public class SimplePause : MonoBehaviour
         if (paused)
         {
             pause.SetActive(true);
-            levelTimer.StopTimer();
-
-            AudioSource[] carAudio = car.GetComponentsInChildren<AudioSource>();
-            foreach (AudioSource audio in carAudio)
-            {
-                Debug.Log("car audio being muted: " + audio.name);
-                audio.Pause();
-                audio.mute = true;
-            }
             foreach (GameObject other in others)
             {
                 other.SetActive(false);
@@ -71,18 +60,6 @@ public class SimplePause : MonoBehaviour
             return;
         }
         pause.SetActive(false);
-        levelTimer.StartTimer();
-
-        if (car != null)
-        {
-            AudioSource[] carAudio = car.GetComponentsInChildren<AudioSource>();
-            foreach (AudioSource audio in carAudio)
-            {
-                Debug.Log("car audio being unmuted: " + audio.name);
-                audio.mute = false;
-                audio.UnPause();
-            }
-        }
 
         foreach (GameObject other in others)
         {
