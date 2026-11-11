@@ -12,7 +12,6 @@ public class SimplePause : MonoBehaviour
     public TMP_Text text;
     public List<GameObject> others;
     public GameObject pause;
-    public LevelTimer levelTimer;
 
     bool paused = false;
     public bool IsPaused => paused;
