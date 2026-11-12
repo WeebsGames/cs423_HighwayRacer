@@ -76,3 +76,5 @@ crashlytics-build.properties
 /android test_BackUpThisFolder_ButDontShipItWithYourGame
 /android_test_BackUpThisFolder_ButDontShipItWithYourGame
 .fake
+/VoiceRacer_BackUpThisFolder_ButDontShipItWithYourGame
+/StackedDelivery_BurstDebugInformation_DoNotShip
