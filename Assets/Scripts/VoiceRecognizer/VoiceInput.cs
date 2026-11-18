@@ -21,6 +21,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "safe", "help", "cover"};
     public string[] sirenKeyword = {"siren", "three", "alarm", "emergency lights", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "silent", "horn", "beep", "honk"};
     public string[] pauseKeyword = {"pause", "stop", "freeze", "pose", "wait", "hold", "stay"};
+    public string[] resumeKeyword = {"resume", "continue", "unpause"};
     public string[] restartKeyword = {"restart", "restart race", "restart game", "start over", "try again", "redo", "reset"};
     public string[] quitKeyword = {"quit", "menu", "main menu", "leave", "leave race", "return", "exit", "home", "back"};
     public SimplePause pause;
@@ -55,7 +56,7 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     private float sirenRemaining;
     private float sirenFillAmount => sirenActive ? 0f : 1f - Mathf.Clamp01(sirenRemaining / maxSirenTime);
 
-    private enum Command { Boost, Shield, Siren, Pause, Restart, Quit }
+    private enum Command { Boost, Shield, Siren, Pause, Restart, Quit, Resume }
     private struct VoiceAction
     {
         public Command Command;
@@ -153,7 +154,23 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         string[] pauseOnlyKeywords = pauseKeyword == null ? null : System.Array.FindAll(
             pauseKeyword, keyword => VoiceKeywordMatcher.FindMatch(quitKeyword, new[] { keyword }) == null);
         VoiceCommandMatch match = VoiceCommandParser.Parse(
-            recognizedResult, boostKeyword, shieldKeyword, sirenKeyword, pauseOnlyKeywords, restartKeyword, quitKeyword);
+            recognizedResult, boostKeyword, shieldKeyword, sirenKeyword, pauseOnlyKeywords, restartKeyword, quitKeyword, resumeKeyword);
+        if (match.CommandIndex == (int)Command.Resume)
+        {
+            if (pause == null || !pause.IsPaused)
+            {
+                ShowFeedback("Resume is only available while paused.", false);
+                return;
+            }
+
+            pause.PauseToggle();
+            hasLastVoiceAction = false;
+            awaitingCorrection = false;
+            pendingOriginalCommandIndex = -1;
+            ShowFeedback("Game resumed.", true);
+            return;
+        }
+
         float now = Time.unscaledTime;
         float window = Mathf.Max(0f, correctionWindowSeconds);
         bool recentAction = hasLastVoiceAction && now - lastVoiceActionTime <= window;
@@ -197,6 +214,11 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
             Quit();
             return;
         }
+        if (command == Command.Pause && !isCorrection && pause != null && pause.IsPaused)
+        {
+            ShowFeedback("Game is already paused. Say resume to continue.", false);
+            return;
+        }
 
         bool undoPrevious = isCorrection && recentAction &&
             (!inlineCorrection || originalCommandIndex == (int)lastVoiceAction.Command);
@@ -236,12 +258,9 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
         }
 
         bool wasActive = GetCommandState(command);
-        bool desiredActive = command == Command.Boost || command == Command.Pause
-            ? isCorrection || !wasActive
-            : true;
+        bool desiredActive = command != Command.Boost || isCorrection || !wasActive;
         if (!SetCommandState(command, desiredActive))
         {
-            // Pause can be refused by the game (for example, after losing cargo).
             // Restore the old effect if the replacement could not be applied.
             if (undoPrevious)
                 SetCommandState(previousAction.Command, previousCurrentState);

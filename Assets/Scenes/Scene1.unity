@@ -282,6 +282,10 @@ MonoBehaviour:
   - wait
   - hold
   - stay
+  resumeKeyword:
+  - resume
+  - continue
+  - unpause
   restartKeyword:
   - restart
   - restart race
