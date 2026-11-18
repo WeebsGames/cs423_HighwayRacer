@@ -243,6 +243,11 @@ MonoBehaviour:
   - Prepare the boost for me
   - nos
   - boosts
+  - quick
+  - quicker
+  - go
+  - fast
+  - more
   shieldKeyword:
   - shield
   - two
@@ -252,6 +257,9 @@ MonoBehaviour:
   - Get my shield ready
   - Prepare the crash protection
   - Prepare the power-up that protects my car
+  - safe
+  - help
+  - cover
   sirenKeyword:
   - siren
   - three
@@ -263,16 +271,25 @@ MonoBehaviour:
   - clear my path
   - out of the way
   - silent
+  - horn
+  - beep
+  - honk
   pauseKeyword:
   - pause
   - stop
   - freeze
+  - pose
+  - wait
+  - hold
+  - stay
   restartKeyword:
   - restart
   - restart race
   - restart game
   - start over
   - try again
+  - redo
+  - reset
   - recalibrate
   - calibrate
   quitKeyword:
@@ -283,6 +300,8 @@ MonoBehaviour:
   - leave race
   - return
   - exit
+  - home
+  - back
   pause: {fileID: 1028822125}
   correctionWindowSeconds: 5
   shieldActive: 0

@@ -9,7 +9,7 @@ public class MenuListener : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecogni
     public TMP_Text voiceFeedback;
 
     [Header("Keywords")]
-    public string[] playKeyword = {"play", "start", "race", "proceed"};
+    public string[] playKeyword = {"play", "start", "race", "proceed", "get in the car"};
 
     private SpeechRecognizerPlugin plugin;
     private bool isLoadingScene;

@@ -17,12 +17,12 @@ public class VoiceInput : MonoBehaviour, SpeechRecognizerPlugin.ISpeechRecognize
     public UnityEngine.UI.Image boostBar;
 
     [Header("Keywords")]
-    public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts"};
-    public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", };
-    public string[] sirenKeyword = {"siren", "three", "alarm", "emergency lights", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "silent"};
-    public string[] pauseKeyword = {"pause", "stop", "freeze"};
-    public string[] restartKeyword = {"restart", "restart race", "restart game", "start over", "try again"};
-    public string[] quitKeyword = {"quit", "menu", "main menu", "leave", "leave race", "return", "exit"};
+    public string[] boostKeyword = {"boost", "one", "speed", "faster", "go fast", "nitro", "Get my speed boost ready", "Prepare the boost for me",  "nos", "boosts", "quick", "quicker", "go", "fast", "more"};
+    public string[] shieldKeyword = {"shield", "two", "protect", "protection", "shields", "Get my shield ready", "Prepare the crash protection", "Prepare the power-up that protects my car", "safe", "help", "cover"};
+    public string[] sirenKeyword = {"siren", "three", "alarm", "emergency lights", "clear the path", "push cars away", "move other cars away", "clear my path", "out of the way", "silent", "horn", "beep", "honk"};
+    public string[] pauseKeyword = {"pause", "stop", "freeze", "pose", "wait", "hold", "stay"};
+    public string[] restartKeyword = {"restart", "restart race", "restart game", "start over", "try again", "redo", "reset"};
+    public string[] quitKeyword = {"quit", "menu", "main menu", "leave", "leave race", "return", "exit", "home", "back"};
     public SimplePause pause;
     [Header("Voice Corrections")]
     [Tooltip("Real-time seconds in which an explicit correction can replace the last voice action, including while paused.")]

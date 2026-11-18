@@ -163,9 +163,11 @@ public class CarControl : MonoBehaviour
         Quaternion relativeAttitude = Quaternion.Inverse(neutralAttitude) * GetScreenAttitude();
         Vector3 deviceUp = relativeAttitude * Vector3.up;
         Vector3 deviceForward = relativeAttitude * Vector3.forward;
-        float steeringAngle = Mathf.Atan2(deviceUp.x, deviceUp.y) * Mathf.Rad2Deg;
-        float accelerationAngle = Mathf.Atan2(-deviceForward.y,
+        float sideTiltAngle = Mathf.Atan2(deviceUp.x, deviceUp.y) * Mathf.Rad2Deg;
+        float forwardTiltAngle = Mathf.Atan2(-deviceForward.y,
             Mathf.Sqrt(deviceForward.x * deviceForward.x + deviceForward.z * deviceForward.z)) * Mathf.Rad2Deg;
+        float steeringAngle = sideTiltAngle + forwardTiltAngle;
+        float accelerationAngle = forwardTiltAngle;
         if (invertSteering) steeringAngle = -steeringAngle;
         if (invertAcceleration) accelerationAngle = -accelerationAngle;
 
